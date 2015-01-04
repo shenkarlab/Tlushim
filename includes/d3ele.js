@@ -32,6 +32,8 @@ function setValue(myValue) {
 
 function changeViewByYear(){
 	console.log(currectYear);
+	//var police = "http://shenkar.html5-book.co.il/2014-2015/html5/dev_38/police"+currectYear+".json";
+	//var army = "http://shenkar.html5-book.co.il/2014-2015/html5/dev_38/army"+currectYear+".json";
 	
 	var police = "../json/police"+currectYear+".json";
 	var army = "../json/army"+currectYear+".json";
