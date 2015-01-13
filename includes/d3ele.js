@@ -155,15 +155,29 @@ function createView(police,army){
 				.attr("x",function(d) {return xScale(d.Rank)+(2*barWidth)+8;});
 
 				
-				/*svg.append("g")
-					.attr("id","circleText")
+				svg.append("g")
+					.attr("id","policeBarsText")
 					.selectAll("text")
 					.data(policedata)	// insert the json data to the imagening circles
 					.enter()
-					.append("text")					
-					.attr("dx", function (d,i) {return xScale(i*10);})
-					.attr("dy", function (d) {return yScale(d.AverageSalary*5);})
-					.text(function(d) { return d.Rank; });*/		
+					.append("text")	
+					.attr("fill", "white")
+.attr("x", function(d,i) {
+    return x(i)+x.rangeBand()/2;
+})
+.attr("y", function(d,i) {
+    return height-y(d)+yTextPadding;
+})
+.text(function(d){
+     return d;
+});
+					/*
+					.text(function(d) { return d.AverageSalary; })				
+					.attr("y", function(d) {return yScale(d.AverageSalary);})
+					.attr("height", function(d) {return h - yScale(d.AverageSalary)-padding;})
+					.data(ranks)
+					.attr("x",function(d) {return xScale(d.Rank)+barWidth+8;});*/
+							
 		
 			}// close if svg == null
 			else{
