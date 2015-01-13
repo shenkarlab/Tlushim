@@ -177,6 +177,7 @@ d3.select("#multi")		// we select the button id tag
 	xScale.domain([0,d3.max(data, function(d,i) { return i*10 ;})]);
 	yScale.domain([0,d3.max(data, function(d) {return d.Multi_For_1000 * 5;;})]);
 	
+	
 	//update the SVG circles
 	svg.selectAll("circle")
 	.data(data)	// insert the dataset to the imagening circles
