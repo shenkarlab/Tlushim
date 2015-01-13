@@ -25,3 +25,20 @@
     cursor: pointer;
     outline: none;
 }
+
+.axis path, .axis line {
+				fill: none;
+				stroke: black;
+				shape-rendering: crispEdges;
+			}
+			.axis text {
+				font-family: sans-serif;
+				font-size: 11px;
+			}
+			.policeBar {
+				fill: blue;
+			}
+
+			.armyBar {
+				fill: green;
+			}
