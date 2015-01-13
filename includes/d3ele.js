@@ -162,21 +162,11 @@ function createView(police,army){
 					.enter()
 					.append("text")	
 					.attr("fill", "white")
-.attr("x", function(d,i) {
-    return x(i)+x.rangeBand()/2;
-})
-.attr("y", function(d,i) {
-    return height-y(d)+yTextPadding;
-})
-.text(function(d){
-     return d;
-});
-					/*
 					.text(function(d) { return d.AverageSalary; })				
 					.attr("y", function(d) {return yScale(d.AverageSalary);})
 					.attr("height", function(d) {return h - yScale(d.AverageSalary)-padding;})
 					.data(ranks)
-					.attr("x",function(d) {return xScale(d.Rank)+barWidth+8;});*/
+					.attr("x",function(d) {return xScale(d.Rank)+barWidth+8;});
 							
 		
 			}// close if svg == null
