@@ -72,7 +72,7 @@ function createView(police,army){
         	
         					console.log("Army dataset is: "+armydata);
         					
-        		d3.json("../json/ranks.json",function(ranksError,ranks){
+        		d3.json("./json/ranks.json",function(ranksError,ranks){
         					if (ranksError) return console.warn(ranksError);
         					
         					console.log("Rank dataset is: "+ranks);
