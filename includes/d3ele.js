@@ -139,7 +139,7 @@ function createView(police,army){
 				.attr("y", function(d) {return yScale(d.AverageSalary);})
 				.attr("height", function(d) {return h - yScale(d.AverageSalary)-padding;})
 				.data(ranks)
-				.attr("x",function(d) {return xScale(d.Rank)+barWidth+10;});
+				.attr("x",function(d) {return xScale(d.Rank)+barWidth+8;});
 											
 				svg.append("g")
 				.attr("id","armyBars")				
@@ -152,7 +152,7 @@ function createView(police,army){
 				.attr("y", function(d) {return yScale(d.AverageSalary);})
 				.attr("height", function(d) {return h - yScale(d.AverageSalary)-padding;})
 				.data(ranks)
-				.attr("x",function(d) {return xScale(d.Rank)+(3*barWidth);});
+				.attr("x",function(d) {return xScale(d.Rank)+(2*barWidth)+8;});
 
 				
 				/*svg.append("g")
