@@ -5,6 +5,7 @@ var currectYear;
 var svg = null;
 var xScale;
 var yScale;
+var yAxis;
 	// create the first view - when page loaded 
 	createView("./json/police2012.json","./json/army2012.json");
 
@@ -100,7 +101,7 @@ function createView(police,army){
 				.ticks(15);
 
 				//Define y axis
-				var yAxis = d3.svg.axis()				
+				yAxis = d3.svg.axis()				
 				.scale(yScale)
 				.orient("left")  // the position of values on the axis
 				.ticks(15);		// suggestion of the axis splits
@@ -157,11 +158,12 @@ function createView(police,army){
 				
 				svg.append("g")
 					.attr("id","policeBarsText")
-					.selectAll("text")
+					.selectAll("text")					
 					.data(policedata)	// insert the json data to the imagening circles
 					.enter()
 					.append("text")	
-					.attr("fill", "white")
+					.attr("class","policeBarsTextClass")
+					.attr("fill", "white")				
 					.text(function(d) { return d.AverageSalary; })				
 					.attr("y", function(d) {return yScale(d.AverageSalary);})
 					.attr("height", function(d) {return h - yScale(d.AverageSalary)-padding;})
@@ -177,6 +179,8 @@ function createView(police,army){
 				// first update the scales
 				xScale.domain(ranks.map(function(d) {return d.Rank;}));
 				yScale.domain([0,d3.max(policedata, function(d) {return d.AverageSalary  + 20000;})]);
+				
+				yAxis.scale(yScale);
 				//update the SVG circles
 				svg.selectAll(".policeBar")
 					.data(policedata)	// insert the new police json to the rects

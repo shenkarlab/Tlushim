@@ -42,7 +42,7 @@
 			.armyBar {
 				fill: green;
 			}
-			#policeBarsText{
+			.policeBarsTextClass{
 				/* Safari */
 				-webkit-transform: rotate(-90deg);
 				
