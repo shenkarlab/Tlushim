@@ -5,7 +5,7 @@ var currectYear;
 var svg = null;
 var xScale;
 var yScale;
-	// create the first view on when page loaded first time
+	// create the first view - when page loaded 
 	createView("./json/police2012.json","./json/army2012.json");
 
   $("#slider-background").slider({
