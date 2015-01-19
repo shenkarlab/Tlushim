@@ -180,7 +180,15 @@ function createView(police,army){
 				xScale.domain(ranks.map(function(d) {return d.Rank;}));
 				yScale.domain([0,d3.max(policedata, function(d) {return d.AverageSalary  + 20000;})]);
 				
-				yAxis.scale(yScale);
+				//update Y axs values 
+				yAxis = d3.svg.axis()				
+				.scale(yScale)
+				.orient("left")  // the position of values on the axis
+				.ticks(15);
+				
+				svg.selectAll(".y.axis")
+				.attr("transform", "translate(" + (padding - 5) + ",0)")
+				.call(yAxis);
 				//update the SVG circles
 				svg.selectAll(".policeBar")
 					.data(policedata)	// insert the new police json to the rects
