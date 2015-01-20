@@ -92,6 +92,7 @@ function createView(data){
 function toggle(id) {
     chart.toggle(id);
 }
+if ( $(".legend").length == 0){
 
 d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
     .data(['Police', 'Army'])
@@ -108,5 +109,8 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
     .on('click', function (id) {
         chart.toggle(id);
     });
+   }
+   
+   
  }
 });
