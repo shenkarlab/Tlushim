@@ -1,24 +1,30 @@
 $(document).ready(function() {
 	var currectYear;
+	var chart;
 	createView("./csv/apdata2012.csv");
 
-	 $("#slider-background").slider({
-	 	orientation: 'vertical',
-	    min: 2002,
-	    max: 2012,
-	    value: 2012,
-	        range: "max",
-	        animate: true,
-	        
-	        
-	    slide: function(event, ui) {
+
+$(".slider")                    
+    .slider({ 
+        min: 2002, 
+        max: 2012,
+        orientation: "vertical",
+        slide: function(event, ui) {
 	        currectYear = ui.value;
 	      setValue((ui.value));
 	      changeViewByYear();
-	    }});
+	    }
+    })
+                    
+    .slider("pips", {
+        rest: "label",
+        step: "5"
+    });
+    
+   
 	 
 	  var mySlider = document.createElement('value');
-	  $('#slider-container').append(mySlider);
+	  $('.slider').append(mySlider);
 	  mySlider.id = "mySlider";
 	
 
@@ -44,10 +50,16 @@ function changeViewByYear(){
 	
 };
 
+	function toggle(id) {
+    chart.toggle(id);
+}
 
 function createView(data){
 	
-		var chart = c3.generate({
+
+	console.log($("svg").length);
+	if ( $("svg").length == 0){
+		chart = c3.generate({
 		bindto: '#chart',
     	data: {
        		url:  data,
@@ -58,6 +70,9 @@ function createView(data){
        }
         
     },
+        bar: {
+       			 width: 11
+             },
     legend : {
     	position:'right',
         show: false
@@ -92,10 +107,8 @@ function createView(data){
 
 });
 
-function toggle(id) {
-    chart.toggle(id);
-}
-if ( $(".legend").length == 0){
+
+
 
 d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
     .data(['Police', 'Army'])
@@ -112,7 +125,12 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
     .on('click', function (id) {
         chart.toggle(id);
     });
-   }
+  } // end if
+  else {
+  	    chart.load({
+        url: data
+    });
+  }
    
    
  }

@@ -1,15 +1,16 @@
 .container{
 	position:absolute;
 	top: 175px;
-	right: 25px;
+	right: 6px;
 	width:66px;
-	height:132px;
+	height:150px;
 }
 .Police{
 	background-image:url("../images/police.png");
 	background-repeat:no-repeat;
 }
 .Army{
+	margin-top:24px;
 	background-image:url("../images/army.png");
 	background-repeat:no-repeat;
 }
