@@ -1,0 +1,19 @@
+.container{
+	position:absolute;
+	top: 100px;
+	left: 600px;
+}
+.Police{
+	background-image:url("../images/police.png");
+	background-repeat:no-repeat;
+}
+.Army{
+	background-image:url("../images/army.png");
+	background-repeat:no-repeat;
+}
+.legend span {
+    width: 66px;
+    height:66px;
+    display: inline-block;
+    cursor: pointer;
+}
