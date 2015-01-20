@@ -10,26 +10,38 @@
 		<body>
 			<div class="container"></div>
 			<div id="chart"></div>
-		<script>
-			var data = 'csv/1stRank.csv';
-			var chart = c3.generate({
-				bindto: '#chart',
-   				data: {
-        			url: data,
-        			type: 'line'
-    			},
-   				axis : {
-       				 x: {
-           			 	type: 'category',
-            			categories: ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010','2011','2012']
-        			}
-        		},
-        		colors: {
-       				Police: '#b0b0b0',
-       				Army: '#ffffff'
-      			}
-			});
-		</script>
+			<script>
+				var data = 'csv/2ndRank.csv';
+				var chart = c3.generate({
+					bindto: '#chart',
+	   				data: {
+	        			url: data,
+	        			type: 'area',
+	        			colors: {
+	       					Police: '#b0b0b0',
+	       					Army: '#ffffff'
+	      				}
+	    			},
+	        		grid: {
+	        			x: {
+	        				show:true,
+	        				lines:[{value: 0,text:2002},{value: 1,text:2003},{value: 2,text:2004},{value: 3,text:2005},{value: 4,text:2006},{value: 5,text:2007},
+	        				{value: 6,text:2008},{value: 7,text:2009},{value: 8,text:2010},{value: 9,text:2011},{value: 10,text:2012}]
+	        			},
+	        			y: {
+	        				show:true
+	        			}
+	        		},
+	        		axis : {
+	       				x : {
+	            			tick: {
+	               				format: function (x) { return '*'; }
+	            			}
+	            		}
+	            	}
+	
+				});
+			</script>
 	</body>
 </html>					
 			
