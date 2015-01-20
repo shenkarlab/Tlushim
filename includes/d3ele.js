@@ -3,11 +3,14 @@ $(document).ready(function() {
 	createView("./csv/apdata2012.csv");
 
 	 $("#slider-background").slider({
+	 	orientation: 'vertical',
 	    min: 2002,
 	    max: 2012,
 	    value: 2012,
-	        range: "min",
+	        range: "max",
 	        animate: true,
+	        
+	        
 	    slide: function(event, ui) {
 	        currectYear = ui.value;
 	      setValue((ui.value));

@@ -1,7 +1,9 @@
 .container{
 	position:absolute;
-	top: 100px;
-	left: 600px;
+	top: 175px;
+	right: 25px;
+	width:66px;
+	height:132px;
 }
 .Police{
 	background-image:url("../images/police.png");

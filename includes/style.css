@@ -1,17 +1,20 @@
 #slider-container {
-    width: 350px;
-    height: 50px;    
-    position: relative;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 570px;
+    height: 70px;    
+    position: absolute;
+	top:395px;
     margin: 0 auto;
-    top: 0px;
 }
 
-#slider-background {
-    position: absolute;
-    left: 24px;
+#slider-background {	
     margin: 0 auto;
-    height:3px;
-    width: 300px;
+    height:24px;
+    width: 570px;
     background: url('images/background.png') no-repeat left top;
 }
 
@@ -25,37 +28,17 @@
     cursor: pointer;
     outline: none;
 }
+.wrapper{
+	position:relative;
+	margin:0 auto;
+	height:768px;
+	width:1004px;
+	background-color:red;
+}
+#graphContainer{
+	position:absolute;
+	top:123px;
+	right:175px;
+}
 
-.axis path, .axis line {
-				fill: none;
-				stroke: black;
-				shape-rendering: crispEdges;
-			}
-			.axis text {
-				font-family: sans-serif;
-				font-size: 11px;
-			}
-			.policeBar {
-				fill: blue;
-			}
 
-			.armyBar {
-				fill: green;
-			}
-			.policeBarsTextClass{
-				/* Safari */
-				-webkit-transform: rotate(-90deg);
-				
-				/* Firefox */
-				-moz-transform: rotate(-90deg);
-				
-				/* IE */
-				-ms-transform: rotate(-90deg);
-				
-				/* Opera */
-				-o-transform: rotate(-90deg);
-				
-				/* Internet Explorer */
-				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
-			}
