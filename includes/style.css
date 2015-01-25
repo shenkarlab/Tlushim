@@ -4,12 +4,16 @@ header,nav,main,footer,section,article,aside {
 	display : block;
 }
 
-#wrapper {
+#wrapper, #degree_wrapper {
 	position: relative;
 	width:1004px;
 	height:768px;
 	margin : 0 auto;
 	background-image:url("../images/backkk.jpg");
+}
+
+#degree_wrapper {
+	background-image:url("../images/degree_back.jpg");
 }
 
 #slider-container {
