@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	var currectDegree;
+	var currentDegree;
 	var chart;
-	createView("./csv/1Rank.csv");
+	createView("../csv/1Rank.csv");
 
 $(".slider")                    
     .slider({ 
@@ -9,7 +9,7 @@ $(".slider")
         max: 8,
         orientation: "vertical",
         slide: function(event, ui) {
-	        currectDegree = ui.value;
+	        currentDegree = ui.value;
 	      setValue((ui.value));
 	      changeViewByDegree();
 	    }
@@ -17,7 +17,7 @@ $(".slider")
                     
     .slider("pips", {
         rest: "label",
-        step: "5"
+        step: "8"
     });
     
    
@@ -32,14 +32,14 @@ $(".slider")
 function setValue(myValue) {
     var mySlider = document.getElementById('mySlider');
     mySlider.value = myValue;
-    console.log(currectDegree);
+    console.log(currentDegree);
 }
 
 
 function changeViewByDegree(){
-	console.log(currectDegree);
+	console.log(currentDegree);
 	
-	var data = "./csv/"+currectDegree+"Rank.csv";
+	var data = "../csv/"+currentDegree+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
     createView(data);
@@ -54,7 +54,7 @@ function createView(data){
 	
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
-				var chart = c3.generate({
+				chart = c3.generate({
 					bindto: '#chart',
 	   				data: {
 	        			url: data,
@@ -103,7 +103,8 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
   } // end if
   else {
   	    chart.load({
-        url: data
+        url: data,
+        type: 'area'
     });
   }
    
