@@ -58,3 +58,18 @@ header,nav,main,footer,section,article,aside {
 	height: 570px;
 	
 }
+
+.c3-axis.c3-axis-y{
+	font-size:12px;
+	fill:#ffffff;
+	color:#ffffff;
+	background-color:#ffffff;
+}
+.c3-axis.c3-axis-x{
+	font-size:26px;
+	fill:#ffffff;
+	color:#ffffff;
+	background-color:#ffffff;
+}
+
+

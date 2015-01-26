@@ -72,7 +72,8 @@ function createView(data){
         
     },
         bar: {
-       			 width: 11
+       			 width: 11,
+       			 ratio: 37
              },
     legend : {
     	position:'right',
@@ -101,9 +102,22 @@ function createView(data){
         axis : {
         x : {
             tick: {
-                format: function (x) { return '*'; }
-            }
-           }
+                format: function (x) { return '•'; }
+              
+            },
+            padding: {left: 0.7,right: 0.7},
+            label: {
+                text: 'דרגות',
+                position: 'inner-right'
+              },
+          },
+        y:{
+        	 padding: {top: 200, bottom: 0},
+        	 label: {
+                text: 'שכר חודשי',
+                position: 'inner-right'
+              },
+        }   
           }
 
 });

@@ -11,7 +11,7 @@
 }
 .c3 path, .c3 line {
   fill: none;
-  stroke: #000;
+  stroke: #ffffff;
 }
 .c3 text {
   -webkit-user-select: none;
@@ -58,8 +58,17 @@
 .c3-grid line {
   stroke: #aaa;
 }
+
+
+.c3-ygrid:before{
+	content:'•';
+	color:#ffffff;
+	}
+
+
 .c3-grid text {
-  fill: #aaa;
+  fill: #ffffff;
+  font-size:12px;
 }
 .c3-xgrid, .c3-ygrid {
   stroke-dasharray: 3 3;
