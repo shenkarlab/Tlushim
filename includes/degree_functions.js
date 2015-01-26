@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var currentDegree;
 	var chart;
-	createView("../csv/1Rank.csv");
+	createView("./csv/1Rank.csv");
 
 $(".slider")                    
     .slider({ 
@@ -39,7 +39,7 @@ function setValue(myValue) {
 function changeViewByDegree(){
 	console.log(currentDegree);
 	
-	var data = "../csv/"+currentDegree+"Rank.csv";
+	var data = "./csv/"+currentDegree+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
     createView(data);
