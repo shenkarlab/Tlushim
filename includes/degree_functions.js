@@ -7,6 +7,7 @@ $(".slider")
     .slider({ 
         min: 1, 
         max: 8,
+        value:8,
         orientation: "vertical",
         slide: function(event, ui) {
 	        currentDegree = ui.value;

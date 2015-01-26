@@ -8,6 +8,7 @@ $(".slider")
     .slider({ 
         min: 2002, 
         max: 2012,
+        value:2012,
         orientation: "vertical",
         slide: function(event, ui) {
 	        currectYear = ui.value;
