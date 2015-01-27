@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var chart;
 	createView("./csv/apdata2012.csv");
 
-
+    
 $(".slider")                    
     .slider({ 
     	
@@ -59,8 +59,8 @@ function changeViewByYear(){
 function createView(data){
 	
 
-	console.log($("svg").length);
-	if ( $("svg").length == 0){
+	console.log($("#graphsvg").length);
+	if ( $("#graphsvg").length == 0){
 		chart = c3.generate({
 		bindto: '#chart',
     	data: {

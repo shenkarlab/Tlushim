@@ -4,6 +4,35 @@ header,nav,main,footer,section,article,aside {
 	display : block;
 }
 
+
+/* main icon Style */
+.manIcon {
+	position:absolute;
+	top:300px;
+	right:150px;
+    width: 10em;
+    height: 10em;
+}
+#mainIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.avarageColor1{
+	fill: #ffffff;
+}
+#holdci {
+	margin-top: -100%;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+}
+#colorIcon {
+    width: 10em;
+    height: 10em;
+}
+
+/*----------------------------*/
 #wrapper, #degree_wrapper,#port_wrapper {
 	position: relative;
 	width:1004px;
