@@ -87,11 +87,11 @@ function createView(data){
             lines: [{value: 0, text: 'נתב'} ,
             		{value: 1, text: 'מנכ"ל'} ,
             		{value: 2, text: 'אתת'} ,
-            		{value: 3, text: 'מכונאי גוררת'} ,
+            		{value: 3, text: 'מכונאי'} ,
             		{value: 4, text: 'מנופאי'} ,
             		{value: 5, text: 'סדרן'} ,
             		{value: 6, text: 'קברניט'} ,
-            		{value: 7, text: 'רע"נ ציוד"'} ,
+            		{value: 7, text: 'רע"נ'} ,
             ]
                    
         },
