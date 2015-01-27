@@ -104,5 +104,20 @@ header,nav,main,footer,section,article,aside {
 	color:#ffffff;
 	background-color:#ffffff;
 }
+#degree1small {
+	top:416px;
+	position:relative;
+	height:350px;
+	width:300px;
+	left:100px;
+	font-family: Arial;
+}
+#small_graph1{
+	position:absolute;
+	top:132px;
+	left:125px;
+	height:200px;
+	width:300px;
+}
 
 

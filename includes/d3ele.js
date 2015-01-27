@@ -1,9 +1,15 @@
 $(document).ready(function() {
 	var currectYear;
 	var chart;
+	var small_chart;
 	createView("./csv/apdata2012.csv");
 
+<<<<<<< HEAD
     
+=======
+
+
+>>>>>>> origin/gh-pages
 $(".slider")                    
     .slider({ 
     	
@@ -69,7 +75,10 @@ function createView(data){
       	colors: {
        		Police: '#b0b0b0',
        		Army: '#ffffff'
-       }
+       },
+       	      	onmouseover: function(id){
+	      		createSmall(id.x);
+	      	}
         
     },
         bar: {
@@ -111,13 +120,9 @@ function createView(data){
         y:{
         	 padding: {top: 200, bottom: 0},
         }   
-          }
+       }
 
 });
-
-
-
-
 d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
     .data(['Police', 'Army'])
   .enter().append('span')
@@ -140,6 +145,41 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
     });
   }
    
-   
- }
+}
+
+
+function createSmall(id){
+	var smalldata = "./csv/"+(id+1)+"Rank.csv";
+	small_chart = c3.generate({
+		bindto: '#small_graph1',
+	   	data: {
+	        url: smalldata,
+	        type: 'line',
+	        colors: {
+	       		Police: '#b0b0b0',
+	       		Army: '#ffffff'
+	      	},
+
+	    },
+	    grid: {
+	    	x: {
+	        	show:true,
+	        	lines:[{value: 0,text:2002},{value: 1,text:2003},{value: 2,text:2004},{value: 3,text:2005},{value: 4,text:2006},{value: 5,text:2007},
+	        		{value: 6,text:2008},{value: 7,text:2009},{value: 8,text:2010},{value: 9,text:2011},{value: 10,text:2012}]
+	        },
+	        y: {
+	        	show:true
+	        }
+	    },
+	    axis : {
+	    	x : {
+	        	tick: {
+	            	format: function (x) { return '*'; }
+	            }
+	        }
+	    }
+	
+	});
+
+}
 });
