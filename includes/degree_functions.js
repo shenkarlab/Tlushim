@@ -78,6 +78,10 @@ function createView(data){
 	       					Army: '#ffffff'
 	      				}
 	    			},
+	    			legend : {
+    					position:'right',
+        				show: false
+   					 },
 	        		grid: {
 	        			x: {
 	        				show:true,
@@ -93,7 +97,10 @@ function createView(data){
 	            			tick: {
 	               				format: function (x) { return '•'; }
 	            			}
-	            		}
+	            	},
+	            		  y:{
+        	 padding: {top: 200, bottom: 0},
+        }
 	            	}
 	
 				});
