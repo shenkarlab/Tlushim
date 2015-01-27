@@ -91,7 +91,7 @@ function createView(data){
 	        		axis : {
 	       				x : {
 	            			tick: {
-	               				format: function (x) { return '*'; }
+	               				format: function (x) { return '•'; }
 	            			}
 	            		}
 	            	}
