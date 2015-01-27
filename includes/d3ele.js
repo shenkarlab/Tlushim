@@ -67,14 +67,16 @@ function createView(data){
     	data: {
        		url:  data,
         	type:'bar',
-      	colors: {
-       		Police: '#b0b0b0',
-       		Army: '#ffffff'
-       },
-       	      	onmouseover: function(id){
-	      		createSmall(id.x);
-	      	}
-        
+      		colors: {
+       			Police: '#b0b0b0',
+       			Army: '#ffffff'
+	       },
+	       onmouseover: function(id){
+	       		createSmall(id.x);
+	      	},
+	      	onclick: function(id) {
+	      		document.location.href = "degree.html?id="+id.x;	
+	      	} 
     },
         bar: {
        			 width: 11,
