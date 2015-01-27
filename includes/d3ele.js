@@ -4,12 +4,7 @@ $(document).ready(function() {
 	var small_chart;
 	createView("./csv/apdata2012.csv");
 
-<<<<<<< HEAD
-    
-=======
 
-
->>>>>>> origin/gh-pages
 $(".slider")                    
     .slider({ 
     	
