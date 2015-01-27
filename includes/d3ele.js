@@ -158,6 +158,10 @@ function createSmall(id){
 	      	},
 
 	    },
+	    legend : {
+    		position:'right',
+        	show: false
+    },
 	    grid: {
 	    	x: {
 	        	show:true,
@@ -171,9 +175,12 @@ function createSmall(id){
 	    axis : {
 	    	x : {
 	        	tick: {
-	            	format: function (x) { return '*'; }
+	            	format: function (x) { return '•'; }
 	            }
-	        }
+	       },
+	                y:{
+        	 padding: {top: 100, bottom: 0},
+        } 
 	    }
 	
 	});

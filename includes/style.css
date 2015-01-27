@@ -35,13 +35,24 @@ header,nav,main,footer,section,article,aside {
     height: 100%;
 }
 
-/*----------------------------*/
+
 #wrapper, #degree_wrapper,#port_wrapper {
+	font-family:alef,Arial;
 	position: relative;
 	width:1004px;
 	height:768px;
 	margin : 0 auto;
 	background-image:url("../images/backkk.jpg");
+}
+
+body {
+	font-family:alef,Arial;
+}
+@font-face {
+		font-family: alef;
+		src: url(Alef-Regular.ttf);
+		font-style: normal;
+	 	font-weight: normal;
 }
 
 #degree_wrapper {
