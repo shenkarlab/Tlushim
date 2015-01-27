@@ -6,8 +6,10 @@ $(document).ready(function() {
 
 $(".slider")                    
     .slider({ 
+    	
         min: 2002, 
         max: 2012,
+                	
         value:2012,
         orientation: "vertical",
         slide: function(event, ui) {
@@ -15,11 +17,10 @@ $(".slider")
 	      setValue((ui.value));
 	      changeViewByYear();
 	    }
-    })
-                    
+    })           
     .slider("pips", {
         rest: "label",
-        step: "5"
+        step: "10"
     });
     
    
