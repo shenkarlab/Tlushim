@@ -64,7 +64,7 @@ function createView(data){
 	
 
 	console.log($("svg").length);
-	if ( $("svg").length == 2){
+	if ( $("svg").length == 3){
 		chart = c3.generate({
 		bindto: '#chart',
     	data: {

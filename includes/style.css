@@ -10,33 +10,60 @@ header,nav,main,footer,section,article,aside {
 	position:absolute;
 	top:440px;
 	right:50px;
-    width: 120px;
+    width: 400px;
     height: 290px;
 }
 #mainIcon {
-    width: 100%;
-    height: 100%;
+	position:absolute;
+	top:288px;
+	right:0px;
+    width: 120px;
+    height: 290px;
+}
+#lineDiv1{
+	position:absolute;
+	top:0px;
+	right:150px;
+}
+#lineDiv2{
+	position:absolute;
+	top:0%;
+	right:150px;
+}
+#lineDiv3{
+	position:absolute;
+	top:0%;
+	right:150px;
 }
 
+.avarageColor2 ,.avarageColor3{
+	fill: #ffffff;
+	opacity:0.3;
+}
 .avarageColor1{
 	fill: #ffffff;
+	opacity:0.3;
 }
-.avarageColor2{
-	fill: #bcbcbc;
+
+#holdci3 {
+	margin-top: -291px;
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
 }
 #holdci2 {
 	margin-top: -291px;
     overflow: hidden;
     width: 100%;
-    height: 0%;
+    height: 0px;
 }
 #holdci{
 	margin-top: -286px;
     overflow: hidden;
     width: 100%;
-    height: 0%;
+    height: 0px;
 }
-#colorIcon,#colorIcon2 {
+#colorIcon,#colorIcon2,#colorIcon2 {
     width: 100%;
     height: 100%;
 }
