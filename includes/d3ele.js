@@ -9,11 +9,14 @@ $(".slider")
     .slider({ 
     	
         min: 2002, 
-        max: 2012,
+        max: 2013,
                 	
         value:2012,
         orientation: "vertical",
         slide: function(event, ui) {
+        	if (ui.value >2012){
+        		ui.value=2012;
+        	}
 	        currectYear = ui.value;
 	      setValue((ui.value));
 	      changeViewByYear();

@@ -1,4 +1,5 @@
    $(document).ready(function() {
+   	
    
     var fill = 0;
     var fill2 = 0;
