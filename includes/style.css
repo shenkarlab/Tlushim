@@ -69,7 +69,7 @@ header,nav,main,footer,section,article,aside {
 }
 
 
-#wrapper, #degree_wrapper,#port_wrapper {
+#wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
 	font-family:alef,Arial;
 	position: relative;
 	width:1004px;
@@ -81,6 +81,7 @@ header,nav,main,footer,section,article,aside {
 body {
 	font-family:alef,Arial;
 }
+
 @font-face {
 		font-family: alef;
 		src: url(Alef-Regular.ttf);
@@ -94,6 +95,10 @@ body {
 
 #port_wrapper {
 	background-image:url("../images/port_background.png");
+}
+
+#ports_degree_wrapper {
+	background-image:url("../images/ports_degree_back.png");
 }
 
 #slider-container {

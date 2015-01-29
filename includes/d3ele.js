@@ -78,7 +78,7 @@ function createView(data){
 	       		createSmall(id.x);
 	      	},
 	      	onclick: function(id) {
-	      		document.location.href = "degree.html?id="+(id.x+1);	
+	      		document.location.href = "apDegree.html?id="+(id.x+1);	
 	      	} 
     },
         bar: {
