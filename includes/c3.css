@@ -1,13 +1,19 @@
 #chart{
 	height:300px;
 	width:600px;
-	font-family: Arial;
+
+}
+@font-face {
+		font-family: alef;
+		src: url(Alef-Regular.ttf);
+		font-style: normal;
+	 	font-weight: normal;
 }
 
 /*-- Chart --*/
 
 .c3 svg {
-  font: 10px sans-serif;
+	font-family: alef, Arial;
 }
 .c3 path, .c3 line {
   fill: none;
