@@ -198,6 +198,7 @@ function changeManIcon(currectYear){
 	var ashdod;
 	var haifa;
 	$.getJSON ("./json/avaregeSalary"+currectYear+".json" , function (data){
+		police = data.Police;
 		$.each (data, function (key, val) {
 			console.log(key);
 			console.log(val);
