@@ -227,8 +227,14 @@ function changeManIcon(currectYear){
         	$('#lineDiv2').css('top',linePosition2);
         	$('#lineDiv3').css('top',linePosition3);
    	   
-   	    	
-    var fill = 0;
+   	   if ($('#manIcon')) {
+   	   	console.log("insode transition");
+   	   	d3.select('holdci').transition().duration(2000).css('height', (fill+'px'));
+   	   	d3.select('holdci2').transition().duration(2000).css('height', (fill+'px'));
+   	   	d3.select('holdci3').transition().duration(2000).css('height', (fill+'px'));
+   	   }
+   	   else {
+   	   	    var fill = 0;
     var fill2 = 0;
     var fill3 = 0;
     var update = setInterval(function() {
@@ -236,11 +242,11 @@ function changeManIcon(currectYear){
         fill2 +=5;
          fill3 +=5;
         if (fill <= layout1inpx) {
-            $('#holdci').attr('height', (fill+'px')); 
+            $('#holdci').css('height', (fill+'px')); 
             if(fill2 <= layout2inpx){
-            	$('#holdci2').attr('height', (fill2+'px')); 
+            	$('#holdci2').css('height', (fill2+'px')); 
            	if(fill3 <= layout3inpx){
-            	$('#holdci3').attr('height', (fill3+'px'));
+            	$('#holdci3').css('height', (fill3+'px'));
             	} 
             }
         } else {
@@ -250,6 +256,8 @@ function changeManIcon(currectYear){
             clearInterval(update);        
         }
     }, 100);
+   	   }
+
     	});
 	
 }
