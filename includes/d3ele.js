@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var man =0;
 	var currectYear;
 	var chart;
 	var small_chart;
@@ -227,13 +228,14 @@ function changeManIcon(currectYear){
         	$('#lineDiv2').css('top',linePosition2);
         	$('#lineDiv3').css('top',linePosition3);
    	   
-   	   if ($('#manIcon')) {
+   	   if (man) {
    	   	console.log("insode transition");
    	   	d3.select('holdci').transition().duration(2000).style('height', (layout1inpx+'px'));
    	   	d3.select('holdci2').transition().duration(2000).style('height', (layout2inpx+'px'));
    	   	d3.select('holdci3').transition().duration(2000).style('height', (layout3inpx+'px'));
    	   }
    	   else {
+   	   	man=1;
    	   	    var fill = 0;
     var fill2 = 0;
     var fill3 = 0;
