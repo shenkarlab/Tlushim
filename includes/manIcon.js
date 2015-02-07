@@ -16,7 +16,9 @@
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
-   	   
+   	        $('#lineDiv1').css('top',linePosition1);
+        	$('#lineDiv2').css('top',linePosition2);
+        	$('#lineDiv3').css('top',linePosition3);
    	   
    	    	
     var fill = 0;

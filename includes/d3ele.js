@@ -53,6 +53,7 @@ function changeViewByYear(){
 
     
     createView(data);
+    changeManIcon(currectYear);
 	
 };
 
@@ -188,5 +189,69 @@ function createSmall(id){
 	
 	});
 
+}
+
+function changeManIcon(currectYear){
+	var all;
+	var police;
+	var army;
+	var ashdod;
+	var haifa;
+	$getJSON ("avaregeSalary"+currectYear+".json" , function (data){
+		$.each (data, function (key, val) {
+			if (key == "All"){all = val;}
+			if (key == "Police"){police = val;}
+			if (key == "Army"){army = val;}
+			if (key == "Ashdod"){ashdod = val;}
+			if (key == "Haifa"){haifa = val;}
+		});
+	});
+	
+	police = (police\1000) * 4;
+	army = (army\1000) *3;
+	var layout1 = 100;
+   		var layout2 = police;
+   			var layout3 = army;
+   	// div position (text and line)
+   	var layout1inpx = layout1*290/100;
+   	var layout2inpx = layout2*290/100;
+   	var layout3inpx = layout3*290/100;
+   	var layoutRegion1 = (290 - layout2inpx);
+   	var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
+   	var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
+   	   
+   	   var linePosition1 = 0 + (0.5*layoutRegion3);
+   	   console.log(linePosition1);
+   	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
+   	   console.log(linePosition1);
+   	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
+   	        $('#lineDiv1').css('top',linePosition1);
+        	$('#lineDiv2').css('top',linePosition2);
+        	$('#lineDiv3').css('top',linePosition3);
+   	   
+   	    	
+    var fill = 0;
+    var fill2 = 0;
+    var fill3 = 0;
+    var update = setInterval(function() {
+        fill += 5;
+        fill2 +=5;
+         fill3 +=5;
+        if (fill <= layout1inpx) {
+            $('#holdci').css('height', (fill+'px')); 
+            if(fill2 <= layout2inpx){
+            	$('#holdci2').css('height', (fill2+'px')); 
+           	if(fill3 <= layout3inpx){
+            	$('#holdci3').css('height', (fill3+'px'));
+            	} 
+            }
+        } else {
+        	$('#lineDiv1').css('top',linePosition1);
+        	$('#lineDiv2').css('top',linePosition2);
+        	$('#lineDiv3').css('top',linePosition3);
+            clearInterval(update);        
+        }
+    }, 100);
+	
 }
 });
