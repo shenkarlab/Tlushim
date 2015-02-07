@@ -244,10 +244,13 @@ if (!man){
 }
    	   
 else{
-   	   	console.log("insode transition");
+   	   	console.log("inside man transition");
    	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
    	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
    	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
+   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px');
+   	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px');
+   	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px');
   }
     	});
 	
