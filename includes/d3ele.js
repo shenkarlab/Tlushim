@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var man =0;
+	var man = false;
 	var currectYear;
 	var chart;
 	var small_chart;
@@ -235,7 +235,7 @@ function changeManIcon(currectYear){
    	   	d3.select('holdci3').transition().duration(2000).style('height', (layout3inpx+'px'));
    	   }
    	   else {
-   	   	man=1;
+   	   	man=true;
    	   	    var fill = 0;
     var fill2 = 0;
     var fill3 = 0;
