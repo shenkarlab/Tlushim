@@ -199,14 +199,16 @@ function changeManIcon(currectYear){
 	var haifa;
 	d3.json("./json/avaregeSalary2012.json",function(data) {
 		police = data.Police;
-		console.log(police);
+		army = data.Army;
+
 
 
 	
 	police = (police/1000) * 4;
 	army = (army/1000) *3;
 	
-
+		console.log(police);
+				console.log(army);
 
 	var layout1 = 100;
    		var layout2 = police;
