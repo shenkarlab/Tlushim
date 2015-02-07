@@ -228,7 +228,7 @@ function changeManIcon(currectYear){
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
 
-lineDiv1.style('top', linePosition1);
+lineDiv1.style('top', linePosition1+'px');
 lineDiv2.style('top', linePosition2);
 lineDiv3.style('top', linePosition3);
    	   console.log(lineDiv1);
