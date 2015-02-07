@@ -199,6 +199,8 @@ function changeManIcon(currectYear){
 	var haifa;
 	$.getJSON ("./json/avaregeSalary"+currectYear+".json" , function (data){
 		$.each (data, function (key, val) {
+			console.log(key);
+			console.log(val);
 			if (key == "All"){all = val;}
 			if (key == "Police"){police = val;}
 			if (key == "Army"){army = val;}
