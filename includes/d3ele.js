@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var man = false;
 	var currectYear;
 	var chart;
 	var small_chart;
@@ -192,12 +193,18 @@ function createSmall(id){
 }
 
 function changeManIcon(currectYear){
+	   var lineDiv1 = d3.select("#lineDiv1");
+   	   var lineDiv2 = d3.select("#lineDiv2");
+   	   var lineDiv3 = d3.select("#lineDiv3");
+   	   var manLayout1 = d3.select("#holdci");
+   	   var manLayout2 = d3.select("#holdci2");
+   	   var manLayout3 = d3.select("#holdci3");
 	var all;
 	var police;
 	var army;
 	var ashdod;
 	var haifa;
-	d3.json("./json/avaregeSalary2012.json",function(data) {
+	d3.json("./json/avaregeSalary"+currectYear+".json",function(data) {
 		police = data.Police;
 		army = data.Army;
 
@@ -223,6 +230,7 @@ function changeManIcon(currectYear){
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
+<<<<<<< HEAD
    	        $('#lineDiv1').css('top',linePosition1);
         	$('#lineDiv2').css('top',linePosition2);
         	$('#lineDiv3').css('top',linePosition3);
@@ -257,7 +265,30 @@ function changeManIcon(currectYear){
         }
     }, 100);
    	   }
+=======
+>>>>>>> origin/gh-pages
 
+if (!man){
+// first Creation
+	manLayout1.style('height', (layout1inpx+'px'));
+	manLayout2.style('height', (layout2inpx+'px'));
+	manLayout3.style('height', (layout3inpx+'px'));
+	lineDiv1.style('top', linePosition1+'px');
+	lineDiv2.style('top', linePosition2+'px');
+	lineDiv3.style('top', linePosition3+'px');
+	man = true;
+  
+}
+   	   
+else{
+   	   	console.log("inside man transition");
+   	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
+   	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
+   	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
+   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px');
+   	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px');
+   	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px');
+  }
     	});
 	
 }
