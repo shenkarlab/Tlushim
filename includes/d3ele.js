@@ -192,27 +192,16 @@ function createSmall(id){
 }
 
 function changeManIcon(currectYear){
-	var all;
-	var police;
-	var army;
-	var ashdod;
-	var haifa;
+	var items = [];
 	$.getJSON ("./json/avaregeSalary"+currectYear+".json" , function (data){
-		police = data.Police;
 		$.each (data, function (key, val) {
-			console.log(key);
-			console.log(val);
-			if (key == "All"){all = val;}
-			if (key == "Police"){police = val;}
-			if (key == "Army"){army = val;}
-			if (key == "Ashdod"){ashdod = val;}
-			if (key == "Haifa"){haifa = val;}
+			items.push(val);
 		});
 	});
-	console.log(police);
-	console.log(army);
-	police = (police/1000) * 4;
-	army = (army/1000) *3;
+	console.log(items[2]);
+	console.log(items[3]);
+	police = (items[2]/1000) * 4;
+	army = (items[3]/1000) *3;
 	console.log(police);
 	console.log(army);
 	var layout1 = 100;
