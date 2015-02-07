@@ -196,6 +196,9 @@ function changeManIcon(currectYear){
 	   var lineDiv1 = d3.select("#lineDiv1");
    	   var lineDiv2 = d3.select("#lineDiv2");
    	   var lineDiv3 = d3.select("#lineDiv3");
+   	   var manLayout1 = d3.select("#holdci");
+   	   var manLayout2 = d3.select("#holdci2");
+   	   var manLayout3 = d3.select("#holdci3");
 	var all;
 	var police;
 	var army;
@@ -228,43 +231,24 @@ function changeManIcon(currectYear){
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
 
-lineDiv1.style('top', linePosition1+'px');
-lineDiv2.style('top', linePosition2);
-lineDiv3.style('top', linePosition3);
-   	   console.log(lineDiv1);
- 
- 
+if (!man){
+// first Creation
+	manLayout1.style('height', (layout1inpx+'px'));
+	manLayout2.style('height', (layout2inpx+'px'));
+	manLayout3.style('height', (layout3inpx+'px'));
+	lineDiv1.style('top', linePosition1+'px');
+	lineDiv2.style('top', linePosition2+'px');
+	lineDiv3.style('top', linePosition3+'px');
+	man = true;
+  
+}
    	   
-   	   if (man) {
+else{
    	   	console.log("insode transition");
-   	   	d3.select('#holdci').transition().duration(2000).style('height', (layout1inpx+'px'));
-   	   	d3.select('holdci2').transition().duration(2000).style('height', (layout2inpx+'px'));
-   	   	d3.select('holdci3').transition().duration(2000).style('height', (layout3inpx+'px'));
-   	   }
-   	   else {
-   	   	man=true;
-   	   	    var fill = 0;
-    var fill2 = 0;
-    var fill3 = 0;
-    var update = setInterval(function() {
-        fill += 5;
-        fill2 +=5;
-         fill3 +=5;
-        if (fill <= layout1inpx) {
-            $('#holdci').css('height', (fill+'px')); 
-            if(fill2 <= layout2inpx){
-            	$('#holdci2').css('height', (fill2+'px')); 
-           	if(fill3 <= layout3inpx){
-            	$('#holdci3').css('height', (fill3+'px'));
-            	} 
-            }
-        } else {
-
-            clearInterval(update);        
-        }
-    }, 100);
-   	   }
-
+   	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
+   	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
+   	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
+  }
     	});
 	
 }
