@@ -197,15 +197,11 @@ function changeManIcon(currectYear){
 	var army;
 	var ashdod;
 	var haifa;
-	$.getJSON ("avaregeSalary"+currectYear+".json" , function (data){
-		$.each (data, function (key, val) {
-			if (key == "All"){all = val;}
-			if (key == "Police"){police = val;}
-			if (key == "Army"){army = val;}
-			if (key == "Ashdod"){ashdod = val;}
-			if (key == "Haifa"){haifa = val;}
-		});
-	});
+	d3.json("./json/avaregeSalary2012",function(data) {
+		police = data.Police;
+		console.log(police);
+
+
 	
 	police = (police/1000) * 4;
 	army = (army/1000) *3;
@@ -253,6 +249,7 @@ function changeManIcon(currectYear){
             clearInterval(update);        
         }
     }, 100);
+    	});
 	
 }
 });
