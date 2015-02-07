@@ -230,43 +230,6 @@ function changeManIcon(currectYear){
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
-<<<<<<< HEAD
-   	        $('#lineDiv1').css('top',linePosition1);
-        	$('#lineDiv2').css('top',linePosition2);
-        	$('#lineDiv3').css('top',linePosition3);
-   	   
-   	   if ($('#holdci')) {
-   	   	console.log("insode transition");
-   	   	d3.select('holdci').transition().duration(2000).css('height', (layout1inpx+'px'));
-   	   	d3.select('holdci2').transition().duration(2000).css('height', (layout2inpx+'px'));
-   	   	d3.select('holdci3').transition().duration(2000).css('height', (layout3inpx+'px'));
-   	   }
-   	   else {
-   	   	    var fill = 0;
-    var fill2 = 0;
-    var fill3 = 0;
-    var update = setInterval(function() {
-        fill += 5;
-        fill2 +=5;
-         fill3 +=5;
-        if (fill <= layout1inpx) {
-            $('#holdci').css('height', (fill+'px')); 
-            if(fill2 <= layout2inpx){
-            	$('#holdci2').css('height', (fill2+'px')); 
-           	if(fill3 <= layout3inpx){
-            	$('#holdci3').css('height', (fill3+'px'));
-            	} 
-            }
-        } else {
-        	$('#lineDiv1').css('top',linePosition1);
-        	$('#lineDiv2').css('top',linePosition2);
-        	$('#lineDiv3').css('top',linePosition3);
-            clearInterval(update);        
-        }
-    }, 100);
-   	   }
-=======
->>>>>>> origin/gh-pages
 
 if (!man){
 // first Creation
