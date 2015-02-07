@@ -206,6 +206,8 @@ function changeManIcon(currectYear){
 	police = (police/1000) * 4;
 	army = (army/1000) *3;
 	
+
+
 	var layout1 = 100;
    		var layout2 = police;
    			var layout3 = army;
