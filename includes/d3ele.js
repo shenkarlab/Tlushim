@@ -198,7 +198,7 @@ function changeManIcon(currectYear){
 	var army;
 	var ashdod;
 	var haifa;
-	d3.json("./json/avaregeSalary2012.json",function(data) {
+	d3.json("./json/avaregeSalary"+currectYear+".json",function(data) {
 		police = data.Police;
 		army = data.Army;
 
