@@ -198,7 +198,7 @@ function changeManIcon(currectYear){
 			items.push(val);
 		});
 	});
-	console.log(items[2]);
+	console.log(items);
 	console.log(items[3]);
 	police = (items[2]/1000) * 4;
 	army = (items[3]/1000) *3;
