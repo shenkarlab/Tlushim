@@ -1,105 +1,182 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<script src="includes/c3.min.js" charset="utf-8"></script>
-		<link rel="stylesheet" href="includes/slide.css">
-		<link href="includes/legend_custom.css" rel="stylesheet" type="text/css">
-		<link href="includes/style.css" rel="stylesheet" type="text/css">
-		<link href="includes/c3.css" rel="stylesheet" type="text/css">
-		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-		<script src="includes/d3ele.js"></script>
-		<!--<script src="includes/manIcon.js"></script>-->
-	</head>
-		<body>
-			<div id="wrapper">
-				<div class="container"></div>			
-				<div id="graphContainer">
-						<div id="chart"></div>
-				</div>
-			
-				<div id="sliderCon">
-					<div class="slider"></div>
-				</div>
-				<div id="degree1small">
-				<div id="small_graph1"></div>
-				</div>
-			
-	<div class="manIcon">
-		<div id="mainIcon">
-			
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+<link href="includes/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+
+
+​</style>
+
+</head>
+<body>
+  <div id="line">
+  	<div id="link1" style="display:none;position:absolute;top:0px;left:0px">
+  		<a href="ap.html">צבא נגד משטרה</a>
+  	</div>
+  	  	<div id="link2" style="display:none;position:absolute;top:0px;left:0px">
+  		<a href="ports.html">נמל חיפה נגד נמל אשדוד</a>
+  	</div>
+  	  	<div id="link3" style="display:none;position:absolute;top:0px;left:0px">
+  		<a href="#">שיאני שכר</a>
+  	</div>
+  </div>​
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.5.0"></script>
+  <script type="text/javascript">
+    var w = 1000;
+    var h = 600;
+
+    var svg = d3.select("#line")
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h)
+      .attr("id", "visualization")
+      .attr("xmlns", "http://www.w3.org/2000/svg");
+
+	var x = d3.scale.linear().domain([0, 10]).range([0, 990]);
+    var y = d3.scale.linear().domain([0, 10]).range([10, 590]);
+    
+    var data = d3.range(11).map(function(){return Math.random()*10;});
+	var data2 = d3.range(11).map(function(){return Math.random()*10;});
+	var data3 = d3.range(11).map(function(){return Math.random()*10;});
+	var emptyline = d3.range(11).map(function(){return Math.random()*10;});
+	var emptyline2 = d3.range(11).map(function(){return Math.random()*10;});
+	var emptyline3 = d3.range(11).map(function(){return Math.random()*10;});
+	var emptyline4 = d3.range(11).map(function(){return Math.random()*10;});
 	
-		<div id="holdci">
-			<div id="colorIcon">
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="117px" height="285.865px" viewBox="0 0 117 285.865" enable-background="new 0 0 117 285.865" xml:space="preserve">
-	<g>
-	<path class="avarageColor1"  d="M47.996,42.865c3.158,2,6.729,2.51,10.516,2.51c3.785,0,7.355-0.51,10.511-2.51
-		c7.535-4,12.697-11.598,12.697-20.597c0-12.771-10.391-23.114-23.208-23.114c-12.823,0-23.213,10.34-23.213,23.11
-		C35.299,31.264,40.462,38.865,47.996,42.865"/>
-	<path class="avarageColor1"  d="M86.965,50.865H30.054C13.713,50.865,0,64.214,0,80.492v12.373v23.123v8.877v21.852v0.049v0.047v1.053v9.04
-		c0,5.726,4.752,10.41,10.5,10.41c5.748,0,10.5-4.685,10.5-10.41v-7.178v-1.862v-23v-8.877V92.865v-6.602
-		c0-2.071,1.941-3.398,4.018-3.398h0.002c2.077,0,3.98,1.328,3.98,3.398v6.602v12.336v19.664v23v1.862v122.787
-		c0,7.243,5.729,13.169,13.001,13.169c7.271,0,12.999-5.926,12.999-13.169V166.865h7v105.649c0,7.242,5.734,13.351,13.002,13.351
-		h0.002c7.271,0,12.996-6.107,12.996-13.351V149.728v-1.862v-23v-19.664V92.865v-6.602c0-2.071,1.922-3.764,4-3.764
-		c2.076,0,4,1.693,4,3.764v6.602v23.123v8.877v23v1.862v7.178c0,5.726,4.752,10.41,10.499,10.41S117,162.631,117,156.905v-9.04
-		v-1.053v-0.047v-0.049v-21.852v-8.877V92.865V80.492C117,64.213,103.308,50.865,86.965,50.865"/>
-	</g>
-</svg>
-		<div id="holdci2" >
-			<div id="colorIcon2">
-		<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="117px" height="285.865px" viewBox="0 0 117 285.865" enable-background="new 0 0 117 285.865" xml:space="preserve">
-	<g>
-	<path class="avarageColor2"  d="M47.996,42.865c3.158,2,6.729,2.51,10.516,2.51c3.785,0,7.355-0.51,10.511-2.51
-		c7.535-4,12.697-11.598,12.697-20.597c0-12.771-10.391-23.114-23.208-23.114c-12.823,0-23.213,10.34-23.213,23.11
-		C35.299,31.264,40.462,38.865,47.996,42.865"/>
-	<path class="avarageColor2"  d="M86.965,50.865H30.054C13.713,50.865,0,64.214,0,80.492v12.373v23.123v8.877v21.852v0.049v0.047v1.053v9.04
-		c0,5.726,4.752,10.41,10.5,10.41c5.748,0,10.5-4.685,10.5-10.41v-7.178v-1.862v-23v-8.877V92.865v-6.602
-		c0-2.071,1.941-3.398,4.018-3.398h0.002c2.077,0,3.98,1.328,3.98,3.398v6.602v12.336v19.664v23v1.862v122.787
-		c0,7.243,5.729,13.169,13.001,13.169c7.271,0,12.999-5.926,12.999-13.169V166.865h7v105.649c0,7.242,5.734,13.351,13.002,13.351
-		h0.002c7.271,0,12.996-6.107,12.996-13.351V149.728v-1.862v-23v-19.664V92.865v-6.602c0-2.071,1.922-3.764,4-3.764
-		c2.076,0,4,1.693,4,3.764v6.602v23.123v8.877v23v1.862v7.178c0,5.726,4.752,10.41,10.499,10.41S117,162.631,117,156.905v-9.04
-		v-1.053v-0.047v-0.049v-21.852v-8.877V92.865V80.492C117,64.213,103.308,50.865,86.965,50.865"/>
-	</g>
-</svg>
+	var textPosition1 = data[3];
+	var textPosition2 = data2[6];
+	var textPosition3 = data3[9];
+	
+	console.log(textPosition1);
+	console.log(textPosition2);
+	console.log(textPosition3);
+	
+    var line= d3.svg.line()
+      .interpolate("linear")
+      .x(function(d,i) {return x(i);})
+      .y(function(d) {return y(d);});
+	
+	var xrect = d3.svg.line()
+	.interpolate("linear")
+	.x(function(d,i) {return x(i)});
+	
+	var link1 = d3.select('#link1').style('top',y(data[3])+'px').style('left',3*100+'px').style('display','block');
+	var link2 = d3.select('#link2').style('top',y(data2[6])+'px').style('left',6*100+'px').style('display','block');
+	var link3 = d3.select('#link3').style('top',y(data3[9])+'px').style('left',9*100+'px').style('display','block');
+	
+    var path = svg.append("path")
+      .attr("d", line(data))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");
 
-<div id="holdci3" >
-			<div id="colorIcon3">
-		<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="117px" height="285.865px" viewBox="0 0 117 285.865" enable-background="new 0 0 117 285.865" xml:space="preserve">
-	<g>
-	<path class="avarageColor2"  d="M47.996,42.865c3.158,2,6.729,2.51,10.516,2.51c3.785,0,7.355-0.51,10.511-2.51
-		c7.535-4,12.697-11.598,12.697-20.597c0-12.771-10.391-23.114-23.208-23.114c-12.823,0-23.213,10.34-23.213,23.11
-		C35.299,31.264,40.462,38.865,47.996,42.865"/>
-	<path class="avarageColor2"  d="M86.965,50.865H30.054C13.713,50.865,0,64.214,0,80.492v12.373v23.123v8.877v21.852v0.049v0.047v1.053v9.04
-		c0,5.726,4.752,10.41,10.5,10.41c5.748,0,10.5-4.685,10.5-10.41v-7.178v-1.862v-23v-8.877V92.865v-6.602
-		c0-2.071,1.941-3.398,4.018-3.398h0.002c2.077,0,3.98,1.328,3.98,3.398v6.602v12.336v19.664v23v1.862v122.787
-		c0,7.243,5.729,13.169,13.001,13.169c7.271,0,12.999-5.926,12.999-13.169V166.865h7v105.649c0,7.242,5.734,13.351,13.002,13.351
-		h0.002c7.271,0,12.996-6.107,12.996-13.351V149.728v-1.862v-23v-19.664V92.865v-6.602c0-2.071,1.922-3.764,4-3.764
-		c2.076,0,4,1.693,4,3.764v6.602v23.123v8.877v23v1.862v7.178c0,5.726,4.752,10.41,10.499,10.41S117,162.631,117,156.905v-9.04
-		v-1.053v-0.047v-0.049v-21.852v-8.877V92.865V80.492C117,64.213,103.308,50.865,86.965,50.865"/>
-	</g>
-</svg>
-</div>
-</div>
+      		
+	var path2 = svg.append("path")
+      .attr("d", line(data2))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");
+   	var path3 = svg.append("path")
+      .attr("d", line(data3))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none"); 
+    var pathempty = svg.append("path")
+      .attr("d", line(emptyline))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");
+     var pathempty2 = svg.append("path")
+      .attr("d", line(emptyline2))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");
+    var pathempty3 = svg.append("path")
+      .attr("d", line(emptyline3))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");
+     var pathempty4 = svg.append("path")
+      .attr("d", line(emptyline4))
+      .attr("stroke", "#cccccc")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");   
+    var totalLength = path.node().getTotalLength();
+	var totalLength2 = path2.node().getTotalLength();
+	
+	var totalLengthempty = pathempty.node().getTotalLength();
+	var totalLengthempty2 = pathempty2.node().getTotalLength();
+	var totalLengthempty3 = pathempty3.node().getTotalLength();
+	var totalLengthempty4 = pathempty4.node().getTotalLength();
+	
+	path
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", 0);
+
+	path2
+      .attr("stroke-dasharray", totalLength2 + " " + totalLength2)
+      .attr("stroke-dashoffset", 0);
+      
+	pathempty
+      .attr("stroke-dasharray", totalLengthempty + " " + totalLengthempty)
+      .attr("stroke-dashoffset", 0);
+	pathempty2
+      .attr("stroke-dasharray", totalLengthempty2 + " " + totalLengthempty2)
+      .attr("stroke-dashoffset", 0);
+	pathempty3
+      .attr("stroke-dasharray", totalLengthempty3 + " " + totalLengthempty3)
+      .attr("stroke-dashoffset", 0);
+	pathempty4
+      .attr("stroke-dasharray", totalLengthempty4 + " " + totalLengthempty4)
+      .attr("stroke-dashoffset", 0);
+            
+            
+    svg.on("click", function(){
+
+   	var pathOver = svg.append("path")
+      .attr("d", line(data))
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", "2")
+      .attr("fill", "none") 
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+ 	  .attr("stroke-dashoffset", totalLength)
+      .transition()
+      .duration(5000)
+      .ease("linear")
+      .attr("stroke-dashoffset", 0);
+        
+    var pathOver2 = svg.append("path")
+      .attr("d", line(data2))
+      .attr("stroke", "#f2b852")
+      .attr("stroke-width", "2")
+      .attr("fill", "none") 
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+ 	  .attr("stroke-dashoffset", totalLength)
+      .transition()
+      .duration(5000)
+      .ease("linear")
+      .attr("stroke-dashoffset", 0);  
+      
+    var pathOver3 = svg.append("path")
+      .attr("d", line(data3))
+      .attr("stroke", "red")
+      .attr("stroke-width", "2")
+      .attr("fill", "none") 
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+ 	  .attr("stroke-dashoffset", totalLength)
+      .transition()
+      .duration(5000)
+      .ease("linear")
+      .attr("stroke-dashoffset", 0); 
+        	
 
 
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="lineDiv1">this is line 1</div>
-<div id="lineDiv2">this is line 2</div>
-<div id="lineDiv3">this is line 3</div>
-	</div>
-	</div>
+    });
+    
 
-
-
-	</body>
-</html>					
+    
+  </script>
+</body>
+</html>

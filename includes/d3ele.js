@@ -227,7 +227,7 @@ function changeManIcon(currectYear){
         	$('#lineDiv2').css('top',linePosition2);
         	$('#lineDiv3').css('top',linePosition3);
    	   
-   	   if ($('#manIcon')) {
+   	   if ($('#holdci')) {
    	   	console.log("insode transition");
    	   	d3.select('holdci').transition().duration(2000).css('height', (layout1inpx+'px'));
    	   	d3.select('holdci2').transition().duration(2000).css('height', (layout2inpx+'px'));

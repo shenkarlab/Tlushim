@@ -171,5 +171,34 @@ body {
 	height:200px;
 	width:350px;
 }
+/*this is the homepage*/
+  #line{
+    width: 1000px;
+    margin: 20px 0;
+    height: 600px;
+    background: #eee;
+  }
+  button {
+    margin: 20px 0 0 20px;
+  }
+  #link1,#link2,#link3 {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
 
-
+    #link1 a:link,#link2 a:link,#link3 a:link {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
+  #link1 a:visited,#link2 a:visited,#link3 a:visited {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
+    #link1 a:active ,#link2 a:active ,#link3 a:active {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
