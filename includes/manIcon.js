@@ -4,9 +4,9 @@
    		var layout2 = 65;
    			var layout3 = 35;
    	// div position (text and line)
-   	   	var layout1inpx = layout1*290/100;
-   		var layout2inpx = layout2*290/100;
-   		var layout3inpx = layout3*290/100;
+   	var layout1inpx = layout1*290/100;
+   	var layout2inpx = layout2*290/100;
+   	var layout3inpx = layout3*290/100;
    	var layoutRegion1 = (290 - layout2inpx);
    	var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
    	var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
@@ -17,6 +17,8 @@
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
    	   
+   	   
+   	    	
     var fill = 0;
     var fill2 = 0;
     var fill3 = 0;

@@ -661,7 +661,7 @@ button.ui-button::-moz-focus-inner {
 .ui-slider-vertical .ui-slider-handle {
 	left: -.3em;
 	margin-left: 48px;
-	margin-bottom: -.6em;
+	margin-bottom: -26px;
 	margin-top: -.6em;
 }
 .ui-slider-vertical .ui-slider-range {
