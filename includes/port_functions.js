@@ -1,14 +1,15 @@
 $(document).ready(function() {
+	var man = false;
 	var currectYear;
 	var chart;
 	var small_chart;
 	createView("./csv/portsdata2012.csv");
-
+	changeManIcon("2012");
 
 $(".slider")                    
     .slider({ 
         min: 2006, 
-        max: 2013,
+        max: 2012,
                 	
         value:2012,
         orientation: "vertical",
@@ -52,7 +53,7 @@ function changeViewByYear(){
 
     
     createView(data);
-	
+	changeManIcon(currectYear);
 };
 
 	function toggle(id) {
@@ -63,7 +64,7 @@ function createView(data){
 	
 
 	console.log($("svg").length);
-	if ( $("svg").length == 0){
+	if ( $("svg").length == 3){
 		chart = c3.generate({
 		bindto: '#chart',
     	data: {
@@ -187,5 +188,69 @@ function createSmall(id){
 	
 	});
 
+}
+
+function changeManIcon(currectYear){
+	   var lineDiv1 = d3.select("#lineDiv1");
+   	   var lineDiv2 = d3.select("#lineDiv2");
+   	   var lineDiv3 = d3.select("#lineDiv3");
+   	   var manLayout1 = d3.select("#holdci");
+   	   var manLayout2 = d3.select("#holdci2");
+   	   var manLayout3 = d3.select("#holdci3");
+	var all;
+	var police;
+	var army;
+	var ashdod;
+	var haifa;
+	d3.json("./json/avaregeSalary"+currectYear+".json",function(data) {
+		haifa = data.Ashdod;
+		ashdod = data.Haifa;
+
+	haifa = (haifa/1000) * 3;
+	ashdod = (ashdod/1000) *2;
+	
+	console.log(haifa);
+	console.log(ashdod);
+
+	var layout1 = 100;
+   	var layout2 = haifa;
+   	var layout3 = ashdod;
+   	// div position (text and line)
+   	var layout1inpx = layout1*290/100;
+   	var layout2inpx = layout2*290/100;
+   	var layout3inpx = layout3*290/100;
+   	var layoutRegion1 = (290 - layout2inpx);
+   	var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
+   	var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
+   	   
+   	   var linePosition1 = 0 + (0.5*layoutRegion3);
+   	   console.log(linePosition1);
+   	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
+   	   console.log(linePosition1);
+   	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
+
+if (!man){
+// first Creation
+	manLayout1.style('height', (layout1inpx+'px'));
+	manLayout2.style('height', (layout2inpx+'px'));
+	manLayout3.style('height', (layout3inpx+'px'));
+	lineDiv1.style('top', linePosition1+'px');
+	lineDiv2.style('top', linePosition2+'px');
+	lineDiv3.style('top', linePosition3+'px');
+	man = true;
+  
+}
+   	   
+else{
+   	   	console.log("inside man transition");
+   	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
+   	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
+   	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
+   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px');
+   	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px');
+   	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px');
+  }
+    	});
+	
 }
 });
