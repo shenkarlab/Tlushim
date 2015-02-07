@@ -208,7 +208,8 @@ function changeManIcon(currectYear){
 			if (key == "Haifa"){haifa = val;}
 		});
 	});
-	
+	console.log(police);
+	console.log(army);
 	police = (police/1000) * 4;
 	army = (army/1000) *3;
 	console.log(police);
