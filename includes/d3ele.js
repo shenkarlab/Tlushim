@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var chart;
 	var small_chart;
 	createView("./csv/apdata2012.csv");
-
+	changeManIcon("2012");
 
 $(".slider")                    
     .slider({ 
