@@ -224,12 +224,12 @@ function changeManIcon(currectYear){
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
-   	   d3.select('lineDiv1').transition().duration(2000).style('top', (linePosition1));
+   	   d3.select('#lineDiv1').transition().duration(2000).style('top', (linePosition1));
  
    	   
    	   if (man) {
    	   	console.log("insode transition");
-   	   	d3.select('holdci').transition().duration(2000).style('height', (layout1inpx+'px'));
+   	   	d3.select('#holdci').transition().duration(2000).style('height', (layout1inpx+'px'));
    	   	d3.select('holdci2').transition().duration(2000).style('height', (layout2inpx+'px'));
    	   	d3.select('holdci3').transition().duration(2000).style('height', (layout3inpx+'px'));
    	   }
