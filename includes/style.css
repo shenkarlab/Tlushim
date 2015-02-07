@@ -20,21 +20,18 @@ header,nav,main,footer,section,article,aside {
     width: 120px;
     height: 290px;
 }
-/*#lineDiv1{
+#lineDiv1{
 	position:absolute;
-	top:0px;
 	right:150px;
 }
 #lineDiv2{
 	position:absolute;
-	top:0%;
 	right:150px;
 }
 #lineDiv3{
 	position:absolute;
-	top:0%;
 	right:150px;
-}*/
+}
 
 .avarageColor2 ,.avarageColor3{
 	fill: #ffffff;
