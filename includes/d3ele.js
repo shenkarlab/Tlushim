@@ -197,7 +197,7 @@ function changeManIcon(currectYear){
 	var army;
 	var ashdod;
 	var haifa;
-	$.getJSON ("avaregeSalary"+currectYear+".json" , function (data){
+	$.getJSON ("../json/avaregeSalary"+currectYear+".json" , function (data){
 		$.each (data, function (key, val) {
 			if (key == "All"){all = val;}
 			if (key == "Police"){police = val;}
