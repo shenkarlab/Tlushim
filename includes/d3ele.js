@@ -229,9 +229,9 @@ function changeManIcon(currectYear){
    	   
    	   if ($('#manIcon')) {
    	   	console.log("insode transition");
-   	   	d3.select('holdci').transition().duration(2000).css('height', (fill+'px'));
-   	   	d3.select('holdci2').transition().duration(2000).css('height', (fill+'px'));
-   	   	d3.select('holdci3').transition().duration(2000).css('height', (fill+'px'));
+   	   	d3.select('holdci').transition().duration(2000).css('height', (layout1inpx+'px'));
+   	   	d3.select('holdci2').transition().duration(2000).css('height', (layout2inpx+'px'));
+   	   	d3.select('holdci3').transition().duration(2000).css('height', (layout3inpx+'px'));
    	   }
    	   else {
    	   	    var fill = 0;
