@@ -223,11 +223,11 @@ function changeManIcon(currectYear){
    	var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
    	var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
    	   
-   	   var linePosition1 = 0 + (0.5*layoutRegion3);
+   	   var linePosition1 = 0 + (0.5*layoutRegion3)-40;
    	   console.log(linePosition1);
-   	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
+   	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
    	   console.log(linePosition1);
-   	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
+   	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 
 if (!man){
 // first Creation
