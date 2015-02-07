@@ -225,11 +225,11 @@ function changeManIcon(currectYear){
    	var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
    	var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
    	   
-   	   var linePosition1 = 0 + (0.5*layoutRegion3);
+   	   var linePosition1 = 0 + (0.5*layoutRegion3)-40;
    	   console.log(linePosition1);
-   	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
+   	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
    	   console.log(linePosition1);
-   	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
+   	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 
 if (!man){
 // first Creation
@@ -237,8 +237,11 @@ if (!man){
 	manLayout2.style('height', (layout2inpx+'px'));
 	manLayout3.style('height', (layout3inpx+'px'));
 	lineDiv1.style('top', linePosition1+'px');
+	lineDiv1.text(data.Police);
 	lineDiv2.style('top', linePosition2+'px');
+	lineDiv2.text(data.Army);
 	lineDiv3.style('top', linePosition3+'px');
+	lineDiv3.text(data.All);
 	man = true;
   
 }
@@ -248,9 +251,9 @@ else{
    	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
    	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
    	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
-   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px');
-   	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px');
-   	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px');
+   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text(data.Police);
+   	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text(data.Army);
+   	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text(data.All);
   }
     	});
 	
