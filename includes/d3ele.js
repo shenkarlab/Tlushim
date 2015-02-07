@@ -224,9 +224,8 @@ function changeManIcon(currectYear){
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5);
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5);
-   	        $('#lineDiv1').css('top',linePosition1);
-        	$('#lineDiv2').css('top',linePosition2);
-        	$('#lineDiv3').css('top',linePosition3);
+   	   d3.select('lineDiv1').transition().duration(2000).style('top', (linePosition1));
+ 
    	   
    	   if (man) {
    	   	console.log("insode transition");
