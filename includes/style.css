@@ -1,11 +1,149 @@
+
+
 * { margin : 0px ; padding: 0px ;}
 
 header,nav,main,footer,section,article,aside {
 	display : block;
 }
 
+#wrapper,#index_wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
+	font-family:alef,Arial;
+	position: relative;
+	width:1004px;
+	height:768px;
+	margin : 0 auto;
+}
 
-/* main icon Style */
+body {
+	font-family:alef,Arial;
+}
+
+@font-face {
+		font-family: alef;
+		src: url(Alef-Regular.ttf);
+		font-style: normal;
+	 	font-weight: normal;
+}
+#index_wrapper{
+		/*background-image:url("../images/index.jpg");*/
+}
+#wrapper{
+		background-image:url("../images/backkk.jpg");
+}
+
+#degree_wrapper {
+	background-image:url("../images/degree_back.jpg");
+}
+
+#port_wrapper {
+	background-image:url("../images/port_background.png");
+}
+
+#ports_degree_wrapper {
+	background-image:url("../images/ports_degree_back.png");
+}
+
+
+
+#slider-container {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    width: 570px;
+    height: 70px;    
+    position: absolute;
+	top:395px;
+    margin: 0 auto;
+}
+
+#slider-background {	
+    margin: 0 auto;
+    height:24px;
+    width: 570px;
+    background: url('images/background.png') no-repeat left top;
+}
+
+
+#graphContainer{
+	position:absolute;
+	top:133px;
+	right:155px;
+}
+
+
+#sliderCon{
+	position:absolute;
+	right:890px;
+	top:139px;
+	height: 570px;
+	
+}
+
+.c3-axis.c3-axis-y{
+	font-size:12px;
+	fill:#ffffff;
+	color:#ffffff;
+	background-color:#ffffff;
+}
+.c3-axis.c3-axis-x{
+	font-size:26px;
+	fill:#ffffff;
+	color:#ffffff;
+	background-color:#ffffff;
+}
+#degree1small {
+	top:416px;
+	position:relative;
+	height:350px;
+	width:300px;
+	left:100px;
+	font-family: Arial;
+}
+#small_graph1{
+	position:absolute;
+	top:132px;
+	left:125px;
+	height:200px;
+	width:350px;
+}
+
+
+/*this is the homepage*/
+  #line{
+    width: 1000px;
+    margin: 20px 0;
+    height: 600px;
+    background: #eee;
+  }
+  button {
+    margin: 20px 0 0 20px;
+  }
+  #link1,#link2,#link3 {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
+
+    #link1 a:link,#link2 a:link,#link3 a:link {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
+  #link1 a:visited,#link2 a:visited,#link3 a:visited {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
+    #link1 a:active ,#link2 a:active ,#link3 a:active {
+  	font-family: alef,Arial;
+  	color:red;
+  	text-decoration: none;
+  }
+  
+  
+  /* man icon Style */
 .manIcon {
 	position:absolute;
 	top:440px;
@@ -65,137 +203,3 @@ header,nav,main,footer,section,article,aside {
     height: 100%;
 }
 
-
-#wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
-	font-family:alef,Arial;
-	position: relative;
-	width:1004px;
-	height:768px;
-	margin : 0 auto;
-	background-image:url("../images/backkk.jpg");
-}
-
-body {
-	font-family:alef,Arial;
-}
-
-@font-face {
-		font-family: alef;
-		src: url(Alef-Regular.ttf);
-		font-style: normal;
-	 	font-weight: normal;
-}
-
-#degree_wrapper {
-	background-image:url("../images/degree_back.jpg");
-}
-
-#port_wrapper {
-	background-image:url("../images/port_background.png");
-}
-
-#ports_degree_wrapper {
-	background-image:url("../images/ports_degree_back.png");
-}
-
-#slider-container {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    width: 570px;
-    height: 70px;    
-    position: absolute;
-	top:395px;
-    margin: 0 auto;
-}
-
-#slider-background {	
-    margin: 0 auto;
-    height:24px;
-    width: 570px;
-    background: url('images/background.png') no-repeat left top;
-}
-
-
-.wrapper{
-	position:relative;
-	margin:0 auto;
-	height:768px;
-	width:1004px;
-	background-color:red;
-}
-#graphContainer{
-	position:absolute;
-	top:133px;
-	right:155px;
-}
-
-
-#sliderCon{
-	position:absolute;
-	right:890px;
-	top:139px;
-	height: 570px;
-	
-}
-
-.c3-axis.c3-axis-y{
-	font-size:12px;
-	fill:#ffffff;
-	color:#ffffff;
-	background-color:#ffffff;
-}
-.c3-axis.c3-axis-x{
-	font-size:26px;
-	fill:#ffffff;
-	color:#ffffff;
-	background-color:#ffffff;
-}
-#degree1small {
-	top:416px;
-	position:relative;
-	height:350px;
-	width:300px;
-	left:100px;
-	font-family: Arial;
-}
-#small_graph1{
-	position:absolute;
-	top:132px;
-	left:125px;
-	height:200px;
-	width:350px;
-}
-/*this is the homepage*/
-  #line{
-    width: 1000px;
-    margin: 20px 0;
-    height: 600px;
-    background: #eee;
-  }
-  button {
-    margin: 20px 0 0 20px;
-  }
-  #link1,#link2,#link3 {
-  	font-family: alef,Arial;
-  	color:red;
-  	text-decoration: none;
-  }
-
-    #link1 a:link,#link2 a:link,#link3 a:link {
-  	font-family: alef,Arial;
-  	color:red;
-  	text-decoration: none;
-  }
-  #link1 a:visited,#link2 a:visited,#link3 a:visited {
-  	font-family: alef,Arial;
-  	color:red;
-  	text-decoration: none;
-  }
-    #link1 a:active ,#link2 a:active ,#link3 a:active {
-  	font-family: alef,Arial;
-  	color:red;
-  	text-decoration: none;
-  }
