@@ -201,18 +201,15 @@ function changeManIcon(currectYear){
 		police = data.Police;
 		army = data.Army;
 
-
-
-	
 	police = (police/1000) * 4;
 	army = (army/1000) *3;
 	
-		console.log(police);
-				console.log(army);
+	console.log(police);
+	console.log(army);
 
 	var layout1 = 100;
-   		var layout2 = police;
-   			var layout3 = army;
+   	var layout2 = police;
+   	var layout3 = army;
    	// div position (text and line)
    	var layout1inpx = layout1*290/100;
    	var layout2inpx = layout2*290/100;
@@ -239,11 +236,11 @@ function changeManIcon(currectYear){
         fill2 +=5;
          fill3 +=5;
         if (fill <= layout1inpx) {
-            $('#holdci').css('height', (fill+'px')); 
+            $('#holdci').attr('height', (fill+'px')); 
             if(fill2 <= layout2inpx){
-            	$('#holdci2').css('height', (fill2+'px')); 
+            	$('#holdci2').attr('height', (fill2+'px')); 
            	if(fill3 <= layout3inpx){
-            	$('#holdci3').css('height', (fill3+'px'));
+            	$('#holdci3').attr('height', (fill3+'px'));
             	} 
             }
         } else {
