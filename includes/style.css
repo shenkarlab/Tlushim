@@ -10,7 +10,7 @@ header,nav,main,footer,section,article,aside {
 	font-family:alef,Arial;
 	position: relative;
 	width:1004px;
-	height:768px;
+	height:570px;
 	margin : 0 auto;
 }
 
@@ -25,7 +25,7 @@ body {
 	 	font-weight: normal;
 }
 #index_wrapper{
-		/*background-image:url("../images/index.jpg");*/
+		background-image:url("../images/main.png");
 }
 #wrapper{
 		background-image:url("../images/backkk.jpg");
@@ -112,36 +112,81 @@ body {
 
 /*this is the homepage*/
   #line{
+  	position:absolute;
+  	top:50px;	
     width: 1000px;
     margin: 20px 0;
-    height: 600px;
-    background: #eee;
+    height: 500px;
   }
   button {
     margin: 20px 0 0 20px;
   }
   #link1,#link2,#link3 {
   	font-family: alef,Arial;
-  	color:red;
+  	color:#ffffff;
   	text-decoration: none;
   }
 
     #link1 a:link,#link2 a:link,#link3 a:link {
   	font-family: alef,Arial;
-  	color:red;
+  	color:#ffffff;
   	text-decoration: none;
   }
   #link1 a:visited,#link2 a:visited,#link3 a:visited {
   	font-family: alef,Arial;
-  	color:red;
+  	color:#ffffff;
   	text-decoration: none;
   }
     #link1 a:active ,#link2 a:active ,#link3 a:active {
   	font-family: alef,Arial;
-  	color:red;
+  	color:#ffffff;
   	text-decoration: none;
   }
   
+  .centered {
+    margin-top: 100px;
+}
+ 
+h1 , h2 {
+    text-align: center;
+}
+ 
+h1 , h3 {
+    font-size: 22px;
+}
+ 
+.headline {
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #ffffff;
+ 
+}
+ 
+.main-line {
+    width: 358px;
+    margin: 0px 333px;
+    position: relative;
+    top: -12px;
+}
+ 
+.dot-line {
+    position: relative;
+    top: -12px;
+ 
+}
+ 
+h4 , h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+    top: -26px;
+}
+ 
+h3 , h4 {
+    padding-right: 3px; 
+}
   
   /* man icon Style */
 .manIcon {

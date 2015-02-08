@@ -1,7 +1,7 @@
    $(document).ready(function() {
    
- 	var w = 1000;
-    var h = 600;
+ 	var w = 1004;
+    var h = 500;
 
     var svg = d3.select("#line")
       .append("svg")
@@ -13,13 +13,13 @@
 	var x = d3.scale.linear().domain([0, 10]).range([0, 990]);
     var y = d3.scale.linear().domain([0, 10]).range([10, 590]);
     
-    var data = d3.range(11).map(function(){return Math.random()*10;});
-	var data2 = d3.range(11).map(function(){return Math.random()*10;});
-	var data3 = d3.range(11).map(function(){return Math.random()*10;});
-	var emptyline = d3.range(11).map(function(){return Math.random()*10;});
-	var emptyline2 = d3.range(11).map(function(){return Math.random()*10;});
-	var emptyline3 = d3.range(11).map(function(){return Math.random()*10;});
-	var emptyline4 = d3.range(11).map(function(){return Math.random()*10;});
+    var data = d3.range(11).map(function(){return Math.random()*5;});
+	var data2 = d3.range(11).map(function(){return Math.random()*5;});
+	var data3 = d3.range(11).map(function(){return Math.random()*5;});
+	var emptyline = d3.range(11).map(function(){return Math.random()*8;});
+	var emptyline2 = d3.range(11).map(function(){return Math.random()*8;});
+	var emptyline3 = d3.range(11).map(function(){return Math.random()*8;});
+	var emptyline4 = d3.range(11).map(function(){return Math.random()*8;});
 	
 	var textPosition1 = data[3];
 	var textPosition2 = data2[6];
@@ -42,41 +42,46 @@
 	
     var path = svg.append("path")
       .attr("d", line(data))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none");
-
-      		
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8");      		
 	var path2 = svg.append("path")
       .attr("d", line(data2))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none");
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8");
    	var path3 = svg.append("path")
       .attr("d", line(data3))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none"); 
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8"); 
     var pathempty = svg.append("path")
       .attr("d", line(emptyline))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none");
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8");
      var pathempty2 = svg.append("path")
       .attr("d", line(emptyline2))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none");
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8");
     var pathempty3 = svg.append("path")
       .attr("d", line(emptyline3))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none");
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8");
      var pathempty4 = svg.append("path")
       .attr("d", line(emptyline4))
-      .attr("stroke", "#cccccc")
-      .attr("stroke-width", "2")
-      .attr("fill", "none");   
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", "1")
+      .attr("fill", "none")
+      .style("opacity","0.8");   
     var totalLength = path.node().getTotalLength();
 	var totalLength2 = path2.node().getTotalLength();
 	
@@ -112,7 +117,7 @@
    d3.select('#link1').on("mouseover", function() {
        	var pathOver = svg.append("path")
       .attr("d", line(data))
-      .attr("stroke", "steelblue")
+      .attr("stroke", "#ffffff")
       .attr("stroke-width", "2")
       .attr("fill", "none") 
       .attr("stroke-dasharray", totalLength + " " + totalLength)
@@ -126,7 +131,7 @@
     d3.select('#link2').on("mouseover", function() { 
     	    var pathOver2 = svg.append("path")
       .attr("d", line(data2))
-      .attr("stroke", "#f2b852")
+      .attr("stroke", "#ffffff")
       .attr("stroke-width", "2")
       .attr("fill", "none") 
       .attr("stroke-dasharray", totalLength + " " + totalLength)
@@ -140,7 +145,7 @@
     d3.select('#link3').on("mouseover", function() {   
     	    var pathOver3 = svg.append("path")
       .attr("d", line(data3))
-      .attr("stroke", "red")
+      .attr("stroke", "#ffffff")
       .attr("stroke-width", "2")
       .attr("fill", "none") 
       .attr("stroke-dasharray", totalLength + " " + totalLength)
