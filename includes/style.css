@@ -29,8 +29,8 @@ body {
 .indexBackgr{
 		background-image:url("../images/main.png");
 }
-#wrapper{
-		background-image:url("../images/backkk.jpg");
+.armyPolice{
+		background-image:url("../images/army-police.png");
 }
 
 #degree_wrapper {
@@ -114,8 +114,8 @@ body {
 
 /*this is the homepage*/
   #line{
-  	position:absolute;
-  	top:150px;	
+  	position:fixed;
+  	bottom:0px;	
     width: 1000px;
     margin: 20px 0;
     height: 500px;
@@ -164,7 +164,11 @@ h1 , h3 {
     color: #ffffff;
  
 }
- 
+ .pageCoteret{
+ 	direction:rtl;
+ 	position:absolute;
+ 	right:20px;
+ }
 .main-line {
     width: 358px;
     margin: 0px 333px;
