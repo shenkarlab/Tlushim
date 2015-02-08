@@ -7,11 +7,13 @@ header,nav,main,footer,section,article,aside {
 }
 
 #wrapper,#index_wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
+	
 	font-family:alef,Arial;
 	position: relative;
 	width:1004px;
 	height:570px;
 	margin : 0 auto;
+	padding-top: 40px;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
 		font-style: normal;
 	 	font-weight: normal;
 }
-#index_wrapper{
+.indexBackgr{
 		background-image:url("../images/main.png");
 }
 #wrapper{
@@ -113,7 +115,7 @@ body {
 /*this is the homepage*/
   #line{
   	position:absolute;
-  	top:50px;	
+  	top:90px;	
     width: 1000px;
     margin: 20px 0;
     height: 500px;
