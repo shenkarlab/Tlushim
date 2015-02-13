@@ -124,7 +124,7 @@ function createView(data){
 
 });
 d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
-    .data(['Police', 'Army'])
+    .data(['Ashdod', 'Haifa'])
   .enter().append('span')
     .attr('data-id', function (id) { return id; })
     .attr('class',function(id){return id;})
