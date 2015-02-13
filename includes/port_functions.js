@@ -209,6 +209,9 @@ function changeManIcon(currectYear){
 	   var lineDiv1 = d3.select("#lineDiv1");
    	   var lineDiv2 = d3.select("#lineDiv2");
    	   var lineDiv3 = d3.select("#lineDiv3");
+	var lineDiv1Cotert = d3.select("#lineDiv1Cotert");
+	var lineDiv2Cotert = d3.select("#lineDiv2Cotert");
+	var lineDiv3Cotert = d3.select("#lineDiv3Cotert");
    	   var manLayout1 = d3.select("#holdci");
    	   var manLayout2 = d3.select("#holdci2");
    	   var manLayout3 = d3.select("#holdci3");
@@ -243,6 +246,9 @@ function changeManIcon(currectYear){
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
+		var lineCotertPosition1 = linePosition1 - 37;
+		var lineCotertPosition2 = linePosition2 ;
+		var lineCotertPosition3 = linePosition3 + 70;
 
 if (!man){
 // first Creation
@@ -252,6 +258,9 @@ if (!man){
 	lineDiv1.style('top', linePosition1+'px').text("₪"+data.Ashdod);
 	lineDiv2.style('top', linePosition2+'px').text("₪"+data.Haifa);
 	lineDiv3.style('top', linePosition3+'px').text("₪"+data.All);
+	lineDiv1Cotert.style('top', lineCotertPosition1+'px');
+	lineDiv2Cotert.style('top', lineCotertPosition2+'px');
+	lineDiv3Cotert.style('top', lineCotertPosition3+'px');
 	man = true;
   
 }
@@ -264,6 +273,9 @@ else{
    	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Ashdod);
    	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Haifa);
    	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
+	lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
+	lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
+	lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
   }
     	});
 	
