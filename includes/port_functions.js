@@ -248,7 +248,7 @@ function changeManIcon(currectYear){
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 		var lineCotertPosition1 = linePosition1 - 37;
 		var lineCotertPosition2 = linePosition2 ;
-		var lineCotertPosition3 = linePosition3 + 70;
+		var lineCotertPosition3 = linePosition3 + 75;
 
 if (!man){
 // first Creation
