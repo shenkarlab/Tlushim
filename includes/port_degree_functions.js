@@ -45,7 +45,7 @@ $(".slider")
 
 	function setSliderTicks(el) {
 		var $slider =  $(el);
-		var degreeArray = [{value: 0, text: 'אתת'} ,
+		var degreeArr = [{value: 0, text: 'אתת'} ,
 			{value: 1, text: 'מנכ"ל'} ,
 			{value: 2, text: 'מנופאי'} ,
 			{value: 3, text: 'מכונאי'} ,
@@ -61,7 +61,7 @@ $(".slider")
 
 		$slider.find('.ui-slider-tick-mark').remove();
 		for (var i = 0; i < max-min+1 ; i++) {
-			$('<span class="ui-slider-tick-mark">'+degreeArray[temp_max].text.toString()+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
+			$('<span class="ui-slider-tick-mark">'+degreeArr[temp_max].text.toString()+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
 			temp_max--;
 		}
 	}
