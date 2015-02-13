@@ -61,7 +61,7 @@ $(".slider")
 
 		$slider.find('.ui-slider-tick-mark').remove();
 		for (var i = 0; i < max-min+1 ; i++) {
-			$('<span class="ui-slider-tick-mark">'+degreeArray[temp_max].text+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
+			$('<span class="ui-slider-tick-mark">'+degreeArray[temp_max].text.toString()+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
 			temp_max--;
 		}
 	}
