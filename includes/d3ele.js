@@ -263,7 +263,7 @@ else{
    	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
    	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
    	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
-   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Police);
+   	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text('₪'+data.Police);
    	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Army);
    	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
   }
