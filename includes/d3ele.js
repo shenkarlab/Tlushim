@@ -208,6 +208,9 @@ function changeManIcon(currectYear){
 	   var lineDiv1 = d3.select("#lineDiv1");
    	   var lineDiv2 = d3.select("#lineDiv2");
    	   var lineDiv3 = d3.select("#lineDiv3");
+	var lineDiv1Cotert = d3.select("lineDiv1Cotert");
+	var lineDiv2Cotert = d3.select("lineDiv2Cotert");
+	var lineDiv3Cotert = d3.select("lineDiv3Cotert");
    	   var manLayout1 = d3.select("#holdci");
    	   var manLayout2 = d3.select("#holdci2");
    	   var manLayout3 = d3.select("#holdci3");
