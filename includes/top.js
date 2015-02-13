@@ -107,7 +107,7 @@ function createView(data){
           	  tick: {
                 format: function (x) { return '•'; }
             	},
-            	padding: {left: 1,right: 0.7},
+            	padding: {left: 1,right: 0.2},
           	},
         	y:{
         		padding: {top: 200, bottom: 0},
