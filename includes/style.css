@@ -230,6 +230,11 @@ h3 , h4 {
     width: 120px;
     height: 290px;
 }
+#lineDiv1Cotert,#lineDiv2Cotert,#lineDiv3Cotert{
+	position:absolute;
+	color:#FFFFFF;
+	font-size:14px;
+}
 #lineDiv1{
 	background-image:url("../images/line1.png");
 	background-repeat: no-repeat;
@@ -255,6 +260,7 @@ h3 , h4 {
 	padding-right: 170px;
 	margin-top: 15px;
 }
+
 #lineDiv3{
 	background-image:url("../images/line3.png");
 	background-repeat: no-repeat;

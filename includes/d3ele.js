@@ -241,7 +241,9 @@ function changeManIcon(currectYear){
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
    	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
-
+		var lineCotertPosition1 = linePosition1 - 20;
+		var lineCotertPosition2 = linePosition2 - 20;
+		var lineCotertPosition3 = linePosition3 + 67;
 if (!man){
 // first Creation
 	manLayout1.style('height', (layout1inpx+'px'));
@@ -250,6 +252,9 @@ if (!man){
 	lineDiv1.style('top', linePosition1+'px').text(data.Police);
 	lineDiv2.style('top', linePosition2+'px').text(data.Army);
 	lineDiv3.style('top', linePosition3+'px').text(data.All);
+	lineDiv1Cotert.style('top', lineCotertPosition1+'px');
+	lineDiv2Cotert.style('top', lineCotertPosition2+'px');
+	lineDiv3Cotert.style('top', lineCotertPosition3+'px');
 	man = true;
   
 }
