@@ -61,6 +61,14 @@ body {
     margin: 0 auto;
 }
 
+.ui-slider-tick-mark{
+	display:inline-block;
+	width:2px;
+	height:16px;
+	position:absolute;
+	top:-4px;
+}
+
 #slider-background {	
     margin: 0 auto;
     height:24px;
