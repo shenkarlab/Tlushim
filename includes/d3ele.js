@@ -40,11 +40,12 @@ $(".slider")
 		var $slider =  $(el);
 		var max =  $slider.slider("option", "max");
 		var min =  $slider.slider("option", "min");
+		var temp_min=  $slider.slider("option", "min");
 		var spacing =  100 / (max - min);
 
 		$slider.find('.ui-slider-tick-mark').remove();
 		for (var i = 0; i < max-min ; i++) {
-			$('<span class="ui-slider-tick-mark"></span>').css('left', (spacing * i) +  '%').appendTo($slider);
+			$('<span class="ui-slider-tick-mark">.temp_min++.</span>').css('left', (spacing * i) +  '%').appendTo($slider);
 		}
 	}
 
