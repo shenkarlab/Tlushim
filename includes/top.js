@@ -67,7 +67,7 @@ function createView(data){
 			i++;
 		})
 	});
-
+	console.log(jobArray);
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
