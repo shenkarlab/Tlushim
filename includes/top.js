@@ -53,21 +53,13 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	var dataArray=[];
+	var dataArray= d3.csv.parse(data);
 	var salaryArray=[];
 	var jobArray=[];
 	var organizationArray=[];
 	var i=0;
-	d3.csv(data, function(passData) {
-		passData.forEach(function(d) {
-			dataArray[i] = d.Data;
-				salaryArray[i]= d.AverageSalary;
-					jobArray[i]= d.Job;
-						organizationArray[i]= d.Organization;
-			i++;
-		})
-	});
-	console.log(jobArray);
+
+	console.log(dataArray);
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
