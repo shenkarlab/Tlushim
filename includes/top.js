@@ -53,6 +53,21 @@ function changeViewByYear(){
 }
 
 function createView(data){
+	var dataArray=[];
+	var salaryArray=[];
+	var jobArray=[];
+	var organizationArray=[];
+	var i=0;
+	d3.csv(data, function(passData) {
+		passData.forEach(function(d) {
+			dataArray[i] = d.Data;
+				salaryArray[i]= d.AverageSalary;
+					jobArray[i]= d.Job;
+						organizationArray[i]= d.Organization;
+			i++;
+		})
+	});
+
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
@@ -65,14 +80,14 @@ function createView(data){
        			Industrial: '#b0b0b0',
        			Electric: '#b0b0b0',
        			Ports: '#b0b0b0',
-       			Education: '#b0b0b0',
+       			Education: '#b0b0b0'
 	       },
 	       onmouseover: function(){
 	       		d3.select('#highSalaryData').style('display','block').style('background-color','blue').
 	       		style('height','360px').style('width','350px').text();
 	      	},
 	      	onmouseout: function() {
-	      		d3.select('#highSalaryData').style('display','none');
+	      		d3.select('#highSalaryData').style('display','none').text("");
 	      	}
     	},
         bar: {
@@ -85,7 +100,7 @@ function createView(data){
    		},
     	grid: {
         	x: {
-            	show: true,           
+            	show: true
         	},
        	 	y: {
             	show: true
@@ -96,10 +111,10 @@ function createView(data){
           	  tick: {
                 format: function (x) { return '•'; }
             	},
-            	padding: {left: 1,right: 0.7},
+            	padding: {left: 1,right: 0.7}
           	},
         	y:{
-        		padding: {top: 200, bottom: 0},
+        		padding: {top: 200, bottom: 0}
         	}   
      	}		
 	});
