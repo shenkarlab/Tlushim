@@ -35,19 +35,17 @@ function setValue(myValue) {
 	// myValue is the currect year!! 
     var mySlider = document.getElementById('mySlider');
     mySlider.value = myValue;
-    console.log(currectYear);
 }
 
 
 function changeViewByYear(){
 	console.log(currectYear);
 	var data = "./csv/highSalary"+currectYear+".csv";
-	var pieData = "./csv/highRatio"+currentYear+".csv";
+	var pieData = "./csv/highRatio"+currectYear+".csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
     createView(data);
-    createPie(pieData);
-    
+    createPie(pieData); 
 }
 
 	function toggle(id) {
@@ -69,9 +67,13 @@ function createView(data){
        			Ports: '#b0b0b0',
        			Education: '#b0b0b0',
 	       },
-	       //onmouseover: function(id){
-	       		//createSmall(id.x);
-	      	//},
+	       onmouseover: function(){
+	       		d3.select('#highSalaryData').style('display','block').style('background-color','blue').
+	       		style('height','360px').style('width','350px').text();
+	      	},
+	      	onmouseout: function() {
+	      		d3.select('#highSalaryData').style('display','none');
+	      	}
     	},
         bar: {
        		width: 11,

@@ -133,8 +133,8 @@ body {
 
 #pieGraph {
 	position:absolute;
-	top:125px;
-	left:-309px;
+	top:80px;
+	left:-235px;
 	height:250px;
 	width:350px;
 }
@@ -303,5 +303,13 @@ h3 , h4 {
 #colorIcon,#colorIcon2,#colorIcon2 {
     width: 100%;
     height: 100%;
+}
+
+/*#highSalaryData {
+	position:absolute;
+	top:5px;
+	right:584px;
+	height:360px;
+	width:350px;
 }
 
