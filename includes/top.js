@@ -76,11 +76,7 @@ function createView(data){
        		url:  data,
         	type:'bar',
       		colors: {
-       			Medical: '#b0b0b0',
-       			Industrial: '#b0b0b0',
-       			Electric: '#b0b0b0',
-       			Ports: '#b0b0b0',
-       			Education: '#b0b0b0'
+				AverageSalary: '#b0b0b0'
 	       },
 	       onmouseover: function(){
 	       		d3.select('#highSalaryData').style('display','block').style('background-color','blue').
