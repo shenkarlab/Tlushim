@@ -17,7 +17,6 @@ body {
 }
 
 #wrapper,#index_wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
-
 	position: relative;
 	width:1004px;
 	height:670px;
@@ -31,20 +30,15 @@ body {
 .armyPolice{
 		background-image:url("../images/army-police.png");
 }
+.port {
+	background-image:url("../images/port.png");
+}
 #top {
 	background-image: url("../images/top.png");
 }
-#degree_wrapper {
-	background-image:url("../images/degree_back.jpg");
-}
 
-#port_wrapper {
-	background-image:url("../images/port_background.png");
-}
 
-#ports_degree_wrapper {
-	background-image:url("../images/ports_degree_back.png");
-}
+
 
 
 

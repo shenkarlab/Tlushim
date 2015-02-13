@@ -17,6 +17,15 @@
 	background-image:url("../images/army.png");
 	background-repeat:no-repeat;
 }
+.Ashdod {
+	background-image:url("../images/ashdod.png");
+	background-repeat:no-repeat;
+}
+.Haifa {
+	margin-top:24px;
+	background-image:url("../images/haifa.png");
+	background-repeat:no-repeat;
+}
 .Medical {
 	background-image:url("../images/medical.png");
 	background-repeat:no-repeat;
