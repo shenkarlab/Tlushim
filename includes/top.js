@@ -143,6 +143,13 @@ function createPie(pieData) {
     	data: {
     		url:pieData,
         	type : 'pie',
+			color: {
+				Medical: '#b0b0b0',
+				Industrial: '#b0b0b0',
+				Electric: '#b0b0b0',
+				Ports: '#b0b0b0',
+				Education: '#b0b0b0'
+			},
         	onclick: function (d, i) { console.log("onclick", d, i); },
         	onmouseover: function (d, i) { console.log("onmouseover", d, i); },
         	onmouseout: function (d, i) { console.log("onmouseout", d, i); }

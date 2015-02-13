@@ -34,7 +34,7 @@ body {
 .portBackgr{
 	background-image:url("../images/port.png");
 }
-#top {
+.topBackgr {
 	background-image: url("../images/top.png");
 }
 
