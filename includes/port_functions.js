@@ -206,15 +206,15 @@ function createSmall(id){
 }
 
 function changeManIcon(currectYear){
-	   var lineDiv1 = d3.select("#lineDiv1");
-   	   var lineDiv2 = d3.select("#lineDiv2");
-   	   var lineDiv3 = d3.select("#lineDiv3");
+	var lineDiv1 = d3.select("#lineDiv1");
+	var lineDiv2 = d3.select("#lineDiv2");
+	var lineDiv3 = d3.select("#lineDiv3");
 	var lineDiv1Cotert = d3.select("#lineDiv1Cotert");
 	var lineDiv2Cotert = d3.select("#lineDiv2Cotert");
 	var lineDiv3Cotert = d3.select("#lineDiv3Cotert");
-   	   var manLayout1 = d3.select("#holdci");
-   	   var manLayout2 = d3.select("#holdci2");
-   	   var manLayout3 = d3.select("#holdci3");
+	var manLayout1 = d3.select("#holdci");
+	var manLayout2 = d3.select("#holdci2");
+	var manLayout3 = d3.select("#holdci3");
 	var all;
 	var police;
 	var army;
@@ -273,9 +273,9 @@ else{
    	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Ashdod);
    	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Haifa);
    	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
-	lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
-	lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
-	lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
+		lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
+		lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
+		lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
   }
     	});
 	
