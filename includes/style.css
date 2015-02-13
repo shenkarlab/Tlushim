@@ -239,7 +239,9 @@ h3 , h4 {
 	background-image:url("../images/line1.png");
 	background-repeat: no-repeat;
 	position:absolute;
-	right:64px;
+	right:42px;
+	width:120px;
+	height: 65px;
 	color:#FFFFFF;
 	font-size:44px;
 	padding-right: 170px;
@@ -251,6 +253,8 @@ h3 , h4 {
 	background-repeat: no-repeat;
 	position:absolute;
 	right:60px;
+	width:120px;
+	height: 65px;
 	color:#FFFFFF;
 	font-size:44px;
 	padding-right: 170px;
@@ -261,6 +265,8 @@ h3 , h4 {
 	background-repeat: no-repeat;
 	position:absolute;
 	right:41px;
+	width:120px;
+	height: 65px;
 	color:#FFFFFF;
 	font-size:44px;
 	padding-right: 201px;
