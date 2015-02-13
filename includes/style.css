@@ -232,6 +232,7 @@ h3 , h4 {
 }
 #lineDiv1Cotert,#lineDiv2Cotert,#lineDiv3Cotert{
 	position:absolute;
+	right:160px;
 	color:#FFFFFF;
 	font-size:14px;
 }
