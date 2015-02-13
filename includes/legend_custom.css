@@ -1,9 +1,12 @@
-.container{
+.container, .top_legend_container{
 	position:absolute;
 	top: 175px;
 	right: 6px;
 	width:66px;
 	height:150px;
+}
+.top_legend_container {
+	height:300px;
 }
 .Police{
 	background-image:url("../images/police.png");
@@ -12,6 +15,30 @@
 .Army{
 	margin-top:24px;
 	background-image:url("../images/army.png");
+	background-repeat:no-repeat;
+}
+.Medical {
+	background-image:url("../images/medical.png");
+	background-repeat:no-repeat;
+}
+.Industrial {
+	margin-top:24px;
+	background-image:url("../images/idustrial.png");
+	background-repeat:no-repeat;
+}
+.Electric {
+	margin-top:24px;
+	background-image:url("../images/electric.png");
+	background-repeat:no-repeat;
+}
+.Ports {
+	margin-top:24px;
+	background-image:url("../images/ports.png");
+	background-repeat:no-repeat;
+}
+.Education {
+	margin-top:24px;
+	background-image:url("../images/education.png");
 	background-repeat:no-repeat;
 }
 .legend span {

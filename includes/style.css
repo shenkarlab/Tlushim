@@ -1,5 +1,4 @@
 
-
 * { margin : 0px ; padding: 0px ;}
 
 header,nav,main,footer,section,article,aside {
@@ -32,7 +31,9 @@ body {
 .armyPolice{
 		background-image:url("../images/army-police.png");
 }
-
+#top {
+	background-image: url("../images/top.png");
+}
 #degree_wrapper {
 	background-image:url("../images/degree_back.jpg");
 }
@@ -111,7 +112,13 @@ body {
 	width:350px;
 }
 
-
+#pieGraph {
+	position:absolute;
+	top:125px;
+	left:-309px;
+	height:250px;
+	width:350px;
+}
 /*this is the homepage*/
   #line{
   	position:fixed;
