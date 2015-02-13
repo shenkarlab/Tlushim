@@ -5,9 +5,19 @@ header,nav,main,footer,section,article,aside {
 	display : block;
 }
 
-#wrapper,#index_wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
-	
+body {
 	font-family:alef,Arial;
+}
+
+@font-face {
+	font-family: alef;
+	src: url(Alef-Regular.ttf);
+	font-style: normal;
+	font-weight: normal;
+}
+
+#wrapper,#index_wrapper, #degree_wrapper,#port_wrapper,#ports_degree_wrapper {
+
 	position: relative;
 	width:1004px;
 	height:670px;
@@ -15,16 +25,6 @@ header,nav,main,footer,section,article,aside {
 	padding-top: 40px;
 }
 
-body {
-	font-family:alef,Arial;
-}
-
-@font-face {
-		font-family: alef;
-		src: url(Alef-Regular.ttf);
-		font-style: normal;
-	 	font-weight: normal;
-}
 .indexBackgr{
 		background-image:url("../images/main.png");
 }
@@ -67,7 +67,6 @@ body {
     width: 570px;
     background: url('images/background.png') no-repeat left top;
 }
-
 
 #graphContainer{
 	position:absolute;
