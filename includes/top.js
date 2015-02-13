@@ -143,7 +143,7 @@ function createPie(pieData) {
     	data: {
     		url:pieData,
         	type : 'pie',
-			color: {
+			colors: {
 				Medical: '#b0b0b0',
 				Industrial: '#b0b0b0',
 				Electric: '#b0b0b0',
