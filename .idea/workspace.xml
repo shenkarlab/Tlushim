@@ -58,8 +58,8 @@
       <file leaf-file-name="d3ele.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/d3ele.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.8566244" vertical-offset="0" max-vertical-offset="4556">
-              <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.8947368" vertical-offset="255" max-vertical-offset="4556">
+              <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -303,8 +303,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/d3ele.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.8566244" vertical-offset="0" max-vertical-offset="4556">
-          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.8947368" vertical-offset="255" max-vertical-offset="4556">
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
           <folding />
         </state>
       </provider>

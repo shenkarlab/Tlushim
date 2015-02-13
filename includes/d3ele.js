@@ -31,7 +31,7 @@ $(".slider")
 	var max =  $slider.slider("option", "max");
 	$(".slider").find('.ui-slider-tick-mark').remove();
 	for (var i = 0; i < max ; i++) {
-		$('<span class="ui-slider-tick-mark"></span>').css('left', (spacing * i) +  '%').appendTo($slider);
+		$('<span class="ui-slider-tick-mark"></span>').css('left', (spacing * i) +  '%').appendTo($(".slider"));
 	 
 	  var mySlider = document.createElement('value');
 	  $('.slider').append(mySlider);
