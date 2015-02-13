@@ -1,4 +1,4 @@
-.container, .top_legend_container{
+.container{
 	position:absolute;
 	top: 175px;
 	right: 6px;
@@ -6,6 +6,10 @@
 	height:150px;
 }
 .top_legend_container {
+	position:absolute;
+	top: 175px;
+	right: 6px;
+	width:66px;
 	height:300px;
 }
 .Police{
