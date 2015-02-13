@@ -270,9 +270,9 @@ else{
    	   	lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Police);
    	   	lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Army);
    	   	lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
-	lineDiv1Cotert.style('top', lineCotertPosition1+'px');
-	lineDiv2Cotert.style('top', lineCotertPosition2+'px');
-	lineDiv3Cotert.style('top', lineCotertPosition3+'px');
+	lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
+	lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
+	lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
   }
     	});
 	
