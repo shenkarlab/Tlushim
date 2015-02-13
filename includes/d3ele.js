@@ -130,10 +130,10 @@ function createView(data){
                 format: function (x) { return '•'; }
               
             },
-            padding: {left: 0.7,right: 0.7},
+            padding: {left: 0.7,right: 0.7}
           },
         y:{
-        	 padding: {top: 200, bottom: 0},
+        	 padding: {top: 200, bottom: 0}
         }   
        }
 
