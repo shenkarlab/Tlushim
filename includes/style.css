@@ -121,8 +121,8 @@ body {
 }
 /*this is the homepage*/
   #line{
-  	position:fixed;
-  	bottom:0px;	
+  	position:absolute;
+  	bottom:50px;
     width: 1000px;
     margin: 20px 0;
     height: 500px;
