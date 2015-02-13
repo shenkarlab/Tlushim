@@ -247,12 +247,9 @@ if (!man){
 	manLayout1.style('height', (layout1inpx+'px'));
 	manLayout2.style('height', (layout2inpx+'px'));
 	manLayout3.style('height', (layout3inpx+'px'));
-	lineDiv1.style('top', linePosition1+'px');
-	lineDiv1.text(data.Police);
-	lineDiv2.style('top', linePosition2+'px');
-	lineDiv2.text(data.Army);
-	lineDiv3.style('top', linePosition3+'px');
-	lineDiv3.text(data.All);
+	lineDiv1.style('top', linePosition1+'px').text(data.Police);
+	lineDiv2.style('top', linePosition2+'px').text(data.Army);
+	lineDiv3.style('top', linePosition3+'px').text(data.All);
 	man = true;
   
 }

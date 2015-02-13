@@ -249,9 +249,9 @@ if (!man){
 	manLayout1.style('height', (layout1inpx+'px'));
 	manLayout2.style('height', (layout2inpx+'px'));
 	manLayout3.style('height', (layout3inpx+'px'));
-	lineDiv1.style('top', linePosition1+'px');
-	lineDiv2.style('top', linePosition2+'px');
-	lineDiv3.style('top', linePosition3+'px');
+	lineDiv1.style('top', linePosition1+'px').text("₪"+data.Ashdod);
+	lineDiv2.style('top', linePosition2+'px').text("₪"+data.Haifa);
+	lineDiv3.style('top', linePosition3+'px').text("₪"+data.All);
 	man = true;
   
 }
