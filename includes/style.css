@@ -218,17 +218,20 @@ h3 , h4 {
 #lineDiv1{
 	background-image:url("../images/line1.png");
 	position:absolute;
-	right:150px;
+	right:100px;
 	color:#FFFFFF;
 	font-size:44px;
+	padding-right: 75px;
 }
 #lineDiv2{
+	background-image:url("../images/line2.png");
 	position:absolute;
 	right:150px;
 	color:#FFFFFF;
 	font-size:44px;
 }
 #lineDiv3{
+	background-image:url("../images/line3.png");
 	position:absolute;
 	right:150px;
 	color:#FFFFFF;
