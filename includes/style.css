@@ -217,6 +217,7 @@ h3 , h4 {
 }
 #lineDiv1{
 	background-image:url("../images/line1.png");
+	background-repeat: no-repeat;
 	position:absolute;
 	right:100px;
 	color:#FFFFFF;
@@ -225,6 +226,7 @@ h3 , h4 {
 }
 #lineDiv2{
 	background-image:url("../images/line2.png");
+	background-repeat: no-repeat;
 	position:absolute;
 	right:150px;
 	color:#FFFFFF;
@@ -232,6 +234,7 @@ h3 , h4 {
 }
 #lineDiv3{
 	background-image:url("../images/line3.png");
+	background-repeat: no-repeat;
 	position:absolute;
 	right:150px;
 	color:#FFFFFF;
