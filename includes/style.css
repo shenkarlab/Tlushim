@@ -219,26 +219,32 @@ h3 , h4 {
 	background-image:url("../images/line1.png");
 	background-repeat: no-repeat;
 	position:absolute;
-	right:100px;
+	right:64px;
 	color:#FFFFFF;
-	font-size:44px;
-	padding-right: 75px;
+	font-size:58px;
+	padding-right: 170px;
+	padding-bottom: 40px;
+	margin-top: -20px;
 }
 #lineDiv2{
 	background-image:url("../images/line2.png");
 	background-repeat: no-repeat;
 	position:absolute;
-	right:150px;
+	right:60px;
 	color:#FFFFFF;
 	font-size:44px;
+	padding-right: 170px;
+	margin-top: 15px;
 }
 #lineDiv3{
 	background-image:url("../images/line3.png");
 	background-repeat: no-repeat;
 	position:absolute;
-	right:150px;
+	right:41px;
 	color:#FFFFFF;
 	font-size:44px;
+	padding-right: 201px;
+	margin-top: 20px;
 }
 
 .avarageColor2 ,.avarageColor3{
