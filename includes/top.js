@@ -53,11 +53,17 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	var dataArray= d3.csv.parse(data);
-	var salaryArray=[];
-	var jobArray=[];
-	var organizationArray=[];
-	var i=0;
+	var dataArray= d3.csv.parse(data, function(d)
+	{
+		return {
+			AvarageSalary:+d.AvarageSalary,
+			Job:d.Job,
+			Organization: d.Organization,
+			Data: d.Data
+
+		};
+	});
+
 
 	console.log(dataArray);
 	console.log($("svg").length);
