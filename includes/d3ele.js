@@ -21,24 +21,32 @@ $(".slider")
 	        currectYear = ui.value;
 	      setValue((ui.value));
 	      changeViewByYear();
-	    }
+	    },
+		create: function( event, ui ) {
+			setSliderTicks(event.target);
+		}
     })           
     .slider("pips", {
         rest: "label",
         step: "10"
     });
-	var spacing =  100 / (max -1);
-	var max =  $slider.slider("option", "max");
-	$(".slider").find('.ui-slider-tick-mark').remove();
-	for (var i = 0; i < max ; i++) {
-		$('<span class="ui-slider-tick-mark"></span>').css('left', (spacing * i) + '%').appendTo($(".slider"));
-	}
+
 	  var mySlider = document.createElement('value');
 	  $('.slider').append(mySlider);
 	  mySlider.id = "mySlider";
-	
 
 
+	function setSliderTicks(el) {
+		var $slider =  $(el);
+		var max =  $slider.slider("option", "max");
+		var min =  $slider.slider("option", "min");
+		var spacing =  100 / (max - min);
+
+		$slider.find('.ui-slider-tick-mark').remove();
+		for (var i = 0; i < max-min ; i++) {
+			$('<span class="ui-slider-tick-mark"></span>').css('left', (spacing * i) +  '%').appendTo($slider);
+		}
+	}
 
 function setValue(myValue) {
 	// myValue is the currect year!! 
