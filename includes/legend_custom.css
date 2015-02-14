@@ -7,13 +7,15 @@
 }
 .legend-title1{
 	position: absolute;
-	right:70px;
-	top:208px;
+	right:80px;
+	top:22px;
+	color:#FFFFFF;
 }
 .legend-title2{
 	position: absolute;
-	right:70px;
-	top:274px;
+	right:80px;
+	top:120px;
+	color:#FFFFFF;
 }
 .top_legend_container {
 	position:absolute;
