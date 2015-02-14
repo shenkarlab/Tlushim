@@ -73,7 +73,7 @@ function createView(data){
 		 .get(function(error, rows) { console.log(rows); });
 
 
-	console.log(topInfo);
+	console.log("this is row 0 " + topInfo.get[0]);
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
