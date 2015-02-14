@@ -18,7 +18,7 @@ $(document).ready(function() {
 	console.log("this is currentDegree="+currentDegree);
 	console.log("this is correcttDegree="+correctDegree);
 	createView("./csv/"+correctDegree("id")+"Rank.csv");
-
+	changeManIcon("2012");
 $(".slider")                    
     .slider({ 
         min: 1, 
