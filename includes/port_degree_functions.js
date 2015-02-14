@@ -18,6 +18,16 @@ $(document).ready(function() {
 		if (correctValue > 8 || correctValue < 1){
 			correctValue = 8 ;
 		}
+		else if (correctValue == 1){correctValue = 8;}
+		else if (correctValue == 2){correctValue = 7;}
+		else if (correctValue == 3){correctValue = 6;}
+		else if (correctValue == 4){correctValue = 5;}
+		else if (correctValue == 5){correctValue = 4;}
+		else if (correctValue == 6){correctValue = 3;}
+		else if (correctValue == 7){correctValue = 2;}
+		else if (correctValue == 8){correctValue = 1;}
+
+
 	createView("./csv/ports"+correctDegree("id")+"Rank.csv");
 	changeManIcon("2012");
 $(".slider")                    
