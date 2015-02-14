@@ -68,10 +68,15 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	var topInfo = d3.csv(data);
-	d3.csv(data, function(data) {
-		topInfo=data
-	});
+	var topInfo = d3.csv(data, function(d) {
+		return {
+		AverageSalary:  +d.AverageSalary,
+			Job: d.Job,
+			Organization: d.Organization,
+			Data: d.Data
+		};});
+
+
 	console.log(topInfo);
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
