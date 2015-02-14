@@ -168,8 +168,8 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			haifa = data.Ashdod;
 			ashdod = data.Haifa;
 
-			haifa = (haifa/1000) * 2.5;
-			ashdod = (ashdod/1000) *2.5;
+			haifa = (haifa/1000) * 3;
+			ashdod = (ashdod/1000) *2;
 
 			console.log(haifa);
 			console.log(ashdod);
