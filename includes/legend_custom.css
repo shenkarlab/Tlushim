@@ -6,6 +6,7 @@
 	height:150px;
 }
 .legend-title1{
+	direction: rtl;
 	position: absolute;
 	right:80px;
 	top:22px;
@@ -13,6 +14,7 @@
 	width:120px;
 }
 .legend-title2{
+	direction: rtl;
 	position: absolute;
 	right:80px;
 	top:120px;
