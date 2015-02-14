@@ -28,8 +28,8 @@
       <file leaf-file-name="top.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/top.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74242425" vertical-offset="1072" max-vertical-offset="3009">
-              <caret line="89" column="88" selection-start-line="89" selection-start-column="88" selection-end-line="89" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.7996633" vertical-offset="1072" max-vertical-offset="3043">
+              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -472,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/top.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74242425" vertical-offset="1072" max-vertical-offset="3009">
-          <caret line="89" column="88" selection-start-line="89" selection-start-column="88" selection-end-line="89" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.7996633" vertical-offset="1072" max-vertical-offset="3043">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
           <folding />
         </state>
       </provider>
