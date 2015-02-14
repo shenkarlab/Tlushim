@@ -87,7 +87,7 @@ function createView(data){
 	       onmouseover: function(id){
 			   console.log(id.x);
 	       		d3.select('#highSalaryData').style('display','block').style('background-color','blue').
-	       		style('height','360px').style('width','350px').text(topInfo.get(function(error, rows) { (rows[id.x].Job) }));
+	       		style('height','360px').style('width','350px').text("" + topInfo.get(function(error, rows) { (rows[id.x].Job) }));
 	      	},
 	      	onmouseout: function(id) {
 	      		d3.select('#highSalaryData').style('display','none').text("");
