@@ -14,13 +14,17 @@ $(document).ready(function() {
 	var man = false;
 	var currentDegree;
 	var chart;
+	var correctValue = correctDegree("id");
+		if (correctValue > 8 || correctValue < 1){
+			correctValue = 8 ;
+		}
 	createView("./csv/ports"+correctDegree("id")+"Rank.csv");
 	changeManIcon("2012");
 $(".slider")                    
     .slider({ 
         min: 1, 
         max: 8,
-        value:8,
+        value: correctValue,
         orientation: "vertical",
         slide: function(event, ui) {
 	        currentDegree = ui.value;
