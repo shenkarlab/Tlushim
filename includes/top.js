@@ -70,6 +70,7 @@ function changeViewByYear(){
 
 function createView(data){
 	 topInfo = d3.csv(data, function(d) {
+		 console.log(d.Job);
 		return {
 		AverageSalary:  +d.AverageSalary,
 			Job: d.Job,
