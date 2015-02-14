@@ -5,6 +5,16 @@
 	width:66px;
 	height:150px;
 }
+.legend-title1{
+	position: absolute;
+	right:70px;
+	top:208px;
+}
+.legend-title2{
+	position: absolute;
+	right:70px;
+	top:274px;
+}
 .top_legend_container {
 	position:absolute;
 	top: 175px;
