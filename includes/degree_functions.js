@@ -15,6 +15,18 @@ $(document).ready(function() {
 	var man = false;
 	var currentDegree;
 	var chart;
+	var correctValue = correctDegree("id");
+	if (correctValue > 8 || correctValue < 1){
+		correctValue = 8 ;
+	}
+	else if (correctValue == 1){correctValue = 8;}
+	else if (correctValue == 2){correctValue = 7;}
+	else if (correctValue == 3){correctValue = 6;}
+	else if (correctValue == 4){correctValue = 5;}
+	else if (correctValue == 5){correctValue = 4;}
+	else if (correctValue == 6){correctValue = 3;}
+	else if (correctValue == 7){correctValue = 2;}
+	else if (correctValue == 8){correctValue = 1;}
 	console.log("this is currentDegree="+currentDegree);
 	console.log("this is correcttDegree="+correctDegree);
 	createView("./csv/"+correctDegree("id")+"Rank.csv");
@@ -23,7 +35,7 @@ $(".slider")
     .slider({ 
         min: 1, 
         max: 8,
-        value:8,
+        value:correctValue,
         orientation: "vertical",
         slide: function(event, ui) {
 	        currentDegree = ui.value;
