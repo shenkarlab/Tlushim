@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var topInfo = [];
 	var man = false;
 	var currectYear;
 	var chart;
@@ -68,7 +69,7 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	var topInfo = d3.csv(data, function(d) {
+	 topInfo = d3.csv(data, function(d) {
 		return {
 		AverageSalary:  +d.AverageSalary,
 			Job: d.Job,
