@@ -85,6 +85,7 @@ function createView(data){
 				AverageSalary: '#b0b0b0'
 	       },
 	       onmouseover: function(id){
+			   console.log(id);
 	       		d3.select('#highSalaryData').style('display','block').style('background-color','blue').
 	       		style('height','360px').style('width','350px').text(topInfo.get(function(error, rows) { (rows[id].Job) }));
 	      	},
