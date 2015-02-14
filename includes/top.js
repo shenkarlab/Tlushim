@@ -69,7 +69,8 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	 topInfo = d3.csv(data);
+	 topInfo = d3.csv(data)    .row(function(d) { return {AverageSalary: d.AverageSalary, Job: +d.Job, Organization: +d.Organization, Data: +d.Data}; })
+		 .get(function(error, rows) { console.log(rows); });
 
 
 	console.log(topInfo);
