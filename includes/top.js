@@ -69,11 +69,7 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	 topInfo = d3.csv(data)    .row(function(d) { return {AverageSalary: d.AverageSalary, Job: d.Job, Organization: d.Organization, Data:d.Data}; })
-		 .get(function(error, rows) { console.log(rows); });
-
-
-	console.log("this is row 0 " + topInfo.get(function(error, rows) { console.log(rows[1].Data); }));
+	 topInfo = d3.csv(data).row(function(d) { return {AverageSalary: d.AverageSalary, Job: d.Job, Organization: d.Organization, Data:d.Data}; });
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
@@ -85,7 +81,6 @@ function createView(data){
 				AverageSalary: '#b0b0b0'
 	       },
 	       onmouseover: function(id){
-			   console.log(id.x);
 			   topInfo.get(function(error, rows) {
 				   d3.select('#highSalaryData').style('display', 'block').style('background-color', 'blue').
 					   style('height', '360px').style('width', '350px').text("" + (rows[id.x].Job));
