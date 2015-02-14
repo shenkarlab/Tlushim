@@ -15,7 +15,7 @@ $(document).ready(function() {
 	var currentDegree;
 	var chart;
 	createView("./csv/ports"+correctDegree("id")+"Rank.csv");
-
+	changeManIcon("2012");
 $(".slider")                    
     .slider({ 
         min: 1, 
@@ -147,5 +147,82 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
   }
    
    
- }
+ } // close createView()
+
+	function changeManIcon(currectYear){
+		var lineDiv1 = d3.select("#lineDiv1");
+		var lineDiv2 = d3.select("#lineDiv2");
+		var lineDiv3 = d3.select("#lineDiv3");
+		var lineDiv1Cotert = d3.select("#lineDiv1Cotert");
+		var lineDiv2Cotert = d3.select("#lineDiv2Cotert");
+		var lineDiv3Cotert = d3.select("#lineDiv3Cotert");
+		var manLayout1 = d3.select("#holdci");
+		var manLayout2 = d3.select("#holdci2");
+		var manLayout3 = d3.select("#holdci3");
+		var all;
+		var police;
+		var army;
+		var ashdod;
+		var haifa;
+		d3.json("./json/avaregeSalary"+currectYear+".json",function(data) {
+			haifa = data.Ashdod;
+			ashdod = data.Haifa;
+
+			haifa = (haifa/1000) * 2.5;
+			ashdod = (ashdod/1000) *2.5;
+
+			console.log(haifa);
+			console.log(ashdod);
+
+			var layout1 = 100;
+			var layout2 = haifa;
+			var layout3 = ashdod;
+			// div position (text and line)
+			var layout1inpx = layout1*290/100;
+			var layout2inpx = layout2*290/100;
+			var layout3inpx = layout3*290/100;
+			var layoutRegion1 = (290 - layout2inpx);
+			var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
+			var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
+
+			var linePosition1 = 0 + (0.5*layoutRegion3)-40;
+			console.log(linePosition1);
+			var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
+			console.log(linePosition1);
+			var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
+			var lineCotertPosition1 = linePosition1 - 37;
+			var lineCotertPosition2 = linePosition2 ;
+			var lineCotertPosition3 = linePosition3 + 75;
+
+			if (!man){
+// first Creation
+				manLayout1.style('height', (layout1inpx+'px'));
+				manLayout2.style('height', (layout2inpx+'px'));
+				manLayout3.style('height', (layout3inpx+'px'));
+				lineDiv1.style('top', linePosition1+'px').text("₪"+data.Ashdod);
+				lineDiv2.style('top', linePosition2+'px').text("₪"+data.Haifa);
+				lineDiv3.style('top', linePosition3+'px').text("₪"+data.All);
+				lineDiv1Cotert.style('top', lineCotertPosition1+'px');
+				lineDiv2Cotert.style('top', lineCotertPosition2+'px');
+				lineDiv3Cotert.style('top', lineCotertPosition3+'px');
+				man = true;
+
+			}
+
+			else{
+				console.log("inside man transition");
+				manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
+				manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
+				manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
+				lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Ashdod);
+				lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Haifa);
+				lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
+				lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
+				lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
+				lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
+			}
+		});
+
+	}
+
 });
