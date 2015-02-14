@@ -87,8 +87,8 @@ function createView(data){
 	      	}
     	},
         bar: {
-       		width: 11,
-       		ratio: 10
+       		width: 37
+
         },
     	legend : {
     		position:'right',
