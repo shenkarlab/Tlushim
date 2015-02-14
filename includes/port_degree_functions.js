@@ -11,7 +11,7 @@ $(document).ready(function() {
         }
     }
 };
-	
+	var man = false;
 	var currentDegree;
 	var chart;
 	createView("./csv/ports"+correctDegree("id")+"Rank.csv");
