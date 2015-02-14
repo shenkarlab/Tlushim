@@ -88,7 +88,7 @@ function createView(data){
 			   console.log(id.x);
 	       		d3.select('#highSalaryData').style('display','block').style('background-color','blue').
 	       		style('height','360px').style('width','350px').text("" + topInfo.get(function(error, rows) { (rows[id.x].Job
-						.toString = function () {
+						.toString ( function () {
 						var s = [];
 						for (var k in this) {
 							if (this.hasOwnProperty(k)) s.push(k + ':' + this[k]);
@@ -97,7 +97,7 @@ function createView(data){
 					}
 
 
-					) }));
+					) )}));
 	      	},
 	      	onmouseout: function(id) {
 	      		d3.select('#highSalaryData').style('display','none').text("");
