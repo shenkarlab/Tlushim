@@ -224,8 +224,8 @@ function changeManIcon(currectYear){
 		haifa = data.Ashdod;
 		ashdod = data.Haifa;
 
-	haifa = (haifa/1000) * 2;
-	ashdod = (ashdod/1000) *3;
+	haifa = (haifa/1000) * 3;
+	ashdod = (ashdod/1000) *2;
 	
 	console.log(haifa);
 	console.log(ashdod);
