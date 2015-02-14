@@ -83,11 +83,9 @@ function createView(data){
 	       onmouseover: function(id){
 			   topInfo.get(function(error, rows) {
 				   d3.select('#highSalaryData').style('display', 'block').
-					   style('height', '360px').style('width', '350px').text("" +
+					   style('height', '360px').style('width', '350px').html("" +
 						   "ארגון: "+
-					   (rows[id.x].Organization));
-				   d3.select('#highSalaryData').append('br');
-				   d3.select('#highSalaryData').text(+
+					   (rows[id.x].Organization)+"<br>"
 						   "תפקיד: "+
 					   (rows[id.x].Data)+ "<br>"+
 						   "שכר:"+
