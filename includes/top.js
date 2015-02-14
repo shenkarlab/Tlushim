@@ -83,15 +83,15 @@ function createView(data){
 	       onmouseover: function(id){
 			   topInfo.get(function(error, rows) {
 				   d3.select('#highSalaryData').style('display', 'block').
-					   style('height', '360px').style('width', '350px').text("" +
+					   style('height', '360px').style('width', '350px').append("" +
 						   "ארגון: "+
 					   (rows[id.x].Organization)+ "<br>"+
 						   "תפקיד: "+
-					   (rows[id.x].Job)+ "<br>"+
+					   (rows[id.x].Data)+ "<br>"+
 						   "שכר:"+
 					   (rows[id.x].AverageSalary)+ "<br>"+
 						   "מידע נוסף:"+
-					   (rows[id.x].Data)
+					   (rows[id.x].Job)
 
 				   );
 			   });
