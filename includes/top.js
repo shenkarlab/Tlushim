@@ -85,12 +85,13 @@ function createView(data){
 				   d3.select('#highSalaryData').style('display', 'block').
 					   style('height', '360px').style('width', '350px').text("" +
 						   "ארגון: "+
-					   (rows[id.x].Organization)+
+					   (rows[id.x].Organization)+ "<br>"+
 						   "תפקיד: "+
-					   (rows[id.x].Job)+
+					   (rows[id.x].Job)+ "<br>"+
 						   "שכר:"+
-					   (rows[id.x].AverageSalary)+
-						   "מידע נוסף:"
+					   (rows[id.x].AverageSalary)+ "<br>"+
+						   "מידע נוסף:"+
+					   (rows[id.x].Data)
 
 				   );
 			   });
