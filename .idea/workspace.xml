@@ -28,10 +28,10 @@
       <file leaf-file-name="top.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/top.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65824914" vertical-offset="1122" max-vertical-offset="2652">
-              <caret line="89" column="73" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.7154882" vertical-offset="1071" max-vertical-offset="2652">
+              <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
               <folding>
-                <element signature="e#3849#4330#0" expanded="false" />
+                <element signature="e#3854#4335#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -70,9 +70,12 @@
       <file leaf-file-name="top.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.576923" vertical-offset="252" max-vertical-offset="884">
-              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-              <folding />
+            <state vertical-scroll-proportion="-17.76923" vertical-offset="269" max-vertical-offset="918">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,12 +106,12 @@
         <option value="$PROJECT_DIR$/apDegree.html" />
         <option value="$PROJECT_DIR$/ports.html" />
         <option value="$PROJECT_DIR$/portsDegree.html" />
-        <option value="$PROJECT_DIR$/top.html" />
         <option value="$PROJECT_DIR$/includes/legend_custom.css" />
         <option value="$PROJECT_DIR$/includes/port_degree_functions.js" />
         <option value="$PROJECT_DIR$/includes/degree_functions.js" />
         <option value="$PROJECT_DIR$/includes/c3.css" />
         <option value="$PROJECT_DIR$/includes/style.css" />
+        <option value="$PROJECT_DIR$/top.html" />
         <option value="$PROJECT_DIR$/includes/top.js" />
       </list>
     </option>
@@ -395,14 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.576923" vertical-offset="252" max-vertical-offset="884">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/legend_custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1955">
@@ -468,12 +463,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.76923" vertical-offset="269" max-vertical-offset="918">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/top.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65824914" vertical-offset="1122" max-vertical-offset="2652">
-          <caret line="89" column="73" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.7154882" vertical-offset="1071" max-vertical-offset="2652">
+          <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
           <folding>
-            <element signature="e#3849#4330#0" expanded="false" />
+            <element signature="e#3854#4335#0" expanded="false" />
           </folding>
         </state>
       </provider>
