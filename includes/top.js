@@ -85,7 +85,7 @@ function createView(data){
 				   d3.select('#highSalaryData').style('display', 'block').
 					   style('height', '360px').style('width', '350px').html("" +
 						   "ארגון: "+
-					   (rows[id.x].Organization)+"<br>"
+					   (rows[id.x].Organization)+"<br>"+
 						   "תפקיד: "+
 					   (rows[id.x].Data)+ "<br>"+
 						   "שכר:"+
