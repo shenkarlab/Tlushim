@@ -25,20 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="port_functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="port_functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/port_functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4498" max-vertical-offset="4896">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.18844222" vertical-offset="3784" max-vertical-offset="4896">
+              <caret line="227" column="29" selection-start-line="227" selection-start-column="29" selection-end-line="227" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ports.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ports.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ports.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4317549" vertical-offset="1647" max-vertical-offset="2108">
+            <state vertical-scroll-proportion="-51.076923" vertical-offset="474" max-vertical-offset="2108">
               <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
               <folding />
             </state>
@@ -48,7 +48,7 @@
       <file leaf-file-name="ap.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.884615" vertical-offset="1766" max-vertical-offset="2125">
+            <state vertical-scroll-proportion="-21.653847" vertical-offset="1460" max-vertical-offset="2125">
               <caret line="119" column="0" selection-start-line="38" selection-start-column="4" selection-end-line="119" selection-end-column="0" />
               <folding />
             </state>
@@ -67,7 +67,6 @@
         <option value="$PROJECT_DIR$/csv/highSalary2012.csv" />
         <option value="$PROJECT_DIR$/ap.html" />
         <option value="$PROJECT_DIR$/includes/d3ele.js" />
-        <option value="$PROJECT_DIR$/includes/port_functions.js" />
         <option value="$PROJECT_DIR$/includes/legend_custom.css" />
         <option value="$PROJECT_DIR$/includes/style.css" />
         <option value="$PROJECT_DIR$/top.html" />
@@ -76,6 +75,7 @@
         <option value="$PROJECT_DIR$/includes/port_degree_functions.js" />
         <option value="$PROJECT_DIR$/includes/degree_functions.js" />
         <option value="$PROJECT_DIR$/ports.html" />
+        <option value="$PROJECT_DIR$/includes/port_functions.js" />
       </list>
     </option>
   </component>
@@ -385,24 +385,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.884615" vertical-offset="1766" max-vertical-offset="2125">
+        <state vertical-scroll-proportion="-21.653847" vertical-offset="1460" max-vertical-offset="2125">
           <caret line="119" column="0" selection-start-line="38" selection-start-column="4" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/port_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4896">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ports.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4317549" vertical-offset="1647" max-vertical-offset="2108">
+        <state vertical-scroll-proportion="-51.076923" vertical-offset="474" max-vertical-offset="2108">
           <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/port_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18844222" vertical-offset="3784" max-vertical-offset="4896">
+          <caret line="227" column="29" selection-start-line="227" selection-start-column="29" selection-end-line="227" selection-end-column="29" />
           <folding />
         </state>
       </provider>
