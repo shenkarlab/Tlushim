@@ -68,6 +68,8 @@ function changeViewByYear(){
 }
 
 function createView(data){
+	var topInfo = d3.csv(data);
+	console.log(topInfo);
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
