@@ -69,6 +69,9 @@ function changeViewByYear(){
 
 function createView(data){
 	var topInfo = d3.csv(data);
+	d3.csv(data, function(data) {
+		topInfo=data
+	});
 	console.log(topInfo);
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
