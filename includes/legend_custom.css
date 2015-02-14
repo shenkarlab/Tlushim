@@ -25,33 +25,33 @@
 	direction: rtl;
 	position: absolute;
 	right:80px;
-	top:22px;
+	top:218px;
 	color:#FFFFFF;
-	width:218px;
+	width:120px;
 }
 .legend-title4{
 	direction: rtl;
 	position: absolute;
 	right:80px;
-	top:120px;
+	top:316px;
 	color:#FFFFFF;
-	width:316px;
+	width:120px;
 }
 .legend-title5{
 	direction: rtl;
 	position: absolute;
 	right:80px;
-	top:22px;
+	top:414px;
 	color:#FFFFFF;
-	width:414px;
+	width:120px;
 }
 .legend-title6{
 	direction: rtl;
 	position: absolute;
 	right:80px;
-	top:120px;
+	top:512px;
 	color:#FFFFFF;
-	width:512px;
+	width:120px;
 }
 .top_legend_container {
 	position:absolute;
