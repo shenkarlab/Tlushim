@@ -82,7 +82,7 @@ function createView(data){
 	       },
 	       onmouseover: function(id){
 			   topInfo.get(function(error, rows) {
-				   d3.select('#highSalaryData').style('display', 'block').style('background-color', 'blue').
+				   d3.select('#highSalaryData').style('display', 'block').
 					   style('height', '360px').style('width', '350px').text("" + (rows[id.x].Job));
 			   });
 	      	},
