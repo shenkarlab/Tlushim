@@ -38,23 +38,20 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2343" max-vertical-offset="5712">
-              <caret line="141" column="10" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1221" max-vertical-offset="5916">
+              <caret line="88" column="31" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highSalary2011.csv" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/csv/highSalary2011.csv">
+      <file leaf-file-name="port_degree_functions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/port_degree_functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2815735" vertical-offset="0" max-vertical-offset="483">
-              <caret line="8" column="77" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.492" vertical-offset="1012" max-vertical-offset="4199">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -115,13 +112,13 @@
         <option value="$PROJECT_DIR$/ports.html" />
         <option value="$PROJECT_DIR$/portsDegree.html" />
         <option value="$PROJECT_DIR$/includes/legend_custom.css" />
-        <option value="$PROJECT_DIR$/includes/port_degree_functions.js" />
         <option value="$PROJECT_DIR$/includes/degree_functions.js" />
         <option value="$PROJECT_DIR$/includes/c3.css" />
         <option value="$PROJECT_DIR$/top.html" />
         <option value="$PROJECT_DIR$/includes/top.js" />
-        <option value="$PROJECT_DIR$/includes/style.css" />
         <option value="$PROJECT_DIR$/csv/highSalary2011.csv" />
+        <option value="$PROJECT_DIR$/includes/style.css" />
+        <option value="$PROJECT_DIR$/includes/port_degree_functions.js" />
       </list>
     </option>
   </component>
@@ -377,14 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/port_degree_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45791245" vertical-offset="0" max-vertical-offset="4199">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="27" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/legend_custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1955">
@@ -466,14 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2343" max-vertical-offset="5712">
-          <caret line="141" column="10" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csv/highSalary2011.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2815735" vertical-offset="0" max-vertical-offset="483">
@@ -483,6 +464,22 @@
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1221" max-vertical-offset="5916">
+          <caret line="88" column="31" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/port_degree_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.492" vertical-offset="1012" max-vertical-offset="4199">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
