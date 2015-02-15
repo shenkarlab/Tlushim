@@ -85,8 +85,16 @@ function setValue(myValue) {
 
 
 function changeViewByDegree(){
+	if (currentDegree == 1){currentDegree = 8;}
+	else if (currentDegree == 2){currentDegree = 7;}
+	else if (currentDegree == 3){currentDegree = 6;}
+	else if (currentDegree == 4){currentDegree = 5;}
+	else if (currentDegree == 5){currentDegree = 4;}
+	else if (currentDegree == 6){currentDegree = 3;}
+	else if (currentDegree == 7){currentDegree = 2;}
+	else if (currentDegree == 8){currentDegree = 1;}
 	console.log(currentDegree);
-	var data = "./csv/"+correctDegree("id")+"Rank.csv";
+	var data = "./csv/"+currentDegree+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
     createView(data);
