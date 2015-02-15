@@ -3,6 +3,8 @@ $(document).ready(function() {
 	var currectYear;
 	var chart;
 	var small_chart;
+	var portSalary;
+	var portDegreeArr = ["אתת","מנהל כללי","מנופאי","מכונאי","סדרן","נתב","קברניט","ראש ענף"];
 	createView("./csv/portsdata2012.csv");
 	changeManIcon("2012");
 
@@ -76,8 +78,7 @@ function changeViewByYear(){
 }
 
 function createView(data){
-	
-
+	portSalary = d3.csv(data).row(function(d) { return {AshdodSalary: d.Ashdod, HaifaSalary: d.Haifa}; });
 	console.log($("svg").length);
 	if ( $("svg").length == 3){
 		chart = c3.generate({
@@ -91,6 +92,18 @@ function createView(data){
 	       },
 	       onmouseover: function(id){
 	       		createSmall(id.x);
+				armyPoliceSalary.get(function(error, rows) {
+					d3.select('#policeArmyData').style('display', 'block').
+						html("" +
+							"דרגת "+
+						portDegreeArr[id.x] +
+							" שכר: "+
+						+rows[id.x].AshdodSalary + ' ש"ח '+ '<br>'+
+						"דרגת "+
+						portDegreeArr[id.x]+
+						" שכר: "+
+						+rows[id.x].HaifaSalary+ ' ש"ח '		
+						)});	       		
 	      	},
 	      	onclick: function(id) {
 	      		document.location.href = "portsDegree.html?id="+(id.x+1);	
