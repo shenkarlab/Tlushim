@@ -15,7 +15,9 @@ $(document).ready(function() {
 	var man = false;
 	var currentDegree = correctDegree("id");;
 	var chart;
-	var apDegreeData= d3.csv("./csv/apDegreeData.csv").row(function(d) { return {Data:d.Data}; });
+	var policeDegreeArr = ["מפכל","ניצב","תת-ניצב","ניצב משנה","סגן ניצב","רב פקד","פקד","מפקח"];
+	var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
+	var apDegreeData= d3.csv("./csv/apDegreeData.csv").row(function(d) { return {policeData:d.Police,armyData:d.Army}; });
 	var correctValue = correctDegree("id");
 	if (correctValue > 8 || correctValue < 1){
 		correctValue = 8 ;
@@ -61,8 +63,7 @@ $(".slider")
 
 	function setSliderTicks(el) {
 		var $slider =  $(el);
-		var policeDegreeArr = ["מפכל","ניצב","תת-ניצב","ניצב משנה","סגן ניצב","רב פקד","פקד","מפקח"];
-		var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
+
 
 		var max =  $slider.slider("option", "max");
 		var min =  $slider.slider("option", "min");
@@ -113,10 +114,13 @@ function createView(data){
 		d3.select('#portDegreeData').style('display', 'block').
 			html("" +
 			'<b>'+
-			degreeArr[currentDegree] +'</b>'+'<br>'+
-			+(rows[currentDegree].Data)
+			policeDegreeArr[currentDegree] +'</b>'+'<br>'+
+			+(rows[currentDegree].policeData)+
+			'<b>'+'<br>'+'<br>'+
+			armyDegreeArr[currentDegree] +'</b>'+'<br>'+
+			+(rows[currentDegree].armyData)
 
-		);console.log(rows[currentDegree].Data);});
+		);console.log(rows[currentDegree].armyData);});
 
 
 
