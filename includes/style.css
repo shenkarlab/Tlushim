@@ -87,13 +87,13 @@ body {
 	font-size: 14px;
 }
 .ui-slider-tick-mark-rank-ports{
-	direction: rtl;
 	display:inline-block;
 	width:40px;
 	height:16px;
 	position:absolute;
-	left:99px;
-	margin-top: -15px;
+	left:69px;
+	margin-top: -13px;
+	text-align: center;
 	font-family: alef;
 	color: #FFFFFF;
 	font-size: 10px;
