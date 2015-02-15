@@ -181,7 +181,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 				degreeArr[currentDegree] +'</b><br>'+
 				+rows[currentDegree].Data
 
-			)});
+			);console.log(rows[0].Data);});
 
    
  } // close createView()
