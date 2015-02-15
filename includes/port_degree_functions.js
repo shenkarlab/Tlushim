@@ -14,7 +14,7 @@ $(document).ready(function() {
 	var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סדרן","נתב","קברניט","רענ"];
 	var portDegreeData= d3.csv("./csv/portsDegreeData.csv").row(function(d) { return {Data:d.Data}; });
 	var man = false;
-	var currentDegree;
+	var currentDegree= correctDegree("id");
 	var chart;
 	var correctValue = correctDegree("id");
 		if (correctValue > 8 || correctValue < 1){
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		else if (correctValue == 8){correctValue = 1;}
 
 
-	createView("./csv/ports"+correctDegree("id")+"Rank.csv",(correctDegree("id")-1));
+	createView("./csv/ports"+correctDegree("id")+"Rank.csv");
 	changeManIcon("2012");
 $(".slider")                    
     .slider({ 
@@ -96,7 +96,7 @@ function changeViewByDegree(){
 	var data = "./csv/ports"+currentDegree+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
-    createView(data,currentDegree-1);
+    createView(data);
 	
 };
 
@@ -104,7 +104,7 @@ function changeViewByDegree(){
     chart.toggle(id);
 }
 
-function createView(data,currentDegree){
+function createView(data){
 
 	console.log("this is currentDegree:" +currentDegree)
 	console.log("this is num of svg: "+$("svg").length);
