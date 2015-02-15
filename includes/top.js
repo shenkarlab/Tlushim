@@ -172,10 +172,7 @@ function createPie(pieData) {
 				onmouseout: function (d, i) {
 					console.log("onmouseout", d, i);
 				}
-			},
-	    	tooltip: {
-       			show: false
-    		},			
+			},		
 			legend: {
 				position: 'right',
 				show: false
