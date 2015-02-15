@@ -106,7 +106,7 @@ function createView(data,topData){
 	      	}
     	},
         bar: {
-       		width: 11,
+       		width: 8,
        		ratio: 6
         },
     	legend : {
