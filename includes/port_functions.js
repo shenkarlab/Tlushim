@@ -113,7 +113,7 @@ function createView(data){
             		{value: 1, text: 'מנכ"ל'} ,
             		{value: 2, text: 'מנופאי'} ,
             		{value: 3, text: 'מכונאי'} ,
-            		{value: 4, text: 'סגן ניצב'} ,
+            		{value: 4, text: 'סדרן'} ,
             		{value: 5, text: 'נתב'} ,
             		{value: 6, text: 'קברניט'} ,
             		{value: 7, text: 'רע"נ'} ,
