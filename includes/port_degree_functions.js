@@ -13,6 +13,8 @@ $(document).ready(function() {
 };
 	var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סדרן","נתב","קברניט","רענ"];
 	var portDegreeData= d3.csv("./csv/portsDegreeData.csv").row(function(d) { return {Data: d.Data}; });
+	console.log(portDegreeData);
+	console.log(portDegreeData[0].Data);
 	var man = false;
 	var currentDegree;
 	var chart;
