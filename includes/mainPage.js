@@ -40,8 +40,8 @@
 	var link2 = d3.select('#link2').style('top',y(data2[6])+'px').style('left',6*100+'px').style('display','block');
 	var link3 = d3.select('#link3').style('top',y(data3[9])+'px').style('left',9*100+'px').style('display','block');
        d3.select('#link1Dot').style('top',y(data[3])+'px').style('left',(3*100)-5+'px').style('display','block');
-       d3.select('#link2Dot').style('top',y(data[3])+'px').style('left',(6*100)-5+'px').style('display','block');
-       d3.select('#link3Dot').style('top',y(data[3])+'px').style('left',(9*100)-5+'px').style('display','block');
+       d3.select('#link2Dot').style('top',y(data[6])+'px').style('left',(6*100)-5+'px').style('display','block');
+       d3.select('#link3Dot').style('top',y(data[9])+'px').style('left',(9*100)-5+'px').style('display','block');
     var path = svg.append("path")
       .attr("d", line(data))
       .attr("stroke", "#ffffff")
