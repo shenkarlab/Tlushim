@@ -172,6 +172,18 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
         type: 'area'
     });
   }
+  armyPoliceSalary.get(function(error, rows) {
+	d3.select('#policeArmyData').style('display', 'block').
+		html("" +
+		"דרגת "+
+		policeDegreeArr[id.x] +
+			" שכר: "+
+				+rows[id.x].PoliceSalary + ' ש"ח '+ '<br>'+
+				"דרגת "+
+				armyDegreeArr[id.x]+
+				" שכר: "+
+				+rows[id.x].ArmySalary+ ' ש"ח '					
+	)});
    
    
  }//close createView()
