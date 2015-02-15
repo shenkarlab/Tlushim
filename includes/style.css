@@ -58,7 +58,9 @@ body {
 #slider-cotert{
 	position: absolute;
 	top:-30px;
-	right:-3px;
+	right:-25px;
+	width: 70px;
+	text-align: center;
 	color:#FFFFFF;
 	font-size: 16px;
 
