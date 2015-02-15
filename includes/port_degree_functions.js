@@ -106,17 +106,17 @@ function changeViewByDegree(){
 
 function createView(data){
 
-	console.log("this is currentDegree:" +currentDegree)
+	console.log("this is currentDegree:" +currentDegree-1)
 	console.log("this is num of svg: "+$("svg").length);
 
 	portDegreeData.get(function(error, rows) {
 		d3.select('#portDegreeData').style('display', 'block').
 			html("" +
 			'<b>'+
-			degreeArr[currentDegree] +'</b>'+'<br>'+
-			+(rows[currentDegree].Data)
+			degreeArr[currentDegree-1] +'</b>'+'<br>'+
+			+(rows[currentDegree-1].Data)
 
-		);console.log(rows[currentDegree].Data);});
+		);console.log(rows[currentDegree-1].Data);});
 
 
 	if ( $("svg").length == 3){
