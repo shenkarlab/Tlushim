@@ -100,7 +100,18 @@ body {
 	color: #FFFFFF;
 	font-size: 12px;
 }
-
+.ui-slider-tick-mark-rank-ap{
+	display:inline-block;
+	width:45px;
+	height:16px;
+	position:absolute;
+	left:66px;
+	margin-top: -16px;
+	text-align: center;
+	font-family: alef;
+	color: #FFFFFF;
+	font-size: 9px;
+}
 #slider-background {	
     margin: 0 auto;
     height:24px;

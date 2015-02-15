@@ -70,7 +70,7 @@ $(".slider")
 
 		$slider.find('.ui-slider-tick-mark').remove();
 		for (var i = 0; i < max-min+1 ; i++) {
-			$('<span class="ui-slider-tick-mark-rank-ports">'+policeDegreeArr[temp_max-1]+'<br>'+armyDegreeArr[temp_max-1]+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
+			$('<span class="ui-slider-tick-mark-rank-ap">'+policeDegreeArr[temp_max-1]+'<br>'+armyDegreeArr[temp_max-1]+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
 			temp_max++;
 		}
 	}
