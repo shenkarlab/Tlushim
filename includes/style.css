@@ -170,6 +170,7 @@ body {
     margin: 20px 0 0 20px;
   }
 	#link1Dot,#link2Dot,#link3Dot{
+		position: absolute;
 		font-family: alef,Arial;
 		color:#ffffff;
 		text-decoration: none;
