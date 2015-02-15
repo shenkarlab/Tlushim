@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var man = false;
 	var currectYear;
 	var chart;
+	var pieChart;
 	var small_chart;
 	createView("./csv/highSalary2012.csv");
 	createPie("./csv/highRatio2012.csv");
@@ -65,7 +66,7 @@ function changeViewByYear(){
 }
 
 	function toggle(id) {
-    chart.toggle(id);
+    pieChart.toggle(id);
 }
 
 function createView(data){
@@ -140,7 +141,7 @@ function createView(data){
 
 function createPie(pieData) {
 	if ( $("svg").length <= 1) {
-		var pieChart = c3.generate({
+		pieChart = c3.generate({
 			bindto: '#pieGraph',
 			data: {
 				url: pieData,
