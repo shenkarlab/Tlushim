@@ -90,12 +90,12 @@ $(document).ready(function() {
 								html("" +
 									"דרגת "+
 								policeDegreeArr[id.x] +
-									"שכר: "+
-								+rows[id.x].PoliceSalary + 'ש"ח '+ '<br>'+
+									" שכר: "+
+								+rows[id.x].PoliceSalary + ' ש"ח '+ '<br>'+
 								"דרגת "+
 								armyDegreeArr[id.x]+
-								"שכר: "+
-								+rows[id.x].ArmySalary+ 'ש"ח '
+								" שכר: "+
+								+rows[id.x].ArmySalary+ ' ש"ח '
 								
 							)});
 	      		},
