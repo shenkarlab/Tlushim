@@ -137,10 +137,10 @@ body {
 }
 #degree1small {
 	top:416px;
-	position:relative;
+	position:absolute;
 	height:350px;
-	width:300px;
-	left:100px;
+	width:650px;
+	right:132px;
 	font-family: Arial;
 }
 #small_graph1{
@@ -152,9 +152,7 @@ body {
 }
 
 #pieGraph {
-	position:absolute;
 	top:20px;
-	left:-235px;
 	height:250px;
 	width:350px;
 }
@@ -345,8 +343,8 @@ h3 , h4 {
 
 #highSalaryData {
 	position:absolute;
-	top:5px;
-	right:584px;
+	top:20px;
+	right:350px;
 	height:360px;
 	width:350px;
 	font-family: alef;
