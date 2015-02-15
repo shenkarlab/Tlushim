@@ -65,7 +65,7 @@ function changeViewByYear(){
 	topData = "./csv/top"+currectYear+".csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
-    createView(data);
+    createView(data,topData);
     createPie(pieData); 
 }
 
