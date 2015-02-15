@@ -105,8 +105,8 @@ function changeViewByDegree(){
 }
 
 function createView(data,currentDegree){
-
-	console.log($("svg").length);
+	console.log("this is currentDegree:" +currentDegree)
+	console.log("this is num of svg: "+$("svg").length);
 	if ( $("svg").length == 3){
 				chart = c3.generate({
 					bindto: '#chart',
