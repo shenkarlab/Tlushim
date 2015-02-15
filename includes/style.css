@@ -377,3 +377,13 @@ h3 , h4 {
 	color:#FFFFFF;
 }
 
+#portDegreeData{
+	direction: rtl;
+	position:absolute;
+	top:20px;
+	right:315px;
+	height:180px;
+	width:300px;
+	font-family: alef;
+	color:#FFFFFF;
+}

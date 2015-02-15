@@ -11,6 +11,8 @@ $(document).ready(function() {
         }
     }
 };
+	var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סדרן","נתב","קברניט","רענ"];
+	var portDegreeData= d3.csv("./csv/portsDegreeData.csv").row(function(d) { return {Data: d.Data}; });
 	var man = false;
 	var currentDegree;
 	var chart;
@@ -59,7 +61,7 @@ $(".slider")
 
 	function setSliderTicks(el) {
 		var $slider =  $(el);
-		var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סדרן","נתב","קברניט","רענ"];
+
 
 		var max =  $slider.slider("option", "max");
 		var min =  $slider.slider("option", "min");
@@ -103,7 +105,7 @@ function changeViewByDegree(){
 }
 
 function createView(data){
-	
+
 	console.log($("svg").length);
 	if ( $("svg").length == 3){
 				chart = c3.generate({
@@ -116,6 +118,16 @@ function createView(data){
 	       					Haifa: '#ffffff'
 	      				}
 	    			},
+					onmouseover: function(id) {
+						portDegreeData.get(function (error, rows) {
+							d3.select('#policeArmyData').style('display', 'block').
+								html("" +
+								'<b>'+
+								degreeArr[id.x] +'</b><br>'+
+								rows[id.x].Data
+							)
+						});
+					},
 			    	tooltip: {
 		       			show: false
 		    		},	    			
