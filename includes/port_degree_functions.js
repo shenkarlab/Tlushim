@@ -12,8 +12,7 @@ $(document).ready(function() {
     }
 };
 	var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סדרן","נתב","קברניט","רענ"];
-	var portDegreeData= d3.csv("./csv/portsDegreeData.csv").row(function(d) { return {Data: d.Data}; });
-
+	var portDegreeData= d3.csv("./csv/portsDegreeData.csv").row(function(d) { return {Data:d.Data}; });
 	var man = false;
 	var currentDegree;
 	var chart;
@@ -115,11 +114,11 @@ function createView(data,currentDegree){
 			html("" +
 			'<b>'+
 			degreeArr[currentDegree] +'</b>'+'<br>'+
-			+(rows[0].Data)
+			+(rows[currentDegree].Data)
 
-		);console.log(rows[0].Data);});
+		);console.log(rows[currentDegree].Data);});
 
-	
+
 	if ( $("svg").length == 3){
 				chart = c3.generate({
 					bindto: '#chart',
