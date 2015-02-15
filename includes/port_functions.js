@@ -92,7 +92,7 @@ function createView(data){
 	       },
 	       onmouseover: function(id){
 	       		createSmall(id.x);
-				armyPoliceSalary.get(function(error, rows) {
+				portSalary.get(function(error, rows) {
 					d3.select('#policeArmyData').style('display', 'block').
 						html("" +
 							"דרגת "+
