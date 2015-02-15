@@ -173,7 +173,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
   }
 
 	portDegreeData.get(function(error, rows) {
-			d3.select('#policeArmyData').style('display', 'block').
+			d3.select('#portDegreeData').style('display', 'block').
 				html("" +
 				'<b>'+
 				degreeArr[currentDegree] +'</b><br>'+
