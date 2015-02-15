@@ -59,7 +59,7 @@ $(".slider")
 
 	function setSliderTicks(el) {
 		var $slider =  $(el);
-		var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סגן ניצב","נתב","קברניט","רענ"];
+		var degreeArr =["אתת","מנכל","מנופאי","מכונאי","סדרן","נתב","קברניט","רענ"];
 
 		var max =  $slider.slider("option", "max");
 		var min =  $slider.slider("option", "min");
