@@ -140,7 +140,7 @@ function createView(data){
 
 function createPie(pieData) {
 	if ( $("svg").length <= 1) {
-		var chart = c3.generate({
+		var pieChart = c3.generate({
 			bindto: '#pieGraph',
 			data: {
 				url: pieData,
@@ -169,21 +169,21 @@ function createPie(pieData) {
 			}
 		});
 		d3.select('.top_legend_container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
-			.data(['Medical', 'Industrial','Electric','Ports','Education'])
+			.data(['Medical', 'Industrial','Electric','Ports','Education','Finance'])
 			.enter().append('span')
 			.attr('data-id', function (id) { return id; })
 			.attr('class',function(id){return id;})
 			.on('mouseover', function (id) {
-				chart.focus(id);
+				pieChart.focus(id);
 			})
 			.on('mouseout', function (id) {
-				chart.revert();
+				pieChart.revert();
 			})
 			.on('click', function (id) {
-				chart.toggle(id);
+				pieChart.toggle(id);
 			});
 	}else{
-		chart.load({
+		pieChart.load({
 			url: pieData
 		});
 	}

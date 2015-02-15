@@ -102,6 +102,11 @@
 	background-image:url("../images/education.png");
 	background-repeat:no-repeat;
 }
+.Finance {
+	margin-top:24px;
+	background-image:url("../images/education.png");
+	background-repeat:no-repeat;
+}
 .legend span {
     width: 66px;
     height:66px;
