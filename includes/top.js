@@ -124,6 +124,7 @@ function createView(data,topData){
     	axis : {
     		x : {
           	  tick: {
+				  count: 20,
                 format: function (x) { return '•'; }
             	},
             	padding: {left: 0.2,right: 0.2},
