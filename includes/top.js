@@ -107,7 +107,7 @@ function createView(data,topData){
     	},
         bar: {
        		width: 11,
-       		ratio: 6
+       		ratio: 37
         },
     	legend : {
     		position:'right',
@@ -128,10 +128,10 @@ function createView(data,topData){
                 format: function (x) { return '•'; }
 
             	},
-            	padding: {left: 0.2,right: 0.2},
+				padding: {left: 0.7,right: 0.7}
           	},
         	y:{
-        		padding: {top: 200, bottom: 0},
+        		padding: {top: 200, bottom: 0}
         	}   
      	}		
 	});
