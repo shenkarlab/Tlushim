@@ -172,7 +172,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
         type: 'area'
     });
   }
-	
+
  }//close createView()
 
 	function changeManIcon(currectYear){

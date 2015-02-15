@@ -109,6 +109,17 @@ function createView(data,currentDegree){
 
 	console.log("this is currentDegree:" +currentDegree)
 	console.log("this is num of svg: "+$("svg").length);
+
+	portDegreeData.get(function(error, rows) {
+		d3.select('#portDegreeData').style('display', 'block').
+			html("" +
+			'<b>'+
+			degreeArr[currentDegree] +'</b>'+'<br>'+
+			+(rows[0].Data)
+
+		);console.log(rows[0].Data);});
+
+	
 	if ( $("svg").length == 3){
 				chart = c3.generate({
 					bindto: '#chart',
@@ -173,17 +184,6 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
         type: 'area'
     });
   }
-
-	portDegreeData.get(function(error, rows) {
-			d3.select('#portDegreeData').style('display', 'block').
-				html("" +
-				'<b>'+
-				degreeArr[currentDegree] +'</b>'+'<br>'+
-				+(rows[0].Data)
-
-			);console.log(rows[0].Data);});
-
-   
  } // close createView()
 
 	function changeManIcon(currectYear){
