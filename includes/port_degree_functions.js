@@ -30,7 +30,7 @@ $(document).ready(function() {
 		else if (correctValue == 8){correctValue = 1;}
 
 
-	createView("./csv/ports"+correctDegree("id")+"Rank.csv");
+	createView("./csv/ports"+correctDegree("id")+"Rank.csv",(correctDegree("id")-1));
 	changeManIcon("2012");
 $(".slider")                    
     .slider({ 
@@ -96,7 +96,7 @@ function changeViewByDegree(){
 	var data = "./csv/ports"+currentDegree+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
-    createView(data);
+    createView(data,currentDegree-1);
 	
 };
 
@@ -104,7 +104,7 @@ function changeViewByDegree(){
     chart.toggle(id);
 }
 
-function createView(data){
+function createView(data,currentDegree){
 
 	console.log($("svg").length);
 	if ( $("svg").length == 3){
@@ -118,16 +118,6 @@ function createView(data){
 	       					Haifa: '#ffffff'
 	      				}
 	    			},
-					onmouseover: function(id) {
-						portDegreeData.get(function (error, rows) {
-							d3.select('#policeArmyData').style('display', 'block').
-								html("" +
-								'<b>'+
-								degreeArr[id.x] +'</b><br>'+
-								rows[id.x].Data
-							)
-						});
-					},
 			    	tooltip: {
 		       			show: false
 		    		},	    			
@@ -181,7 +171,16 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
         type: 'area'
     });
   }
-   
+
+	portDegreeData.get(function(error, rows) {
+			d3.select('#policeArmyData').style('display', 'block').
+				html("" +
+				'<b>'+
+				degreeArr[currentDegree] +'</b><br>'+
+				+rows[currentDegree].Data
+
+			)});
+
    
  } // close createView()
 
