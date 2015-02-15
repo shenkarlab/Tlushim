@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var chart;
 	var small_chart;
 	createView("./csv/apdata2012.csv");
+	createSmall(8);
 	changeManIcon("2012");
 
 	$(".slider").slider({

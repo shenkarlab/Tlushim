@@ -41,7 +41,10 @@ $(".slider")
 	        currentDegree = ui.value;
 	      setValue((ui.value));
 	      changeViewByDegree();
-	    }
+	    },
+		create: function( event, ui ) {
+			setSliderTicks(event.target);
+		}
     })
                     
     .slider("pips", {
@@ -54,7 +57,23 @@ $(".slider")
 	  var mySlider = document.createElement('value');
 	  $('.slider').append(mySlider);
 	  mySlider.id = "mySlider";
-	
+
+	function setSliderTicks(el) {
+		var $slider =  $(el);
+		var policeDegreeArr = ["מפכל","ניצב","תת-ניצב","ניצב משנה","סגן ניצב","רב פקד","פקד","מפקח"];
+		var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
+
+		var max =  $slider.slider("option", "max");
+		var min =  $slider.slider("option", "min");
+		var temp_max=  $slider.slider("option", "min");
+		var spacing =  100 / (max - min);
+
+		$slider.find('.ui-slider-tick-mark').remove();
+		for (var i = 0; i < max-min+1 ; i++) {
+			$('<span class="ui-slider-tick-mark-rank-ports">'+policeDegreeArr[temp_max-1]+'<br>'+armyDegreeArr[temp_max-1]+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
+			temp_max++;
+		}
+	}
 
 
 
