@@ -3,6 +3,9 @@ $(document).ready(function() {
 	var currectYear;
 	var chart;
 	var small_chart;
+	var armyPoliceSalary;
+	var policeDegreeArr = ["מפכל","ניצב","תת-ניצב","ניצב משנה","סגן ניצב","רב פקד","פקד","מפקח"];
+	var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
 	createView("./csv/apdata2012.csv");
 	createSmall(8);
 	changeManIcon("2012");
@@ -68,6 +71,7 @@ $(document).ready(function() {
 	}
 
 	function createView(data){
+		armyPoliceSalary = d3.csv(data).row(function(d) { return {PoliceSalary: d.Police, ArmySalary: d.Army}; });
 		console.log("Num of svg: "+$("svg").length);
 		if ( $("svg").length == 3){
 			chart = c3.generate({
@@ -81,6 +85,13 @@ $(document).ready(function() {
 	       		},
 	       		onmouseover: function(id){
 	       			createSmall(id.x);
+					armyPoliceSalary.get(function(error, rows) {
+							d3.select('#policeArmyData').style('display', 'block').
+								html("" +
+								policeDegreeArr[id.x] +": "+rows[id.x].PoliceSalary + '<br>'+
+								armyDegreeArr[id.x]+": "+rows[id.x].ArmySalary
+								
+							)});
 	      		},
 	      		onclick: function(id) {
 	      			document.location.href = "apDegree.html?id="+(id.x+1);

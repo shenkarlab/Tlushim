@@ -354,6 +354,8 @@ h3 , h4 {
     height: 100%;
 }
 
+
+/* Data divs */
 #highSalaryData {
 	position:absolute;
 	top:20px;
@@ -364,3 +366,12 @@ h3 , h4 {
 	color:#FFFFFF;
 }
 
+#policeArmyData{
+	position:absolute;
+	top:20px;
+	right:350px;
+	height:360px;
+	width:350px;
+	font-family: alef;
+	color:#FFFFFF;
+}
