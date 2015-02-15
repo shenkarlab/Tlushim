@@ -139,42 +139,55 @@ function createView(data){
 }
 
 function createPie(pieData) {
-	var chart = c3.generate({
-		bindto:'#pieGraph',
-    	data: {
-    		url:pieData,
-        	type : 'pie',
-			colors: {
-				Medical: '#b0b0b0',
-				Industrial: '#b0b0b0',
-				Electric: '#b0b0b0',
-				Ports: '#b0b0b0',
-				Education: '#b0b0b0',
-				Finance:'#b0b0b0'
+	if ( $("svg").length <= 1) {
+		var chart = c3.generate({
+			bindto: '#pieGraph',
+			data: {
+				url: pieData,
+				type: 'pie',
+				colors: {
+					Medical: '#b0b0b0',
+					Industrial: '#b0b0b0',
+					Electric: '#b0b0b0',
+					Ports: '#b0b0b0',
+					Education: '#b0b0b0',
+					Finance: '#b0b0b0'
+				},
+				onclick: function (d, i) {
+					console.log("onclick", d, i);
+				},
+				onmouseover: function (d, i) {
+					console.log("onmouseover", d, i);
+				},
+				onmouseout: function (d, i) {
+					console.log("onmouseout", d, i);
+				}
 			},
-        	onclick: function (d, i) { console.log("onclick", d, i); },
-        	onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        	onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-    	},
-		legend : {
-			position:'right',
-			show: false
-		}
-	});
-	d3.select('.top_legend_container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
-		.data(['Medical', 'Industrial','Electric','Ports','Education'])
-		.enter().append('span')
-		.attr('data-id', function (id) { return id; })
-		.attr('class',function(id){return id;})
-		.on('mouseover', function (id) {
-			chart.focus(id);
-		})
-		.on('mouseout', function (id) {
-			chart.revert();
-		})
-		.on('click', function (id) {
-			chart.toggle(id);
+			legend: {
+				position: 'right',
+				show: false
+			}
 		});
+		d3.select('.top_legend_container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
+			.data(['Medical', 'Industrial','Electric','Ports','Education'])
+			.enter().append('span')
+			.attr('data-id', function (id) { return id; })
+			.attr('class',function(id){return id;})
+			.on('mouseover', function (id) {
+				chart.focus(id);
+			})
+			.on('mouseout', function (id) {
+				chart.revert();
+			})
+			.on('click', function (id) {
+				chart.toggle(id);
+			});
+	}else{
+		chart.load({
+			url: data
+		});
+	}
+
 }
 
 
