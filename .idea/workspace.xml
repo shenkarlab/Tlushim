@@ -25,11 +25,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="top.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="top.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/top.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40942928" vertical-offset="974" max-vertical-offset="3519">
+            <state vertical-scroll-proportion="0.0" vertical-offset="974" max-vertical-offset="3519">
               <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top2011.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/csv/top2011.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="d3ele.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/d3ele.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="4437">
+              <caret line="118" column="23" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="degree_functions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/degree_functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67493796" vertical-offset="255" max-vertical-offset="4165">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -54,7 +84,6 @@
         <option value="$PROJECT_DIR$/csv/highRatio2012.csv" />
         <option value="$PROJECT_DIR$/includes/d3ele.js" />
         <option value="$PROJECT_DIR$/apDegree.html" />
-        <option value="$PROJECT_DIR$/includes/degree_functions.js" />
         <option value="$PROJECT_DIR$/includes/c3.css" />
         <option value="$PROJECT_DIR$/includes/style.css" />
         <option value="$PROJECT_DIR$/includes/legend_custom.css" />
@@ -73,6 +102,7 @@
         <option value="$PROJECT_DIR$/csv/top2009.csv" />
         <option value="$PROJECT_DIR$/csv/top2010.csv" />
         <option value="$PROJECT_DIR$/includes/top.js" />
+        <option value="$PROJECT_DIR$/includes/degree_functions.js" />
       </list>
     </option>
   </component>
@@ -138,20 +168,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tlushim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tlushim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="csv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -222,7 +238,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -441,22 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/degree_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70471466" vertical-offset="872" max-vertical-offset="4165">
-          <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/d3ele.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42183623" vertical-offset="1836" max-vertical-offset="4437">
-          <caret line="118" column="23" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/c3.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4216">
@@ -566,14 +566,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv/top2011.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8173077" vertical-offset="0" max-vertical-offset="442">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csv/top2012.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
@@ -642,10 +634,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/csv/top2011.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/top.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40942928" vertical-offset="974" max-vertical-offset="3519">
+        <state vertical-scroll-proportion="0.0" vertical-offset="974" max-vertical-offset="3519">
           <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/d3ele.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="4437">
+          <caret line="118" column="23" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/degree_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67493796" vertical-offset="255" max-vertical-offset="4165">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="43" />
           <folding />
         </state>
       </provider>
