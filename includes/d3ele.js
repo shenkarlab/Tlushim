@@ -88,8 +88,14 @@ $(document).ready(function() {
 					armyPoliceSalary.get(function(error, rows) {
 							d3.select('#policeArmyData').style('display', 'block').
 								html("" +
-								policeDegreeArr[id.x] +": "+rows[id.x].PoliceSalary + '<br>'+
-								armyDegreeArr[id.x]+": "+rows[id.x].ArmySalary
+									"דרגת "+
+								policeDegreeArr[id.x] +
+									"שכר: "+
+								+rows[id.x].PoliceSalary + 'ש"ח '+ '<br>'+
+								"דרגת "+
+								armyDegreeArr[id.x]+
+								"שכר: "+
+								+rows[id.x].ArmySalary+ 'ש"ח '
 								
 							)});
 	      		},

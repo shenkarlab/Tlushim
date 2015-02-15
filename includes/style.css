@@ -367,11 +367,12 @@ h3 , h4 {
 }
 
 #policeArmyData{
+	direction: rtl;
 	position:absolute;
 	top:20px;
-	right:350px;
-	height:360px;
-	width:350px;
+	right:315px;
+	height:180px;
+	width:300px;
 	font-family: alef;
 	color:#FFFFFF;
 }
