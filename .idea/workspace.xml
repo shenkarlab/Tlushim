@@ -59,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/includes/degree_functions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.67493796" vertical-offset="255" max-vertical-offset="4165">
-              <caret line="31" column="43" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="43" />
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -661,7 +661,7 @@
     <entry file="file://$PROJECT_DIR$/includes/degree_functions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67493796" vertical-offset="255" max-vertical-offset="4165">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="43" />
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding />
         </state>
       </provider>
