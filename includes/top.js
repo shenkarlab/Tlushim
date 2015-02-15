@@ -184,7 +184,7 @@ function createPie(pieData) {
 			});
 	}else{
 		chart.load({
-			url: data
+			url: pieData
 		});
 	}
 
