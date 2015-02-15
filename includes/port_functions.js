@@ -94,14 +94,11 @@ function createView(data){
 	       		createSmall(id.x);
 				portSalary.get(function(error, rows) {
 					d3.select('#policeArmyData').style('display', 'block').
-						html("" +
-							"דרגת "+
-						portDegreeArr[id.x] +
-							" שכר: "+
+						html("" + '<b>'+
+						portDegreeArr[id.x] + '</b>'+'<br>'+
+							" שכר בנמל אשדוד: "+
 						+rows[id.x].AshdodSalary + ' ש"ח '+ '<br>'+
-						"דרגת "+
-						portDegreeArr[id.x]+
-						" שכר: "+
+						" שכר בנמל חיפה: "+
 						+rows[id.x].HaifaSalary+ ' ש"ח '		
 						)});	       		
 	      	},
