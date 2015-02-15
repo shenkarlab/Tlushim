@@ -13,7 +13,7 @@ $(document).ready(function() {
     	}
 	};
 	var man = false;
-	var currentDegree;
+	var currentDegree = correctDegree("id");;
 	var chart;
 	var apDegreeData= d3.csv("./csv/apDegreeData.csv").row(function(d) { return {Data:d.Data}; });
 	var correctValue = correctDegree("id");
@@ -106,9 +106,10 @@ function changeViewByDegree(){
     chart.toggle(id);
 }
 
-function createView(data,currentDegree){
-
-	portDegreeData.get(function(error, rows) {
+function createView(data){
+	console.log("this is currentDegree:" +currentDegree-1)
+	console.log("this is num of svg: "+$("svg").length);
+	apDegreeData.get(function(error, rows) {
 		d3.select('#portDegreeData').style('display', 'block').
 			html("" +
 			'<b>'+
@@ -118,7 +119,7 @@ function createView(data,currentDegree){
 		);console.log(rows[currentDegree].Data);});
 
 
-	console.log($("svg").length);
+
 	if ( $("svg").length == 3){
 				chart = c3.generate({
 					bindto: '#chart',
