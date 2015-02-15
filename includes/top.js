@@ -88,11 +88,11 @@ function createView(data){
 						   "ארגון: "+
 					   (rows[id.x].Organization)+"<br>"+
 						   "תפקיד: "+
-					   (rows[id.x].Data)+ "<br>"+
+					   (rows[id.x].Job)+ "<br>"+
 						   "שכר:"+
 					   (rows[id.x].AverageSalary)+ "<br>"+
 						   "מידע נוסף:"+
-					   (rows[id.x].Job)
+					   (rows[id.x].Data)
 
 				   );
 			   });
