@@ -86,7 +86,7 @@ function setValue(myValue) {
 
 function changeViewByDegree(){
 	console.log(currentDegree);
-	var data = "./csv/"+currentDegree+"Rank.csv";
+	var data = "./csv/"+correctDegree("id")+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
     createView(data);
