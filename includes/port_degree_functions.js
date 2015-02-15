@@ -178,7 +178,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			d3.select('#portDegreeData').style('display', 'block').
 				html("" +
 				'<b>'+
-				degreeArr[currentDegree] +'</b><br>'+
+				degreeArr[currentDegree] +'</b>'+'<br>'+
 				+(rows[0].Data)
 
 			);console.log(rows[0].Data);});
