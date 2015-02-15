@@ -29,7 +29,7 @@ $(document).ready(function() {
 	else if (correctValue == 8){correctValue = 1;}
 	console.log("this is currentDegree="+currentDegree);
 	console.log("this is correcttDegree="+correctDegree);
-	createView("./csv/"+correctValue+"Rank.csv");
+	createView("./csv/"+correctDegree("id")+"Rank.csv");
 	changeManIcon("2012");
 $(".slider")                    
     .slider({ 
