@@ -179,7 +179,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 				html("" +
 				'<b>'+
 				degreeArr[currentDegree] +'</b><br>'+
-				+rows[currentDegree].Data
+				+(rows[currentDegree].Data)
 
 			);console.log(rows[0].Data);});
 
