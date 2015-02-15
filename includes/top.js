@@ -5,7 +5,10 @@ $(document).ready(function() {
 	var chart;
 	var pieChart;
 	var small_chart;
-	createView("./csv/highSalary2012.csv");
+	var data;
+	var pieData;
+	var topData;
+	createView("./csv/highSalary2012.csv","./csv/top2012.csv");
 	createPie("./csv/highRatio2012.csv");
 
 $(".slider")                    
@@ -57,8 +60,9 @@ function setValue(myValue) {
 
 function changeViewByYear(){
 	console.log(currectYear);
-	var data = "./csv/highSalary"+currectYear+".csv";
-	var pieData = "./csv/highRatio"+currectYear+".csv";
+	data = "./csv/highSalary"+currectYear+".csv";
+	pieData = "./csv/highRatio"+currectYear+".csv";
+	topData = "./csv/top"+currectYear+".csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
     createView(data);
@@ -69,14 +73,14 @@ function changeViewByYear(){
     pieChart.toggle(id);
 }
 
-function createView(data){
+function createView(data,topData){
 	 topInfo = d3.csv(data).row(function(d) { return {AverageSalary: d.AverageSalary, Job: d.Job, Organization: d.Organization, Data:d.Data}; });
 	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
 		bindto: '#chart',
     	data: {
-       		url:  data,
+       		url:  topData,
         	type:'bar',
       		colors: {
 				AverageSalary: '#b0b0b0'
@@ -133,7 +137,7 @@ function createView(data){
   } // end if
   else {
   	    chart.load({
-        url: data
+        url: topData
     });
   }
 
