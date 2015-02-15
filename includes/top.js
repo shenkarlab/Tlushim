@@ -125,7 +125,8 @@ function createView(data,topData){
     		x : {
           	  tick: {
 				  count: 20,
-                format: function (x) { return '•'; }
+                //format: function (x) { return '•'; }
+				  values:['•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•']
             	},
             	padding: {left: 0.2,right: 0.2},
           	},
