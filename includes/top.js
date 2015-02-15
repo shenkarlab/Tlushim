@@ -106,7 +106,7 @@ function createView(data,topData){
 	      	}
     	},
         bar: {
-       		width: 8,
+       		width: 11,
        		ratio: 6
         },
     	legend : {
@@ -125,8 +125,8 @@ function createView(data,topData){
     		x : {
           	  tick: {
 				  count: 20,
-                //format: function (x) { return '•'; }
-				  values:['•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•','•']
+                format: function (x) { return '•'; }
+
             	},
             	padding: {left: 0.2,right: 0.2},
           	},
@@ -134,7 +134,7 @@ function createView(data,topData){
         		padding: {top: 200, bottom: 0},
         	}   
      	}		
-	},620);
+	});
 
   } // end if
   else {
