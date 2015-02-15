@@ -114,13 +114,13 @@ function createView(data){
 		d3.select('#portDegreeData').style('display', 'block').
 			html("" +
 			'<b>'+
-			policeDegreeArr[currentDegree] +'</b>'+'<br>'+
+			policeDegreeArr[currentDegree-1] +'</b>'+'<br>'+
 			+(rows[currentDegree].policeData)+
 			'<b>'+'<br>'+'<br>'+
-			armyDegreeArr[currentDegree] +'</b>'+'<br>'+
-			+(rows[currentDegree].armyData)
+			armyDegreeArr[currentDegree-1] +'</b>'+'<br>'+
+			+(rows[currentDegree-1].armyData)
 
-		);console.log(rows[currentDegree].armyData);});
+		);console.log(rows[currentDegree-1].armyData);});
 
 
 
