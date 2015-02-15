@@ -95,7 +95,10 @@ function createView(data){
 	      	onclick: function(id) {
 	      		document.location.href = "portsDegree.html?id="+(id.x+1);	
 	      	} 
-    },
+    	},
+	    tooltip: {
+       		show: false
+    	},    	
         bar: {
        			 width: 11,
        			 ratio: 37
@@ -174,8 +177,10 @@ function createSmall(id){
 	       		Ashdod: '#b0b0b0',
 	       		Haifa: '#ffffff'
 	      	},
-
 	    },
+	    tooltip: {
+       		show: false
+    	},	    
 	    legend : {
     		position:'right',
         	show: false

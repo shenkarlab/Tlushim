@@ -86,6 +86,9 @@ $(document).ready(function() {
 	      			document.location.href = "apDegree.html?id="+(id.x+1);
 	      		}
     		},
+    		tooltip: {
+        		show: false
+    		},
         	bar: {
        			 width: 11,
        			 ratio: 37
@@ -154,6 +157,9 @@ $(document).ready(function() {
 	       			Army: '#ffffff'
 	      		}
 	    	},
+	    	tooltip: {
+       			show: false
+    		},
 	    	legend : {
     			position:'right',
         		show: false

@@ -119,6 +119,9 @@ function createView(data){
 	       					Army: '#ffffff'
 	      				}
 	    			},
+	    			tooltip: {
+       					show: false
+    				},	    			
 	    			legend : {
     					position:'right',
         				show: false

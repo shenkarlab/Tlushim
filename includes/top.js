@@ -105,6 +105,9 @@ function createView(data,topData){
 	      		d3.select('#highSalaryData').style('display','none').text("");
 	      	}
     	},
+    	tooltip: {
+       		show: false
+    	},
         bar: {
        		width: 11,
        		ratio: 37
@@ -170,6 +173,9 @@ function createPie(pieData) {
 					console.log("onmouseout", d, i);
 				}
 			},
+	    	tooltip: {
+       			show: false
+    		},			
 			legend: {
 				position: 'right',
 				show: false
