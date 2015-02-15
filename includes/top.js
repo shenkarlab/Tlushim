@@ -133,7 +133,7 @@ function createView(data,topData){
         		padding: {top: 200, bottom: 0},
         	}   
      	}		
-	});
+	},620);
 
   } // end if
   else {
