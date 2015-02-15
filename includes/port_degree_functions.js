@@ -83,7 +83,14 @@ function setValue(myValue) {
 
 function changeViewByDegree(){
 	console.log(currentDegree);
-	
+	if (currentDegree == 1){currentDegree = 8;}
+	else if (currentDegree == 2){currentDegree = 7;}
+	else if (currentDegree == 3){currentDegree = 6;}
+	else if (currentDegree == 4){currentDegree = 5;}
+	else if (currentDegree == 5){currentDegree = 4;}
+	else if (currentDegree == 6){currentDegree = 3;}
+	else if (currentDegree == 7){currentDegree = 2;}
+	else if (currentDegree == 8){currentDegree = 1;}
 	var data = "./csv/ports"+currentDegree+"Rank.csv";
 	console.log("Data File:"+ data);
 	console.log("Before json");
