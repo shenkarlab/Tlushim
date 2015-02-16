@@ -130,20 +130,7 @@
 	      .attr("stroke-dashoffset", 0);	
     	
     });
-       d3.select('#link1').on("mouseout", function() {
-       var pathOver = svg.append("path")
-           .attr("d", line(data))
-           .attr("stroke", "#ffffff")
-           .attr("stroke-width", "1")
-           .attr("fill", "none")
-           .style("opacity","0.8")
-           .attr("stroke-dasharray", totalLength + " " + totalLength)
-           .attr("stroke-dashoffset", 0)
-           .transition()
-           .duration(1500)
-           .ease("linear")
-           .attr("stroke-dashoffset", totalLength);
-       });
+
        d3.select('#link2').on("mouseover", function() {
     	    var pathOver2 = svg.append("path")
 		      .attr("d", line(data2))
