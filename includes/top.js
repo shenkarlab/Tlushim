@@ -154,7 +154,7 @@ $(document).ready(function() {
 						Ports: '#b0b0b0',
 						Education: '#b0b0b0',
 						Finance: '#b0b0b0'
-					},
+					}
 				},		
 				legend: {
 					position: 'right',
