@@ -663,6 +663,7 @@ button.ui-button::-moz-focus-inner {
 	margin-left: 48px;
 	margin-bottom: -28px;
 	margin-top: -.6em;
+	outline-color: transparent ;
 }
 .ui-widget-content>a{
 	text-decoration:none;
