@@ -8,19 +8,18 @@ $(document).ready(function() {
 	var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
 	createView("./csv/apdata2012.csv");
 	changeManIcon("2012");
-
 	$(".slider").slider({
         min: 2002, 
         max: 2012,
         value:2012,
         orientation: "vertical",
         slide: function(event, ui) {
-        				if (ui.value >2012){
-        					ui.value=2012;
-        				}
-	        			currectYear = ui.value;
-	      				setValue((ui.value));
-	      				changeViewByYear();
+        	if (ui.value >2012) {
+        		ui.value=2012;
+        	}
+	        currectYear = ui.value;
+	      	setValue((ui.value));
+	      	changeViewByYear();
 	    },
 		create: function( event, ui ) {
 			setSliderTicks(event.target);
@@ -34,14 +33,12 @@ $(document).ready(function() {
 	$('.slider').append(mySlider);
 	mySlider.id = "mySlider";
 
-
 	function setSliderTicks(el) {
 		var $slider =  $(el);
 		var max =  $slider.slider("option", "max");
 		var min =  $slider.slider("option", "min");
 		var temp_max=  $slider.slider("option", "max");
 		var spacing =  100 / (max - min);
-
 		$slider.find('.ui-slider-tick-mark').remove();
 		for (var i = 0; i < max-min+1 ; i++) {
 			$('<span class="ui-slider-tick-mark">'+temp_max+'</span>').css('top', (spacing * i) +  '%').appendTo($slider);
@@ -63,7 +60,7 @@ $(document).ready(function() {
 	};
 
 	function toggle(id) {
-    chart.toggle(id);
+    	chart.toggle(id);
 	}
 
 	function createView(data){
@@ -78,7 +75,7 @@ $(document).ready(function() {
        				Police: '#b0b0b0',
        				Army: '#ffffff'
 	       		},
-	       		onmouseover: function(id){
+	       		onmouseover: function(id) {
 	       			createSmall(id.x);
 					armyPoliceSalary.get(function(error, rows) {
 							d3.select('#policeArmyData').style('display', 'block').
@@ -119,8 +116,7 @@ $(document).ready(function() {
             				{value: 4, text: 'סגן ניצב'} ,{value: 4.3, text: 'סגן אלוף', class: 'gridNoLine'},
             				{value: 5, text: 'רב פקד'} ,{value: 5.3, text: 'רב סרן', class: 'gridNoLine'},
             				{value: 6, text: 'פקד'} ,{value: 6.3, text: 'סרן', class: 'gridNoLine'},
-            				{value: 7, text: 'מפקח'} ,{value: 7.3, text: 'סגן', class: 'gridNoLine'},]
-                   
+            				{value: 7, text: 'מפקח'} ,{value: 7.3, text: 'סגן', class: 'gridNoLine'},]  
         		},
         		y: {
             		show: true
@@ -219,51 +215,48 @@ $(document).ready(function() {
 		d3.json("./json/avaregeSalary"+currectYear+".json",function(data) {
 			police = data.Police;
 			army = data.Army;
-
 			police = (police/1000) * 4;
 			army = (army/1000) *3;
-
-		var layout1 = 100;
-   		var layout2 = police;
-   		var layout3 = army;
-   		// div position (text and line)
-   		var layout1inpx = layout1*290/100;
-   		var layout2inpx = layout2*290/100;
-   		var layout3inpx = layout3*290/100;
-   		var layoutRegion1 = (290 - layout2inpx);
-   		var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
-   		var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
-		var linePosition1 = 0 + (0.5*layoutRegion3)-40;
-   	   	var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
-   	   	var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
-		var lineCotertPosition1 = linePosition1 - 37;
-		var lineCotertPosition2 = linePosition2 ;
-		var lineCotertPosition3 = linePosition3 + 75;
-		if (!man){
-			// first Creation
-			manLayout1.style('height', (layout1inpx+'px'));
-			manLayout2.style('height', (layout2inpx+'px'));
-			manLayout3.style('height', (layout3inpx+'px'));
-			lineDiv1.style('top', linePosition1+'px').text(data.Police);
-			lineDiv2.style('top', linePosition2+'px').text(data.Army);
-			lineDiv3.style('top', linePosition3+'px').text(data.All);
-			lineDiv1Cotert.style('top', lineCotertPosition1+'px');
-			lineDiv2Cotert.style('top', lineCotertPosition2+'px');
-			lineDiv3Cotert.style('top', lineCotertPosition3+'px');
-			man = true;
-  
-		}
-		else{
-			manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
-			manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
-			manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
-			lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Police);
-			lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Army);
-			lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
-			lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
-			lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
-			lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
-  		}
-	});
+			var layout1 = 100;
+   			var layout2 = police;
+   			var layout3 = army;
+   			// div position (text and line)
+   			var layout1inpx = layout1*290/100;
+   			var layout2inpx = layout2*290/100;
+   			var layout3inpx = layout3*290/100;
+   			var layoutRegion1 = (290 - layout2inpx);
+   			var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
+   			var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
+			var linePosition1 = 0 + (0.5*layoutRegion3)-40;
+	   	   	var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
+	   	   	var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
+			var lineCotertPosition1 = linePosition1 - 37;
+			var lineCotertPosition2 = linePosition2 ;
+			var lineCotertPosition3 = linePosition3 + 75;
+			if (!man) {
+				// first Creation
+				manLayout1.style('height', (layout1inpx+'px'));
+				manLayout2.style('height', (layout2inpx+'px'));
+				manLayout3.style('height', (layout3inpx+'px'));
+				lineDiv1.style('top', linePosition1+'px').text(data.Police);
+				lineDiv2.style('top', linePosition2+'px').text(data.Army);
+				lineDiv3.style('top', linePosition3+'px').text(data.All);
+				lineDiv1Cotert.style('top', lineCotertPosition1+'px');
+				lineDiv2Cotert.style('top', lineCotertPosition2+'px');
+				lineDiv3Cotert.style('top', lineCotertPosition3+'px');
+				man = true;
+			}
+			else {
+				manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
+				manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
+				manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
+				lineDiv1.transition().duration(2000).style('top', linePosition1+'px').text("₪"+data.Police);
+				lineDiv2.transition().duration(2000).style('top', linePosition2+'px').text("₪"+data.Army);
+				lineDiv3.transition().duration(2000).style('top', linePosition3+'px').text("₪"+data.All);
+				lineDiv1Cotert.transition().duration(2000).style('top', lineCotertPosition1+'px');
+				lineDiv2Cotert.transition().duration(2000).style('top', lineCotertPosition2+'px');
+				lineDiv3Cotert.transition().duration(2000).style('top', lineCotertPosition3+'px');
+	  		}
+		});
 	}
 });
