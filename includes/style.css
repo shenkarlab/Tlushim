@@ -238,10 +238,13 @@ h1 , h3 {
  	right:20px;
  }
 .main-line {
+	display:block;
     width: 358px;
-    margin: 0px 333px;
-    position: relative;
-    top: -12px;
+    margin: auto;
+}
+
+#main_cotert{
+	margin: 0 auto;
 }
  
 .dot-line {
@@ -249,7 +252,10 @@ h1 , h3 {
     top: -12px;
  
 }
- 
+ #mainh2{
+     position: relative;
+    top: -11px;	
+ }
 h4 , h2 {
     color: #ffffff;
     font-weight: bold;

@@ -664,6 +664,9 @@ button.ui-button::-moz-focus-inner {
 	margin-bottom: -28px;
 	margin-top: -.6em;
 }
+.ui-widget-content>a{
+	text-decoration:none;
+}
 .ui-slider-vertical .ui-slider-range {
 	left: 0;
 	width: 90%;

@@ -93,10 +93,10 @@ $(document).ready(function() {
 					   (rows[id.x].Data)
 				   		);
 			   		});
-	      		},
-	      		onmouseout: function(id) {
-	      			d3.select('#highSalaryData').style('display','none').text("");
-	      		}
+	      		}//,
+	      		//onmouseout: function(id) {
+	      			//d3.select('#highSalaryData').style('display','none').text("");
+	      		//}
     		},
     		tooltip: {
        			show: false
