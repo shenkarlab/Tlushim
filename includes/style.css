@@ -26,20 +26,20 @@ body {
 
 .indexBackgr{
 		background-image:url("../images/main.png");
-		background-repeat::no-repeat;
+		background-repeat:no-repeat;
 }
 .armyPolice{
 		background-image:url("../images/army-police.png");
-		background-repeat::no-repeat;
+		background-repeat:no-repeat;
 }
 
 .portBackgr{
 	background-image:url("../images/port.png");
-	background-repeat::no-repeat;
+	background-repeat:no-repeat;
 }
 .topBackgr {
 	background-image: url("../images/top.png");
-	background-repeat::no-repeat;
+	background-repeat:no-repeat;
 }
 
 
@@ -71,7 +71,7 @@ body {
 	height:16px;
 	position:absolute;
 	left:74px;
-	margin-top: -15px;
+	margin-top: -14px;
 	font-family: alef;
 	color: #FFFFFF;
 	font-size: 14px;
@@ -116,7 +116,7 @@ body {
     margin: 0 auto;
     height:24px;
     width: 570px;
-    background: url('images/background.png') no-repeat left top;
+    /*background: url('images/background.png') no-repeat left top;*/
 }
 
 #graphContainer{
