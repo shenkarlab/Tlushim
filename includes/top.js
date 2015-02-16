@@ -135,6 +135,8 @@ $(document).ready(function() {
   	    chart.load({
         	url: topData
     	});
+	d3.select('#highSalaryData').style('display', 'block').
+				html("");
   	}	
 }	
 

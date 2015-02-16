@@ -155,7 +155,7 @@ $(document).ready(function() {
         	url: data
     		});
 			d3.select('#policeArmyData').style('display', 'block').
-				html("" );
+				html("");
   		}
    
 	}

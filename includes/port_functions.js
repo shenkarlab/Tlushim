@@ -150,6 +150,8 @@ $(document).ready(function() {
   	    	chart.load({
         		url: data
     		});
+			d3.select('#policeArmyData').style('display', 'block').
+				html("");
   		}
 	}
 
