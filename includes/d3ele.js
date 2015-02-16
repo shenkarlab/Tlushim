@@ -83,11 +83,14 @@ $(document).ready(function() {
 	       			createSmall(id.x);
 					armyPoliceSalary.get(function(error, rows) {
 							d3.select('#policeArmyData').style('display', 'block').
-								html("" +
+								html("" +'<b>'+
+								משטרה + '</b>'+'<br>'+
 									"דרגת "+
 								policeDegreeArr[id.x] +
 									" שכר: "+
 								+rows[id.x].PoliceSalary + ' ש"ח '+ '<br>'+
+								'<b>'+
+								'צה"ל' + '</b>'+'<br>'+
 								"דרגת "+
 								armyDegreeArr[id.x]+
 								" שכר: "+
