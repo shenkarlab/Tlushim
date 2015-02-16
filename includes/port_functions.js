@@ -57,18 +57,11 @@ function setValue(myValue) {
 	// myValue is the currect year!! 
     var mySlider = document.getElementById('mySlider');
     mySlider.value = myValue;
-    console.log(currectYear);
 }
 
 
 function changeViewByYear(){
-	console.log(currectYear);
-	
 	var data = "./csv/portsdata"+currectYear+".csv";
-	console.log("Data File:"+ data);
-	console.log("Before json");
-
-    
     createView(data);
 	changeManIcon(currectYear);
 };
@@ -79,7 +72,6 @@ function changeViewByYear(){
 
 function createView(data){
 	portSalary = d3.csv(data).row(function(d) { return {AshdodSalary: d.Ashdod, HaifaSalary: d.Haifa}; });
-	console.log($("svg").length);
 	if ( $("svg").length == 3){
 		chart = c3.generate({
 		bindto: '#chart',
@@ -241,9 +233,6 @@ function changeManIcon(currectYear){
 
 	haifa = (haifa/1000) * 3;
 	ashdod = (ashdod/1000) *2;
-	
-	console.log(haifa);
-	console.log(ashdod);
 
 	var layout1 = 100;
    	var layout2 = haifa;
@@ -257,9 +246,7 @@ function changeManIcon(currectYear){
    	var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
    	   
    	   var linePosition1 = 0 + (0.5*layoutRegion3)-40;
-   	   console.log(linePosition1);
    	   var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
-   	   console.log(linePosition1);
    	   var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 		var lineCotertPosition1 = linePosition1 - 37;
 		var lineCotertPosition2 = linePosition2 ;
@@ -281,7 +268,6 @@ if (!man){
 }
    	   
 else{
-   	   	console.log("inside man transition");
    	   	manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
    	   	manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
    	   	manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));

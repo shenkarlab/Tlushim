@@ -79,12 +79,10 @@ $(".slider")
 function setValue(myValue) {
     var mySlider = document.getElementById('mySlider');
     mySlider.value = myValue;
-    console.log(currentDegree);
 }
 
 
 function changeViewByDegree(){
-	console.log(currentDegree);
 	if (currentDegree == 1){currentDegree = 8;}
 	else if (currentDegree == 2){currentDegree = 7;}
 	else if (currentDegree == 3){currentDegree = 6;}
@@ -94,8 +92,6 @@ function changeViewByDegree(){
 	else if (currentDegree == 7){currentDegree = 2;}
 	else if (currentDegree == 8){currentDegree = 1;}
 	var data = "./csv/ports"+currentDegree+"Rank.csv";
-	console.log("Data File:"+ data);
-	console.log("Before json");
     createView(data);
 	
 };
@@ -105,18 +101,13 @@ function changeViewByDegree(){
 }
 
 function createView(data){
-
-	console.log("this is currentDegree:" +currentDegree-1)
-	console.log("this is num of svg: "+$("svg").length);
-
 	portDegreeData.get(function(error, rows) {
 		d3.select('#portDegreeData').style('display', 'block').
 			html("" +
 			'<b>'+
 			degreeArr[currentDegree-1] +'</b>'+'<br>'+
-			+(rows[currentDegree-1].Data)
-
-		);console.log(rows[currentDegree-1].Data);});
+			(rows[currentDegree-1].Data));
+});
 
 
 	if ( $("svg").length == 3){
@@ -207,9 +198,6 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			haifa = (haifa/1000) * 3;
 			ashdod = (ashdod/1000) *2;
 
-			console.log(haifa);
-			console.log(ashdod);
-
 			var layout1 = 100;
 			var layout2 = haifa;
 			var layout3 = ashdod;
@@ -222,9 +210,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
 
 			var linePosition1 = 0 + (0.5*layoutRegion3)-40;
-			console.log(linePosition1);
 			var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
-			console.log(linePosition1);
 			var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 			var lineCotertPosition1 = linePosition1 - 37;
 			var lineCotertPosition2 = linePosition2 ;
@@ -246,7 +232,6 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			}
 
 			else{
-				console.log("inside man transition");
 				manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
 				manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
 				manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));

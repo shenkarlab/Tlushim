@@ -59,12 +59,9 @@ function setValue(myValue) {
 
 
 function changeViewByYear(){
-	console.log(currectYear);
 	data = "./csv/highSalary"+currectYear+".csv";
 	pieData = "./csv/highRatio"+currectYear+".csv";
 	topData = "./csv/top"+currectYear+".csv";
-	console.log("Data File:"+ data);
-	console.log("Before json");
     createView(data,topData);
     createPie(pieData); 
 }
@@ -75,7 +72,6 @@ function changeViewByYear(){
 
 function createView(data,topData){
 	 topInfo = d3.csv(data).row(function(d) { return {AverageSalary: d.AverageSalary, Job: d.Job, Organization: d.Organization, Data:d.Data}; });
-	console.log($("svg").length);
 	if ( $("svg").length == 0){
 		chart = c3.generate({
 		bindto: '#chart',
@@ -163,15 +159,6 @@ function createPie(pieData) {
 					Education: '#b0b0b0',
 					Finance: '#b0b0b0'
 				},
-				onclick: function (d, i) {
-					console.log("onclick", d, i);
-				},
-				onmouseover: function (d, i) {
-					console.log("onmouseover", d, i);
-				},
-				onmouseout: function (d, i) {
-					console.log("onmouseout", d, i);
-				}
 			},		
 			legend: {
 				position: 'right',

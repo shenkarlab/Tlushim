@@ -30,8 +30,6 @@ $(document).ready(function() {
 	else if (correctValue == 6){correctValue = 3;}
 	else if (correctValue == 7){correctValue = 2;}
 	else if (correctValue == 8){correctValue = 1;}
-	console.log("this is currentDegree="+currentDegree);
-	console.log("this is correcttDegree="+correctDegree);
 	createView("./csv/"+correctDegree("id")+"Rank.csv");
 	changeManIcon("2012");
 $(".slider")                    
@@ -82,7 +80,6 @@ $(".slider")
 function setValue(myValue) {
     var mySlider = document.getElementById('mySlider');
     mySlider.value = myValue;
-    console.log(currentDegree);
 }
 
 
@@ -95,10 +92,7 @@ function changeViewByDegree(){
 	else if (currentDegree == 6){currentDegree = 3;}
 	else if (currentDegree == 7){currentDegree = 2;}
 	else if (currentDegree == 8){currentDegree = 1;}
-	console.log(currentDegree);
 	var data = "./csv/"+currentDegree+"Rank.csv";
-	console.log("Data File:"+ data);
-	console.log("Before json");
     createView(data);
 	
 };
@@ -108,19 +102,16 @@ function changeViewByDegree(){
 }
 
 function createView(data){
-	console.log("this is currentDegree:" +currentDegree-1)
-	console.log("this is num of svg: "+$("svg").length);
 	apDegreeData.get(function(error, rows) {
 		d3.select('#portDegreeData').style('display', 'block').
 			html("" +
 			'<b>'+
 			policeDegreeArr[currentDegree-1] +'</b>'+'<br>'+
-			+(rows[currentDegree].policeData)+
+			((rows[currentDegree-1].policeData))+
 			'<b>'+'<br>'+'<br>'+
 			armyDegreeArr[currentDegree-1] +'</b>'+'<br>'+
-			+(rows[currentDegree-1].armyData)
-
-		);console.log(rows[currentDegree-1].armyData);});
+			(rows[currentDegree-1].armyData));
+	});
 
 
 
@@ -213,8 +204,6 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			police = (police/1000) * 4;
 			army = (army/1000) *3;
 
-			console.log(police);
-			console.log(army);
 			var layout1 = 100;
 			var layout2 = police;
 			var layout3 = army;
@@ -226,9 +215,7 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 			var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
 			var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
 			var linePosition1 = 0 + (0.5*layoutRegion3)-40;
-			console.log(linePosition1);
 			var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
-			console.log(linePosition1);
 			var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 			var lineCotertPosition1 = linePosition1 - 37;
 			var lineCotertPosition2 = linePosition2 ;
@@ -248,7 +235,6 @@ d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAl
 
 			}
 			else{
-				console.log("inside man transition");
 				manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
 				manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
 				manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));

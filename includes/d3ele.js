@@ -7,7 +7,6 @@ $(document).ready(function() {
 	var policeDegreeArr = ["מפכל","ניצב","תת-ניצב","ניצב משנה","סגן ניצב","רב פקד","פקד","מפקח"];
 	var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
 	createView("./csv/apdata2012.csv");
-	createSmall(8);
 	changeManIcon("2012");
 
 	$(".slider").slider({
@@ -54,14 +53,11 @@ $(document).ready(function() {
 		// myValue is the currect year!!
     	var mySlider = document.getElementById('mySlider');
     	mySlider.value = myValue;
-    	console.log(currectYear);
 	}
 
 
 	function changeViewByYear(){
-		console.log(currectYear);
 		var data = "./csv/apdata"+currectYear+".csv";
-		console.log("Data File:"+ data);
     	createView(data);
    	 	changeManIcon(currectYear);
 	};
@@ -72,7 +68,6 @@ $(document).ready(function() {
 
 	function createView(data){
 		armyPoliceSalary = d3.csv(data).row(function(d) { return {PoliceSalary: d.Police, ArmySalary: d.Army}; });
-		console.log("Num of svg: "+$("svg").length);
 		if ( $("svg").length == 3){
 			chart = c3.generate({
 			bindto: '#chart',
@@ -97,7 +92,7 @@ $(document).ready(function() {
 								" שכר: "+
 								+rows[id.x].ArmySalary+ ' ש"ח '
 								
-							)});
+							);});
 	      		},
 	      		onclick: function(id) {
 	      			document.location.href = "apDegree.html?id="+(id.x+1);
@@ -227,9 +222,7 @@ $(document).ready(function() {
 
 			police = (police/1000) * 4;
 			army = (army/1000) *3;
-	
-		console.log(police);
-		console.log(army);
+
 		var layout1 = 100;
    		var layout2 = police;
    		var layout3 = army;
@@ -241,9 +234,7 @@ $(document).ready(function() {
    		var layoutRegion2 = (290 - layoutRegion1- layout3inpx);
    		var layoutRegion3 = (290 - layoutRegion2 -layoutRegion1 );
 		var linePosition1 = 0 + (0.5*layoutRegion3)-40;
-   	   	console.log(linePosition1);
    	   	var linePosition2 = 0 + layoutRegion3+ (layoutRegion2*0.5)-40;
-   	   	console.log(linePosition1);
    	   	var linePosition3 = 0 +layoutRegion3+layoutRegion2+ (layoutRegion1*0.5)-40;
 		var lineCotertPosition1 = linePosition1 - 37;
 		var lineCotertPosition2 = linePosition2 ;
@@ -263,7 +254,6 @@ $(document).ready(function() {
   
 		}
 		else{
-   	   		console.log("inside man transition");
 			manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
 			manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
 			manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
