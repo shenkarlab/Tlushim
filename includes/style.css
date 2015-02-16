@@ -26,21 +26,21 @@ body {
 
 .indexBackgr{
 		background-image:url("../images/main.png");
+		background-repeat::no-repeat;
 }
 .armyPolice{
 		background-image:url("../images/army-police.png");
+		background-repeat::no-repeat;
 }
 
 .portBackgr{
 	background-image:url("../images/port.png");
+	background-repeat::no-repeat;
 }
 .topBackgr {
 	background-image: url("../images/top.png");
+	background-repeat::no-repeat;
 }
-
-
-
-
 
 
 #slider-container {
