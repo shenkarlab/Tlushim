@@ -138,7 +138,7 @@
            .attr("fill", "none")
            .style("opacity","0.8")
            .attr("stroke-dasharray", totalLength + " " + totalLength)
-           .attr("stroke-dashoffset", totalLength)
+           .attr("stroke-dashoffset", 0)
            .transition()
            .duration(1500)
            .ease("linear")
