@@ -135,6 +135,7 @@ $(document).ready(function() {
   	    chart.load({
         	url: topData
     	});
+			$('.tick > text > tspan').attr('x', '-55');
 	d3.select('#highSalaryData').style('display', 'block').
 				html("");
   	}	
