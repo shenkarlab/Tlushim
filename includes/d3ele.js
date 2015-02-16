@@ -6,8 +6,10 @@ $(document).ready(function() {
 	var armyPoliceSalary;
 	var policeDegreeArr = ["מפכל","ניצב","תת-ניצב","ניצב משנה","סגן ניצב","רב פקד","פקד","מפקח"];
 	var armyDegreeArr =["רמטכל","אלוף","תת-אלוף","אלוף משנה","סגן אלוף","רב סרן","סרן","סגן"];
+	// Creating the page for first time
 	createView("./csv/apdata2012.csv");
 	changeManIcon("2012");
+	// Create and manage the Jquery slider
 	$(".slider").slider({
         min: 2002, 
         max: 2012,
@@ -32,7 +34,7 @@ $(document).ready(function() {
 	var mySlider = document.createElement('value');
 	$('.slider').append(mySlider);
 	mySlider.id = "mySlider";
-
+	// set slider ticks value
 	function setSliderTicks(el) {
 		var $slider =  $(el);
 		var max =  $slider.slider("option", "max");
@@ -45,14 +47,14 @@ $(document).ready(function() {
 			temp_max--;
 		}
 	}
-
+	// set the value from the slider
 	function setValue(myValue) {
 		// myValue is the currect year!!
     	var mySlider = document.getElementById('mySlider');
     	mySlider.value = myValue;
 	}
 
-
+	// change page view by the new value from slider
 	function changeViewByYear(){
 		var data = "./csv/apdata"+currectYear+".csv";
     	createView(data);
@@ -62,7 +64,9 @@ $(document).ready(function() {
 	function toggle(id) {
     	chart.toggle(id);
 	}
-
+	/* Create page view (main graph)
+	* @param - data 		path to graph correct data
+	* */
 	function createView(data){
 		armyPoliceSalary = d3.csv(data).row(function(d) { return {PoliceSalary: d.Police, ArmySalary: d.Army}; });
 		if ( $("svg").length == 3){
@@ -135,6 +139,7 @@ $(document).ready(function() {
        		}
 
 		});
+			// adding to each data type icon from container
 		d3.select('.container').insert('div', '.chart').attr('class', 'legend').selectAll('span')
     		.data(['Police', 'Army'])
   			.enter().append('span')
@@ -145,6 +150,7 @@ $(document).ready(function() {
     		.on('click', function (id) {chart.toggle(id);});
   		} // end if
   		else {
+			// if the graph allready exist- just load data into it
   	    	chart.load({
         	url: data
     		});
@@ -152,7 +158,10 @@ $(document).ready(function() {
    
 	}
 
-
+	/* Create the second graph
+	*
+	*@param id 			get the columns number
+	*/
 	function createSmall(id){
 		var smalldata = "./csv/"+(id+1)+"Rank.csv";
 		small_chart = c3.generate({
@@ -196,7 +205,7 @@ $(document).ready(function() {
 		});
 
 	}
-
+	//Create the man SVG element
 	function changeManIcon(currectYear){
 	   	var lineDiv1 = d3.select("#lineDiv1");
    	   	var lineDiv2 = d3.select("#lineDiv2");
@@ -207,11 +216,8 @@ $(document).ready(function() {
    	   	var manLayout1 = d3.select("#holdci");
    	   	var manLayout2 = d3.select("#holdci2");
    	   	var manLayout3 = d3.select("#holdci3");
-		var all;
 		var police;
 		var army;
-		var ashdod;
-		var haifa;
 		d3.json("./json/avaregeSalary"+currectYear+".json",function(data) {
 			police = data.Police;
 			army = data.Army;
@@ -234,7 +240,7 @@ $(document).ready(function() {
 			var lineCotertPosition2 = linePosition2 ;
 			var lineCotertPosition3 = linePosition3 + 75;
 			if (!man) {
-				// first Creation
+				// first Creation of the svg
 				manLayout1.style('height', (layout1inpx+'px'));
 				manLayout2.style('height', (layout2inpx+'px'));
 				manLayout3.style('height', (layout3inpx+'px'));
@@ -247,6 +253,7 @@ $(document).ready(function() {
 				man = true;
 			}
 			else {
+				// svg allready exist - make transition to new information
 				manLayout1.transition().duration(2000).style('height', (layout1inpx+'px'));
 				manLayout2.transition().duration(2000).style('height', (layout2inpx+'px'));
 				manLayout3.transition().duration(2000).style('height', (layout3inpx+'px'));
