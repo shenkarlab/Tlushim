@@ -84,7 +84,7 @@ $(document).ready(function() {
 					armyPoliceSalary.get(function(error, rows) {
 							d3.select('#policeArmyData').style('display', 'block').
 								html("" +'<b>'+
-								משטרה + '</b>'+'<br>'+
+								'משטרה'+'</b>'+'<br>'+
 									"דרגת "+
 								policeDegreeArr[id.x] +
 									" שכר: "+
